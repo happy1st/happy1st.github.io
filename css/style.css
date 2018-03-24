@@ -1,4 +1,4 @@
-@import url("//fonts.googleapis.com/css?family=Lato:400,400italic");
+@import url("//fonts.useso.com/css?family=Lato:400,400italic");
 @font-face {
   font-family: 'FontAwesome';
   font-style: normal;
@@ -813,4 +813,38 @@ pre .clojure .title {
 }
 pre .deletion {
   color: #dc322f;
+}
+.category-list-count,
+.tag-list-count,
+.archive-list-count {
+  padding-left: 15px;
+  color: #999;
+  font-size: 0.85em;
+}
+.category-list-count:before,
+.tag-list-count:before,
+.archive-list-count:before {
+  content: "(";
+}
+.category-list-count:after,
+.tag-list-count:after,
+.archive-list-count:after {
+  content: ")";
+}
+.category-list,
+.tag-list,
+.archive-list {
+  font-size: 0.9em;
+  padding: 15px 20px;
+}
+.category-list ul,
+.tag-list ul,
+.archive-list ul,
+.category-list ol,
+.tag-list ol,
+.archive-list ol,
+.category-list dl,
+.tag-list dl,
+.archive-list dl {
+  list-style: none;
 }
