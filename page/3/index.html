@@ -63,123 +63,6 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2018-07-30T03:02:35.736Z"><a href="/2018/07/30/Java相关/Java基础知识面试题总结/超详细的Java面试题总结（二）之Java基础知识篇/">2018-07-30</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2018/07/30/Java相关/Java基础知识面试题总结/超详细的Java面试题总结（二）之Java基础知识篇/"></a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h1 id="多线程和Java虚拟机"><a href="#多线程和Java虚拟机" class="headerlink" title="多线程和Java虚拟机"></a>多线程和Java虚拟机</h1><h2 id="创建线程有几种不同的方式？你喜欢哪一种？为什么？"><a href="#创建线程有几种不同的方式？你喜欢哪一种？为什么？" class="headerlink" title="创建线程有几种不同的方式？你喜欢哪一种？为什么？"></a><font face="楷体">创建线程有几种不同的方式？你喜欢哪一种？为什么？</font></h2><ol>
-<li>继承Thread类</li>
-<li>实现Runnable接口</li>
-<li>应用程序可以使用Executor框架来创建线程池</li>
-<li>实现Callable接口。</li>
-</ol>
-<p>我更喜欢实现Runnable接口这种方法，当然这也是现在大多程序员会选用的方法。因为一个类只能继承一个父类而可以实现多个接口。同时，线程池也是非常高效的，很容易实现和使用。</p>
-<h2 id="简述线程，程序、进程的基本概念。以及他们之间关系是什么？（参考书籍：《Java程序设计基础》第五版）"><a href="#简述线程，程序、进程的基本概念。以及他们之间关系是什么？（参考书籍：《Java程序设计基础》第五版）" class="headerlink" title="简述线程，程序、进程的基本概念。以及他们之间关系是什么？（参考书籍：《Java程序设计基础》第五版）"></a><font face="楷体">简述线程，程序、进程的基本概念。以及他们之间关系是什么？（参考书籍：《Java程序设计基础》第五版）</font></h2><p><strong>线程</strong>与进程相似，但线程是一个比进程更小的执行单位。一个进程在其执行的过程中可以产生多个线程。与进程不同的是同类的多个线程共享同一块内存空间和一组系统资源，所以系统在产生一个线程，或是在各个线程之间作切换工作时，负担要比进程小得多，也正因为如此，线程也被称为轻量级进程。  </p>
-<p><strong>程序</strong>是含有指令和数据的文件，被存储在磁盘或其他的数据存储设备中，也就是说程序是静态的代码。</p>
-<p><strong>进程</strong>是程序的一次执行过程，是系统运行程序的基本单位，因此进程是动态的。系统运行一个程序即是一个进程从创建，运行到消亡的过程。简单来说，一个进程就是一个执行中的程序，它在计算机中一个指令接着一个指令地执行着，同时，每个进程还占有某些系统资源如CPU时间，内存空间，文件，文件，输入输出设备的使用权等等。换句话说，当程序在执行时，将会被操作系统载入内存中。<br>线程是进程划分成的更小的运行单位。线程和进程最大的不同在于基本上各进程是独立的，而各线程则不一定，因为同一进程中的线程极有可能会相互影响。从另一角度来说，进程属于操作系统的范畴，主要是同一段时间内，可以同时执行一个以上的程序，而线程则是在同一程序内几乎同时执行一个以上的程序段。</p>
-<h2 id="什么是多线程？为什么程序的多线程功能是必要的？"><a href="#什么是多线程？为什么程序的多线程功能是必要的？" class="headerlink" title="什么是多线程？为什么程序的多线程功能是必要的？"></a><font face="楷体">什么是多线程？为什么程序的多线程功能是必要的？</font></h2><p> 多线程就是几乎同时执行多个线程（一个处理器在某一个时间点上永远都只能是一个线程！即使这个处理器是多核的，除非有多个处理器才能实现多个线程同时运行。）。几乎同时是因为实际上多线程程序中的多个线程实际上是一个线程执行一会然后其他的线程再执行，并不是很多书籍所谓的同时执行。这样可以带来以下的好处：</p>
-<ol>
-<li>使用线程可以把占据长时间的程序中的任务放到后台去处理</li>
-<li>用户界面可以更加吸引人，这样比如用户点击了一个按钮去触发某些事件的处理，可以弹出一个进度条来显示处理的进度</li>
-<li>程序的运行速度可能加快</li>
-<li>在一些等待的任务实现上如用户输入、文件读写和网络收发数据等，线程就比较有用了。在这种情况下可以释放一些珍贵的资源如内存占用等等。<br>还有其他很多使用多线程的好处，这里就不一一说明了。</li>
-</ol>
-<h2 id="多线程与多任务的差异是什么？（参考书籍：《Java程序设计基础》第五版）"><a href="#多线程与多任务的差异是什么？（参考书籍：《Java程序设计基础》第五版）" class="headerlink" title="多线程与多任务的差异是什么？（参考书籍：《Java程序设计基础》第五版）"></a><font face="楷体">多线程与多任务的差异是什么？（参考书籍：《Java程序设计基础》第五版）</font></h2><p>多任务与多线程是两个不同的概念，<br>多任务是针对操作系统而言的，表示操作系统可以同时运行多个应用程序。<br>而多线程是针对一个进程而言的，表示在一个进程内部可以几乎同时执行多个线程</p>
-<h2 id="线程有哪些基本状态？这些状态是如何定义的"><a href="#线程有哪些基本状态？这些状态是如何定义的" class="headerlink" title="线程有哪些基本状态？这些状态是如何定义的?"></a><font face="楷体">线程有哪些基本状态？这些状态是如何定义的?</font></h2><ol>
-<li><strong>新建(new)</strong>：新创建了一个线程对象。</li>
-<li><strong>可运行(runnable)</strong>：线程对象创建后，其他线程(比如main线程）调用了该对象的start()方法。该状态的线程位于可运行线程池中，等待被线程调度选中，获 取cpu的使用权。</li>
-<li><strong>运行(running)</strong>：可运行状态(runnable)的线程获得了cpu时间片（timeslice），执行程序代码。</li>
-<li><strong>阻塞(block)</strong>：阻塞状态是指线程因为某种原因放弃了cpu使用权，也即让出了cpu timeslice，暂时停止运行。直到线程进入可运行(runnable)状态，才有 机会再次获得cpu timeslice转到运行(running)状态。阻塞的情况分三种：<br>(一). 等待阻塞：运行(running)的线程执行o.wait()方法，JVM会把该线程放 入等待队列(waitting queue)中。<br>(二). 同步阻塞：运行(running)的线程在获取对象的同步锁时，若该同步锁 被别的线程占用，则JVM会把该线程放入锁池(lock pool)中。<br>(三). 其他阻塞: 运行(running)的线程执行Thread.sleep(long ms)或t.join()方法，或者发出了I/O请求时，JVM会把该线程置为阻塞状态。当sleep()状态超时join()等待线程终止或者超时、或者I/O处理完毕时，线程重新转入可运行(runnable)状态。</li>
-<li><strong>死亡(dead)</strong>：线程run()、main()方法执行结束，或者因异常退出了run()方法，则该线程结束生命周期。死亡的线程不可再次复生。<br><img src="https://user-gold-cdn.xitu.io/2017/12/15/16059cc91ee8efb3?w=876&amp;h=492&amp;f=png&amp;s=-1" alt="线程的基本状态"><br>备注：<br>可以用早起坐地铁来比喻这个过程：<br>还没起床：sleeping<br>起床收拾好了，随时可以坐地铁出发：Runnable<br>等地铁来：Waiting<br>地铁来了，但要排队上地铁：I/O阻塞<br>上了地铁，发现暂时没座位：synchronized阻塞<br>地铁上找到座位：Running<br>到达目的地：Dead</li>
-</ol>
-<h2 id="什么是线程的同步？程序中为什么要实现线程的同步？是如何实现同步的？"><a href="#什么是线程的同步？程序中为什么要实现线程的同步？是如何实现同步的？" class="headerlink" title="什么是线程的同步？程序中为什么要实现线程的同步？是如何实现同步的？"></a><font face="楷体">什么是线程的同步？程序中为什么要实现线程的同步？是如何实现同步的？</font></h2><p>当一个线程对共享的数据进行操作时，应使之成为一个”原子操作“，即在没有完成相关操作之前，不允许其他线程打断它，否则，就会破坏数据的完整性，必然会得到错误的处理结果，这就是线程的同步。<br>在多线程应用中，考虑不同线程之间的数据同步和防止死锁。当两个或多个线程之间同时等待对方释放资源的时候就会形成线程之间的死锁。为了防止死锁的发生，需要通过同步来实现线程安全。</p>
-<h2 id="在监视器-Monitor-内部，是如何做线程同步的？程序应该做哪种级别的同步？"><a href="#在监视器-Monitor-内部，是如何做线程同步的？程序应该做哪种级别的同步？" class="headerlink" title="在监视器(Monitor)内部，是如何做线程同步的？程序应该做哪种级别的同步？"></a><font face="楷体">在监视器(Monitor)内部，是如何做线程同步的？程序应该做哪种级别的同步？</font></h2><p>在 java 虚拟机中, 每个对象( Object 和 class )通过某种逻辑关联监视器,每个监视器和一个对象引用相关联, 为了实现监视器的互斥功能, 每个对象都关联着一把锁.<br>一旦方法或者代码块被 <strong>synchronized</strong> 修饰, 那么这个部分就放入了监视器的监视区域, <strong>确保一次只能有一个线程执行该部分的代码</strong>, 线程在获取锁之前不允许执行该部分的代码<br>另外 java 还提供了显式监视器( Lock )和隐式监视器( synchronized )两种锁方案</p>
-<h2 id="什么是死锁-deadlock-？"><a href="#什么是死锁-deadlock-？" class="headerlink" title="什么是死锁(deadlock)？"></a><font face="楷体">什么是死锁(deadlock)？</font></h2><p><a href="https://baike.so.com/doc/6950313-7172714.html" target="_blank" rel="noopener">360百科</a></p>
-<p>死锁 :是指两个或两个以上的进程在执行过程中,因争夺资源而造成的一种互相等待的现象,若无外力作用,它们都将无法推进下去 。<br>产生原因：</p>
-<ul>
-<li>因为系统资源不足。 </li>
-<li>进程运行推进顺序不合适。 </li>
-<li>资源分配不当等。 </li>
-<li>占用资源的程序崩溃等。</li>
-</ul>
-<p>如果系统资源充足，进程的资源请求都能够得到满足，死锁出现的可能性就很低，否则就会因争夺有限的资源而陷入死锁。其次，进程运行推进顺序与速度不同，也可能产生死锁。</p>
-<p>下面四个条件是死锁的必要条件，只要系统发生死锁，这些条件必然成立，而只要下列条件之一不满足，就不会发生死锁。 </p>
-<ul>
-<li>互斥条件：一个资源每次只能被一个进程使用。 </li>
-<li>请求与保持条件：一个进程因请求资源而阻塞时，对已获得的资源保持不放。 </li>
-<li>不剥夺条件:进程已获得的资源，在末使用完之前，不能强行剥夺。 </li>
-<li>循环等待条件:若干进程之间形成一种头尾相接的循环等待资源关系。<br>死锁的解除与预防：</li>
-</ul>
-<p>理解了死锁的原因，尤其是产生死锁的四个必要条件，就可以最大可能地避免、预防和 解除死锁。所以，在系统设计、进程调度等方面注意如何不让这四个必要条件成立，如何确 定资源的合理分配算法，避免进程永久占据系统资源。此外，也要防止进程在处于等待状态的情况下占用资源。因此，对资源的分配要给予合理的规划。</p>
-<h2 id="如何确保N个线程可以访问N个资源同时又不导致死锁？"><a href="#如何确保N个线程可以访问N个资源同时又不导致死锁？" class="headerlink" title="如何确保N个线程可以访问N个资源同时又不导致死锁？"></a><font face="楷体">如何确保N个线程可以访问N个资源同时又不导致死锁？</font></h2><p>上面一题我们知道了发生死锁的四个必要条件。我们只要使其中一个不成立就行了。一种非常简单的避免死锁的方式就是：指定获取锁的顺序，并强制线程按照指定的顺序获取锁。因此，如果所有的线程都是以同样的顺序加锁和释放锁，就不会出现死锁了。这也就是破坏了第四个条件循环等待条件。</p>
-<h2 id="Java中垃圾回收有什么目的？什么时候进行垃圾回收？"><a href="#Java中垃圾回收有什么目的？什么时候进行垃圾回收？" class="headerlink" title="Java中垃圾回收有什么目的？什么时候进行垃圾回收？"></a><font face="楷体">Java中垃圾回收有什么目的？什么时候进行垃圾回收？</font></h2><p>垃圾回收是在内存中存在没有引用的对象或超过作用域的对象时进行。</p>
-<p>垃圾回收的目的是识别并且丢弃应用不再使用的对象来释放和重用资源。</p>
-<h2 id="finalize-方法什么时候被调用？析构函数-finalization-的目的是什么？"><a href="#finalize-方法什么时候被调用？析构函数-finalization-的目的是什么？" class="headerlink" title="finalize()方法什么时候被调用？析构函数(finalization)的目的是什么？"></a><font face="楷体">finalize()方法什么时候被调用？析构函数(finalization)的目的是什么？</font></h2><p>1）垃圾回收器（garbage colector）决定回收某对象时，就会运行该对象的finalize()方法；<br>finalize是Object类的一个方法，该方法在Object类中的声明protected void finalize() throws Throwable { }<br>在垃圾回收器执行时会调用被回收对象的finalize()方法，可以覆盖此方法来实现对其资源的回收。注意：一旦垃圾回收器准备释放对象占用的内存，将首先调用该对象的finalize()方法，并且下一次垃圾回收动作发生时，才真正回收对象占用的内存空间</p>
-<p>2）GC本来就是内存回收了，应用还需要在finalization做什么呢？ 答案是大部分时候，什么都不用做(也就是不需要重载)。只有在某些很特殊的情况下，比如你调用了一些native的方法(一般是C写的)，可以要在finaliztion里去调用C的释放函数。</p>
-<h2 id="如果对象的引用被置为null，垃圾收集器是否会立即释放对象占用的内存？"><a href="#如果对象的引用被置为null，垃圾收集器是否会立即释放对象占用的内存？" class="headerlink" title="如果对象的引用被置为null，垃圾收集器是否会立即释放对象占用的内存？"></a><font face="楷体">如果对象的引用被置为null，垃圾收集器是否会立即释放对象占用的内存？</font></h2><p>不会，在下一个垃圾回收周期中，这个对象将是可被回收的。</p>
-<h2 id="Java中堆和栈的区别"><a href="#Java中堆和栈的区别" class="headerlink" title="Java中堆和栈的区别"></a><font face="楷体">Java中堆和栈的区别</font></h2><p><a href="http://www.cnblogs.com/perfy/p/3820594.html" target="_blank" rel="noopener">Java中堆和栈的区别</a></p>
-<p><strong>堆内存</strong>用来存放由new创建的对象和数组。 在堆中分配的内存，由Java虚拟机的自动垃圾回收器来管理。<br><strong>栈</strong>中一般存放的是局部变量（方法中的变量或某代码段里（比如for循环））</p>
-<h2 id="Java堆的结构是什么样子的？什么是堆中的永久代-Perm-Gen-space"><a href="#Java堆的结构是什么样子的？什么是堆中的永久代-Perm-Gen-space" class="headerlink" title="Java堆的结构是什么样子的？什么是堆中的永久代(Perm Gen space)?"></a><font face="楷体">Java堆的结构是什么样子的？什么是堆中的永久代(Perm Gen space)?</font></h2><p><a href="https://www.nowcoder.com/ta/review-java/review?page=39" target="_blank" rel="noopener">Java堆的结构是什么样子的？什么是堆中的永久代</a></p>
-<h1 id="Java集合框架"><a href="#Java集合框架" class="headerlink" title="Java集合框架"></a>Java集合框架</h1><font face="楷体">List，Set,Map三者的区别及总结</font>
-
-<font face="楷体">ArrayList 与 Vector 区别（为什么要用Arraylist取代Vector呢？）</font>
-
-<font face="楷体">List，Set,Map三者的区别及总结</font>
-
-<font face="楷体">HashMap 和 Hashtable 的区别</font>
-
-<font face="楷体">HashSet 和 HashMap 区别</font>
-
-<font face="楷体">HashMap 和 ConcurrentHashMap 的区别</font>
-
-<font face="楷体">HashSet如何检查重复</font>
-
-<font face="楷体">comparable 和 comparator的区别？</font>
-
-<font face="楷体">如何对Object的list排序？</font>
-
-<font face="楷体">如何实现数组与List的相互转换？</font>
-
-<font face="楷体">如何求ArrayList集合的交集 并集 差集 去重复并集?</font>
-
-<font face="楷体">HashMap 的工作原理及代码实现</font>
-
-<font face="楷体">ConcurrentHashMap 的工作原理及代码实现</font>
-
-<font face="楷体">集合框架底层数据结构总结</font>
-
-<font face="楷体">集合的选用</font>
-
-
-
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
         <time datetime="2018-07-30T03:02:35.733Z"><a href="/2018/07/30/Java相关/Java基础知识面试题总结/超详细的Java面试题总结（三）之Java集合篇常见问题/">2018-07-30</a></time>
       
       
@@ -967,103 +850,6 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2018-07-30T03:02:35.640Z"><a href="/2018/07/30/个人阅读书籍清单/">2018-07-30</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2018/07/30/个人阅读书籍清单/"></a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>下面是个人阅读书籍的部分清单，我比较建议阅读的书籍前都加上了:thumbsup: 表情。</p>
-<blockquote>
-<h3 id="核心基础知识"><a href="#核心基础知识" class="headerlink" title="核心基础知识"></a>核心基础知识</h3></blockquote>
-<ul>
-<li><p>:thumbsup: <a href="https://book.douban.com/subject/25863515/" target="_blank" rel="noopener">《图解HTTP》</a></p>
-<p>讲漫画一样的讲HTTP，很有意思，不会觉得枯燥，大概也涵盖也HTTP常见的知识点。因为篇幅问题，内容可能不太全面。不过，如果不是专门做网络方向研究的小伙伴想研究HTTP相关知识的话，读这本书的话应该来说就差不多了。</p>
-</li>
-</ul>
-<blockquote>
-<h3 id="Java相关"><a href="#Java相关" class="headerlink" title="Java相关"></a>Java相关</h3></blockquote>
-<ul>
-<li><p>:thumbsup: <a href="https://book.douban.com/subject/2000732/" target="_blank" rel="noopener">《Head First Java.第二版》</a></p>
-<p>可以说是我的Java启蒙书籍了，特别适合新手读当然也适合我们用来温故Java知识点。</p>
-</li>
-<li><p><a href="https://book.douban.com/subject/26555197/" target="_blank" rel="noopener">《Java多线程编程核心技术》</a></p>
-<p>Java多线程入门级书籍还不错，但是说实话，质量不是很高，很快就可以阅读完。</p>
-</li>
-<li><p><a href="https://book.douban.com/subject/26259017/" target="_blank" rel="noopener">《JAVA网络编程 第4版》</a></p>
-<p>可以系统的学习一下网络的一些概念以及网络编程在Java中的使用。</p>
-</li>
-<li><p>:thumbsup: <a href="https://book.douban.com/subject/25762168/" target="_blank" rel="noopener">《Java核心技术卷1+卷2》</a></p>
-<p>很棒的两本书，建议有点Java基础之后再读，介绍的还是比较深入的，非常推荐。这两本书我一般也会用来巩固知识点，是两本适合放在自己身边的好书。</p>
-</li>
-<li><p>:thumbsup: <a href="https://book.douban.com/subject/2130190/" target="_blank" rel="noopener">《Java编程思想(第4版)》</a></p>
-<p>这本书要常读，初学者可以快速概览，中等程序员可以深入看看java，老鸟还可以用之回顾java的体系。这本书之所以厉害，因为它在无形中整合了设计模式，这本书之所以难读，也恰恰在于他对设计模式的整合是无形的。</p>
-</li>
-<li><p>:thumbsup: <a href="https://book.douban.com/subject/26591326/" target="_blank" rel="noopener">《Java并发编程的艺术》</a></p>
-<p>这本书不是很适合作为Java并发入门书籍，需要具备一定的JVM基础。我感觉有些东西讲的还是挺深入的，推荐阅读。</p>
-</li>
-<li><p><a href="https://book.douban.com/subject/24841235/" target="_blank" rel="noopener">《Java程序员修炼之道》</a></p>
-<p>很杂，我只看了前面几章，不太推荐阅读。</p>
-</li>
-<li><p>:thumbsup: <a href="https://book.douban.com/subject/24722612/" target="_blank" rel="noopener">《深入理解Java虚拟机（第2版）周志明》</a></p>
-<p>神书！神书！神书！建议多刷几遍，书中的所有知识点可以通过JAVA运行时区域和JAVA的内存模型与线程两个大模块罗列完全。 </p>
-</li>
-</ul>
-<blockquote>
-<h3 id="JavaWeb相关"><a href="#JavaWeb相关" class="headerlink" title="JavaWeb相关"></a>JavaWeb相关</h3></blockquote>
-<ul>
-<li><p>:thumbsup: <a href="https://book.douban.com/subject/25953851/" target="_blank" rel="noopener">《深入分析Java Web技术内幕》</a></p>
-<p>感觉还行，涉及的东西也蛮多，推荐阅读。</p>
-</li>
-<li><p>:thumbsup: <a href="https://book.douban.com/subject/26767354/" target="_blank" rel="noopener">《Spring实战（第4版）》</a></p>
-<p>不建议当做入门书籍读，入门的话可以找点国人的书或者视频看。这本定位就相当于是关于Spring的新华字典，只有一些基本概念的介绍和示例，涵盖了Spring的各个方面，但都不够深入。就像作者在最后一页写的那样：“学习Spring，这才刚刚开始”。</p>
-</li>
-<li><p><a href="https://book.douban.com/subject/4189495/" target="_blank" rel="noopener">《Java Web整合开发王者归来》</a></p>
-<p>当时刚开始学的时候就是开的这本书，基本上是完完整整的看完了。不过，我不是很推荐大家看。这本书比较老了，里面很多东西都已经算是过时了。不过，这本书的一个很大优点是：基础知识点概括全面。</p>
-</li>
-<li><p>:thumbsup: <a href="https://book.douban.com/subject/26612779/" target="_blank" rel="noopener">《Redis实战》</a></p>
-<p> 如果你想了解Redis的一些概念性知识的话，这本书真的非常不错。</p>
-</li>
-</ul>
-<blockquote>
-<h3 id="架构相关"><a href="#架构相关" class="headerlink" title="架构相关"></a>架构相关</h3></blockquote>
-<ul>
-<li><p>:thumbsup: <a href="https://book.douban.com/subject/25723064/" target="_blank" rel="noopener">《大型网站技术架构：核心原理与案例分析+李智慧》</a></p>
-<p>这本书我读过，基本不需要你有什么基础啊~读起来特别轻松，但是却可以学到很多东西，非常推荐了。另外我写过这本书的思维导图，关注我的微信公众号：“Java面试通关手册”回复“大型网站技术架构”即可领取思维导图。</p>
-</li>
-<li><p><a href="https://book.douban.com/subject/27081188/" target="_blank" rel="noopener">《架构解密从分布式到微服务（Leaderus著）》</a></p>
-<p>很一般的书籍，我就是当做课后图书来阅读的。</p>
-</li>
-</ul>
-<blockquote>
-<h3 id="课外书籍"><a href="#课外书籍" class="headerlink" title="课外书籍"></a>课外书籍</h3></blockquote>
-<p>《技术奇点》 :thumbsup:《追风筝的人》 :thumbsup:《穆斯林的葬礼》  :thumbsup:《三体》 《人工智能——李开复》<br>:thumbsup:《活着——余华》  </p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
         <time datetime="2018-05-08T11:37:11.000Z"><a href="/2018/05/08/2018-05-08/">2018-05-08</a></time>
       
       
@@ -1091,13 +877,87 @@
 
 
 
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-03-24T07:55:28.000Z"><a href="/2018/03/24/hello-hexo/">2018-03-24</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2018/03/24/hello-hexo/">hello hexo</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>hello hexo<br>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2018/03/24/hello-hexo/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-03-23T14:10:16.814Z"><a href="/2018/03/23/hello-world/">2018-03-23</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2018/03/23/hello-world/">Hello World</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post.  Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
 
 <nav id="pagination">
   
     <a href="/page/2/" class="alignleft prev">上一页</a>
   
-  
-    <a href="/page/4/" class="alignright next">下一页</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
