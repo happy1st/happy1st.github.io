@@ -1,0 +1,351 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>you left，I right</title>
+  <meta name="author" content="happy1st">
+  
+  <meta name="description" content="记录后青春">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="you left，I right"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="/atom.xml" title="you left，I right" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+  <script src="https://cdn1.lncld.net/static/js/3.6.1/av-min.js"></script>
+  <script>
+	var APP_ID = 'rhvUkXBxc7IAl5eYvkEV4kCy-gzGzoHsz';
+	var APP_KEY = 'M26DgAo4H6hhYGjL4ILzR9ap';
+
+	AV.init({
+  		appId: APP_ID,
+  		appKey: APP_KEY
+	});
+</script>
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">you left，I right</a></h1>
+  <h2><a href="/"></a></h2>
+  <div><a href="/">Heroes come and go , but legends are forever !</a></div>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-07-30T03:02:35.736Z"><a href="/2018/07/30/Java相关/Java基础知识面试题总结/超详细的Java面试题总结（二）之Java基础知识篇/">2018-07-30</a></time>
+      
+      
+  
+    <h1 class="title"></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="多线程和Java虚拟机"><a href="#多线程和Java虚拟机" class="headerlink" title="多线程和Java虚拟机"></a>多线程和Java虚拟机</h1><h2 id="创建线程有几种不同的方式？你喜欢哪一种？为什么？"><a href="#创建线程有几种不同的方式？你喜欢哪一种？为什么？" class="headerlink" title="创建线程有几种不同的方式？你喜欢哪一种？为什么？"></a><font face="楷体">创建线程有几种不同的方式？你喜欢哪一种？为什么？</font></h2><ol>
+<li>继承Thread类</li>
+<li>实现Runnable接口</li>
+<li>应用程序可以使用Executor框架来创建线程池</li>
+<li>实现Callable接口。</li>
+</ol>
+<p>我更喜欢实现Runnable接口这种方法，当然这也是现在大多程序员会选用的方法。因为一个类只能继承一个父类而可以实现多个接口。同时，线程池也是非常高效的，很容易实现和使用。</p>
+<h2 id="简述线程，程序、进程的基本概念。以及他们之间关系是什么？（参考书籍：《Java程序设计基础》第五版）"><a href="#简述线程，程序、进程的基本概念。以及他们之间关系是什么？（参考书籍：《Java程序设计基础》第五版）" class="headerlink" title="简述线程，程序、进程的基本概念。以及他们之间关系是什么？（参考书籍：《Java程序设计基础》第五版）"></a><font face="楷体">简述线程，程序、进程的基本概念。以及他们之间关系是什么？（参考书籍：《Java程序设计基础》第五版）</font></h2><p><strong>线程</strong>与进程相似，但线程是一个比进程更小的执行单位。一个进程在其执行的过程中可以产生多个线程。与进程不同的是同类的多个线程共享同一块内存空间和一组系统资源，所以系统在产生一个线程，或是在各个线程之间作切换工作时，负担要比进程小得多，也正因为如此，线程也被称为轻量级进程。  </p>
+<p><strong>程序</strong>是含有指令和数据的文件，被存储在磁盘或其他的数据存储设备中，也就是说程序是静态的代码。</p>
+<p><strong>进程</strong>是程序的一次执行过程，是系统运行程序的基本单位，因此进程是动态的。系统运行一个程序即是一个进程从创建，运行到消亡的过程。简单来说，一个进程就是一个执行中的程序，它在计算机中一个指令接着一个指令地执行着，同时，每个进程还占有某些系统资源如CPU时间，内存空间，文件，文件，输入输出设备的使用权等等。换句话说，当程序在执行时，将会被操作系统载入内存中。<br>线程是进程划分成的更小的运行单位。线程和进程最大的不同在于基本上各进程是独立的，而各线程则不一定，因为同一进程中的线程极有可能会相互影响。从另一角度来说，进程属于操作系统的范畴，主要是同一段时间内，可以同时执行一个以上的程序，而线程则是在同一程序内几乎同时执行一个以上的程序段。</p>
+<h2 id="什么是多线程？为什么程序的多线程功能是必要的？"><a href="#什么是多线程？为什么程序的多线程功能是必要的？" class="headerlink" title="什么是多线程？为什么程序的多线程功能是必要的？"></a><font face="楷体">什么是多线程？为什么程序的多线程功能是必要的？</font></h2><p> 多线程就是几乎同时执行多个线程（一个处理器在某一个时间点上永远都只能是一个线程！即使这个处理器是多核的，除非有多个处理器才能实现多个线程同时运行。）。几乎同时是因为实际上多线程程序中的多个线程实际上是一个线程执行一会然后其他的线程再执行，并不是很多书籍所谓的同时执行。这样可以带来以下的好处：</p>
+<ol>
+<li>使用线程可以把占据长时间的程序中的任务放到后台去处理</li>
+<li>用户界面可以更加吸引人，这样比如用户点击了一个按钮去触发某些事件的处理，可以弹出一个进度条来显示处理的进度</li>
+<li>程序的运行速度可能加快</li>
+<li>在一些等待的任务实现上如用户输入、文件读写和网络收发数据等，线程就比较有用了。在这种情况下可以释放一些珍贵的资源如内存占用等等。<br>还有其他很多使用多线程的好处，这里就不一一说明了。</li>
+</ol>
+<h2 id="多线程与多任务的差异是什么？（参考书籍：《Java程序设计基础》第五版）"><a href="#多线程与多任务的差异是什么？（参考书籍：《Java程序设计基础》第五版）" class="headerlink" title="多线程与多任务的差异是什么？（参考书籍：《Java程序设计基础》第五版）"></a><font face="楷体">多线程与多任务的差异是什么？（参考书籍：《Java程序设计基础》第五版）</font></h2><p>多任务与多线程是两个不同的概念，<br>多任务是针对操作系统而言的，表示操作系统可以同时运行多个应用程序。<br>而多线程是针对一个进程而言的，表示在一个进程内部可以几乎同时执行多个线程</p>
+<h2 id="线程有哪些基本状态？这些状态是如何定义的"><a href="#线程有哪些基本状态？这些状态是如何定义的" class="headerlink" title="线程有哪些基本状态？这些状态是如何定义的?"></a><font face="楷体">线程有哪些基本状态？这些状态是如何定义的?</font></h2><ol>
+<li><strong>新建(new)</strong>：新创建了一个线程对象。</li>
+<li><strong>可运行(runnable)</strong>：线程对象创建后，其他线程(比如main线程）调用了该对象的start()方法。该状态的线程位于可运行线程池中，等待被线程调度选中，获 取cpu的使用权。</li>
+<li><strong>运行(running)</strong>：可运行状态(runnable)的线程获得了cpu时间片（timeslice），执行程序代码。</li>
+<li><strong>阻塞(block)</strong>：阻塞状态是指线程因为某种原因放弃了cpu使用权，也即让出了cpu timeslice，暂时停止运行。直到线程进入可运行(runnable)状态，才有 机会再次获得cpu timeslice转到运行(running)状态。阻塞的情况分三种：<br>(一). 等待阻塞：运行(running)的线程执行o.wait()方法，JVM会把该线程放 入等待队列(waitting queue)中。<br>(二). 同步阻塞：运行(running)的线程在获取对象的同步锁时，若该同步锁 被别的线程占用，则JVM会把该线程放入锁池(lock pool)中。<br>(三). 其他阻塞: 运行(running)的线程执行Thread.sleep(long ms)或t.join()方法，或者发出了I/O请求时，JVM会把该线程置为阻塞状态。当sleep()状态超时join()等待线程终止或者超时、或者I/O处理完毕时，线程重新转入可运行(runnable)状态。</li>
+<li><strong>死亡(dead)</strong>：线程run()、main()方法执行结束，或者因异常退出了run()方法，则该线程结束生命周期。死亡的线程不可再次复生。<br><img src="https://user-gold-cdn.xitu.io/2017/12/15/16059cc91ee8efb3?w=876&amp;h=492&amp;f=png&amp;s=-1" alt="线程的基本状态"><br>备注：<br>可以用早起坐地铁来比喻这个过程：<br>还没起床：sleeping<br>起床收拾好了，随时可以坐地铁出发：Runnable<br>等地铁来：Waiting<br>地铁来了，但要排队上地铁：I/O阻塞<br>上了地铁，发现暂时没座位：synchronized阻塞<br>地铁上找到座位：Running<br>到达目的地：Dead</li>
+</ol>
+<h2 id="什么是线程的同步？程序中为什么要实现线程的同步？是如何实现同步的？"><a href="#什么是线程的同步？程序中为什么要实现线程的同步？是如何实现同步的？" class="headerlink" title="什么是线程的同步？程序中为什么要实现线程的同步？是如何实现同步的？"></a><font face="楷体">什么是线程的同步？程序中为什么要实现线程的同步？是如何实现同步的？</font></h2><p>当一个线程对共享的数据进行操作时，应使之成为一个”原子操作“，即在没有完成相关操作之前，不允许其他线程打断它，否则，就会破坏数据的完整性，必然会得到错误的处理结果，这就是线程的同步。<br>在多线程应用中，考虑不同线程之间的数据同步和防止死锁。当两个或多个线程之间同时等待对方释放资源的时候就会形成线程之间的死锁。为了防止死锁的发生，需要通过同步来实现线程安全。</p>
+<h2 id="在监视器-Monitor-内部，是如何做线程同步的？程序应该做哪种级别的同步？"><a href="#在监视器-Monitor-内部，是如何做线程同步的？程序应该做哪种级别的同步？" class="headerlink" title="在监视器(Monitor)内部，是如何做线程同步的？程序应该做哪种级别的同步？"></a><font face="楷体">在监视器(Monitor)内部，是如何做线程同步的？程序应该做哪种级别的同步？</font></h2><p>在 java 虚拟机中, 每个对象( Object 和 class )通过某种逻辑关联监视器,每个监视器和一个对象引用相关联, 为了实现监视器的互斥功能, 每个对象都关联着一把锁.<br>一旦方法或者代码块被 <strong>synchronized</strong> 修饰, 那么这个部分就放入了监视器的监视区域, <strong>确保一次只能有一个线程执行该部分的代码</strong>, 线程在获取锁之前不允许执行该部分的代码<br>另外 java 还提供了显式监视器( Lock )和隐式监视器( synchronized )两种锁方案</p>
+<h2 id="什么是死锁-deadlock-？"><a href="#什么是死锁-deadlock-？" class="headerlink" title="什么是死锁(deadlock)？"></a><font face="楷体">什么是死锁(deadlock)？</font></h2><p><a href="https://baike.so.com/doc/6950313-7172714.html" target="_blank" rel="noopener">360百科</a></p>
+<p>死锁 :是指两个或两个以上的进程在执行过程中,因争夺资源而造成的一种互相等待的现象,若无外力作用,它们都将无法推进下去 。<br>产生原因：</p>
+<ul>
+<li>因为系统资源不足。 </li>
+<li>进程运行推进顺序不合适。 </li>
+<li>资源分配不当等。 </li>
+<li>占用资源的程序崩溃等。</li>
+</ul>
+<p>如果系统资源充足，进程的资源请求都能够得到满足，死锁出现的可能性就很低，否则就会因争夺有限的资源而陷入死锁。其次，进程运行推进顺序与速度不同，也可能产生死锁。</p>
+<p>下面四个条件是死锁的必要条件，只要系统发生死锁，这些条件必然成立，而只要下列条件之一不满足，就不会发生死锁。 </p>
+<ul>
+<li>互斥条件：一个资源每次只能被一个进程使用。 </li>
+<li>请求与保持条件：一个进程因请求资源而阻塞时，对已获得的资源保持不放。 </li>
+<li>不剥夺条件:进程已获得的资源，在末使用完之前，不能强行剥夺。 </li>
+<li>循环等待条件:若干进程之间形成一种头尾相接的循环等待资源关系。<br>死锁的解除与预防：</li>
+</ul>
+<p>理解了死锁的原因，尤其是产生死锁的四个必要条件，就可以最大可能地避免、预防和 解除死锁。所以，在系统设计、进程调度等方面注意如何不让这四个必要条件成立，如何确 定资源的合理分配算法，避免进程永久占据系统资源。此外，也要防止进程在处于等待状态的情况下占用资源。因此，对资源的分配要给予合理的规划。</p>
+<h2 id="如何确保N个线程可以访问N个资源同时又不导致死锁？"><a href="#如何确保N个线程可以访问N个资源同时又不导致死锁？" class="headerlink" title="如何确保N个线程可以访问N个资源同时又不导致死锁？"></a><font face="楷体">如何确保N个线程可以访问N个资源同时又不导致死锁？</font></h2><p>上面一题我们知道了发生死锁的四个必要条件。我们只要使其中一个不成立就行了。一种非常简单的避免死锁的方式就是：指定获取锁的顺序，并强制线程按照指定的顺序获取锁。因此，如果所有的线程都是以同样的顺序加锁和释放锁，就不会出现死锁了。这也就是破坏了第四个条件循环等待条件。</p>
+<h2 id="Java中垃圾回收有什么目的？什么时候进行垃圾回收？"><a href="#Java中垃圾回收有什么目的？什么时候进行垃圾回收？" class="headerlink" title="Java中垃圾回收有什么目的？什么时候进行垃圾回收？"></a><font face="楷体">Java中垃圾回收有什么目的？什么时候进行垃圾回收？</font></h2><p>垃圾回收是在内存中存在没有引用的对象或超过作用域的对象时进行。</p>
+<p>垃圾回收的目的是识别并且丢弃应用不再使用的对象来释放和重用资源。</p>
+<h2 id="finalize-方法什么时候被调用？析构函数-finalization-的目的是什么？"><a href="#finalize-方法什么时候被调用？析构函数-finalization-的目的是什么？" class="headerlink" title="finalize()方法什么时候被调用？析构函数(finalization)的目的是什么？"></a><font face="楷体">finalize()方法什么时候被调用？析构函数(finalization)的目的是什么？</font></h2><p>1）垃圾回收器（garbage colector）决定回收某对象时，就会运行该对象的finalize()方法；<br>finalize是Object类的一个方法，该方法在Object类中的声明protected void finalize() throws Throwable { }<br>在垃圾回收器执行时会调用被回收对象的finalize()方法，可以覆盖此方法来实现对其资源的回收。注意：一旦垃圾回收器准备释放对象占用的内存，将首先调用该对象的finalize()方法，并且下一次垃圾回收动作发生时，才真正回收对象占用的内存空间</p>
+<p>2）GC本来就是内存回收了，应用还需要在finalization做什么呢？ 答案是大部分时候，什么都不用做(也就是不需要重载)。只有在某些很特殊的情况下，比如你调用了一些native的方法(一般是C写的)，可以要在finaliztion里去调用C的释放函数。</p>
+<h2 id="如果对象的引用被置为null，垃圾收集器是否会立即释放对象占用的内存？"><a href="#如果对象的引用被置为null，垃圾收集器是否会立即释放对象占用的内存？" class="headerlink" title="如果对象的引用被置为null，垃圾收集器是否会立即释放对象占用的内存？"></a><font face="楷体">如果对象的引用被置为null，垃圾收集器是否会立即释放对象占用的内存？</font></h2><p>不会，在下一个垃圾回收周期中，这个对象将是可被回收的。</p>
+<h2 id="Java中堆和栈的区别"><a href="#Java中堆和栈的区别" class="headerlink" title="Java中堆和栈的区别"></a><font face="楷体">Java中堆和栈的区别</font></h2><p><a href="http://www.cnblogs.com/perfy/p/3820594.html" target="_blank" rel="noopener">Java中堆和栈的区别</a></p>
+<p><strong>堆内存</strong>用来存放由new创建的对象和数组。 在堆中分配的内存，由Java虚拟机的自动垃圾回收器来管理。<br><strong>栈</strong>中一般存放的是局部变量（方法中的变量或某代码段里（比如for循环））</p>
+<h2 id="Java堆的结构是什么样子的？什么是堆中的永久代-Perm-Gen-space"><a href="#Java堆的结构是什么样子的？什么是堆中的永久代-Perm-Gen-space" class="headerlink" title="Java堆的结构是什么样子的？什么是堆中的永久代(Perm Gen space)?"></a><font face="楷体">Java堆的结构是什么样子的？什么是堆中的永久代(Perm Gen space)?</font></h2><p><a href="https://www.nowcoder.com/ta/review-java/review?page=39" target="_blank" rel="noopener">Java堆的结构是什么样子的？什么是堆中的永久代</a></p>
+<h1 id="Java集合框架"><a href="#Java集合框架" class="headerlink" title="Java集合框架"></a>Java集合框架</h1><font face="楷体">List，Set,Map三者的区别及总结</font>
+
+<font face="楷体">ArrayList 与 Vector 区别（为什么要用Arraylist取代Vector呢？）</font>
+
+<font face="楷体">List，Set,Map三者的区别及总结</font>
+
+<font face="楷体">HashMap 和 Hashtable 的区别</font>
+
+<font face="楷体">HashSet 和 HashMap 区别</font>
+
+<font face="楷体">HashMap 和 ConcurrentHashMap 的区别</font>
+
+<font face="楷体">HashSet如何检查重复</font>
+
+<font face="楷体">comparable 和 comparator的区别？</font>
+
+<font face="楷体">如何对Object的list排序？</font>
+
+<font face="楷体">如何实现数组与List的相互转换？</font>
+
+<font face="楷体">如何求ArrayList集合的交集 并集 差集 去重复并集?</font>
+
+<font face="楷体">HashMap 的工作原理及代码实现</font>
+
+<font face="楷体">ConcurrentHashMap 的工作原理及代码实现</font>
+
+<font face="楷体">集合框架底层数据结构总结</font>
+
+<font face="楷体">集合的选用</font>
+
+
+
+
+      
+    </div>
+    <footer>
+      
+        
+        
+        <script>
+    window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "",
+            "bdMini": "2",
+            "bdPic": "",
+            "bdStyle": "0",
+            "bdSize": "16"
+        },
+        "share": {},
+        "image": {
+            "viewList": ["qzone", "tsina", "tqq", "renren", "weixin"],
+            "viewText": "分享到",
+            "viewSize": "16"
+        },
+        "selectShare": {
+            "bdContainerClass": null,
+            "bdSelectMiniList": ["qzone", "tsina", "tqq", "renren", "weixin"]
+        }
+    };
+    /*with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];*/
+with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = '/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+<div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina"></a>
+    <a href="#" class="bds_tqq" data-cmd="tqq"></a>
+    <a href="#" class="bds_renren" data-cmd="renren"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin"></a>
+</div>
+
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="http://yoursite.com/2018/07/30/Java相关/Java基础知识面试题总结/超详细的Java面试题总结（二）之Java基础知识篇/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li></ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-light/">hexo, light</a><span class="tag-list-count">1</span></li></ul>
+</div>
+
+
+  <div class="widget tag">
+<h3 class="title">友情链接</h3>
+<ul class="entry">
+<li><a href="https://www.baidu.com/" title="百度搜索" target="_blank">百度搜索</a></li>
+<li><a href="https://www.github.com/" title="github官网" target="_blank">github官网</a></li>
+</ul>
+</div>
+
+
+  <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="https://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=1&ptype=1&speed=0&skin=5&isTitle=1&noborder=1&isWeibo=1&isFans=0&uid=5684095680&verifier=b4735243&dpc=1"></iframe>
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2018 happy1st
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="https://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+<!--page counter part-->
+<script>
+function addCount (Counter) {
+        url=$('.article-date').attr('href').trim();
+        title = $('.article-title').text().trim();
+        var query=new AV.Query(Counter);
+        //use url as unique idnetfication
+        query.equalTo("url",url);
+        query.find({
+            success: function(results){
+                if(results.length>0)
+                {
+                    var counter=results[0];
+                    counter.fetchWhenSave(true); //get recent result
+                    counter.increment("time");
+                    counter.save();
+                }
+                else
+                {
+                    var newcounter=new Counter();
+                    newcounter.set("title",title);
+                    newcounter.set("url",url);
+                    newcounter.set("time",1);
+                    newcounter.save(null,{
+                        success: function(newcounter){
+                        //alert('New object created');
+                        },
+                        error: function(newcounter,error){
+                        alert('Failed to create');
+                        }
+                        });
+                }
+            },
+            error: function(error){
+                //find null is not a error
+                alert('Error:'+error.code+" "+error.message);
+            }
+        });
+}
+$(function(){
+        var Counter=AV.Object.extend("Counter");
+        //only increse visit counting when intering a page
+        if ($('.article-title').length == 1)
+           addCount(Counter);
+        var query=new AV.Query(Counter);
+        query.descending("time");
+        // the sum of popular posts
+        query.limit(10); 
+        query.find({
+            success: function(results){
+                    for(var i=0;i<results.length;i++)    
+                    {
+                        var counter=results[i];
+                        title=counter.get("title");
+                        url=counter.get("url");
+                        time=counter.get("time");
+                        // add to the popularlist widget
+                        showcontent=title+" ("+time+")";
+                        //notice the "" in href
+                        $('.popularlist').append('<li><a href="'+url+'">'+showcontent+'</a></li>');
+                    }
+                },
+            error: function(error){
+                alert("Error:"+error.code+" "+error.message);
+            }
+            }
+        )
+        });
+</script>
+</body>
+</html>
+

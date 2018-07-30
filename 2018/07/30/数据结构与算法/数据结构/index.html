@@ -1,0 +1,363 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>you left，I right</title>
+  <meta name="author" content="happy1st">
+  
+  <meta name="description" content="记录后青春">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="you left，I right"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="/atom.xml" title="you left，I right" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+  <script src="https://cdn1.lncld.net/static/js/3.6.1/av-min.js"></script>
+  <script>
+	var APP_ID = 'rhvUkXBxc7IAl5eYvkEV4kCy-gzGzoHsz';
+	var APP_KEY = 'M26DgAo4H6hhYGjL4ILzR9ap';
+
+	AV.init({
+  		appId: APP_ID,
+  		appKey: APP_KEY
+	});
+</script>
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">you left，I right</a></h1>
+  <h2><a href="/"></a></h2>
+  <div><a href="/">Heroes come and go , but legends are forever !</a></div>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-07-30T03:02:35.814Z"><a href="/2018/07/30/数据结构与算法/数据结构/">2018-07-30</a></time>
+      
+      
+  
+    <h1 class="title"></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>在我们学习Java的时候，很多人会面临我不知道继续学什么或者面试会问什么的尴尬情况（我本人之前就很迷茫）。所以，我决定通过这个开源平台来帮助一些有需要的人，通过下面的内容，你会掌握系统的Java学习以及面试的相关知识。本来是想通过Gitbook的形式来制作的，后来想了想觉得可能有点大题小做。另外，我自己一个人的力量毕竟有限，希望各位有想法的朋友可以提issue和pull。</p>
+<p>———–<strong>最新更新5/9/16:00</strong>———-</p>
+<p><strong>Java面试通关手册（Java学习指南）github 地址</strong>：<a href="https://github.com/Snailclimb/Java_Guide" target="_blank" rel="noopener">https://github.com/Snailclimb/Java_Guide</a></p>
+<p>如果你觉得有什么问题可以给我提issue，觉得不错的话你也可以star一下。目前更新的内容并不多，因为为了保证文章质量，每一篇文章我自己都看了一遍，希望大家贡献自己的力量完善。</p>
+<h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><p>推荐学习视频：<a href="https://www.icourse163.org/course/ZJU-93001" target="_blank" rel="noopener">浙江大学数据结构国家精品教程</a></p>
+<ul>
+<li><p><strong>Queue</strong></p>
+<p><a href="http://wanglizhi.github.io/2016/06/18/Java-Queue/" target="_blank" rel="noopener">Java集合类分析之Queue</a></p>
+</li>
+<li><p><strong>Set</strong></p>
+<p>  <a href="https://www.jianshu.com/p/9081017a2d67" target="_blank" rel="noopener">由浅入深理解java集合(二)——集合 Set</a></p>
+</li>
+<li><p><strong>List</strong></p>
+<p> <a href="http://www.cnblogs.com/skywang12345/p/3308900.html" target="_blank" rel="noopener">Java 集合系列08之 List总结(LinkedList, ArrayList等使用场景和性能分析)</a></p>
+<p> <strong>ArrayList</strong> 是一个数组队列，相当于动态数组。它由数组实现，随机访问效率高，随机插入、随机删除效率低。</p>
+<p>  <strong>LinkedList</strong> 是一个双向链表。它也可以被当作堆栈、队列或双端队列进行操作。LinkedList随机访问效率低，但随机插入、随机删除效率低。</p>
+<p>  <strong>Vector</strong> 是矢量队列，和ArrayList一样，它也是一个动态数组，由数组实现。但是ArrayList是非线程安全的，而Vector是线程安全的。</p>
+<p> <strong>Stack</strong>  是栈，它继承于Vector。它的特性是：先进后出(FILO, First In Last Out)。</p>
+<p>  <a href="https://juejin.im/post/5aafa05a6fb9a028c06aa217" target="_blank" rel="noopener">集合框架源码学习之ArrayList</a></p>
+<p>  注意ArrayList的扩容机制(注意移位运算符的使用)以及System.arraycopy()和Arrays.copyOf()方法在ArrayList集合源码中的使用。</p>
+<p>  <a href="https://juejin.im/post/5aafab9651882555635e219a" target="_blank" rel="noopener">集合框架源码学习之LinkedList</a></p>
+<p>  <a href="https://blog.csdn.net/javazejian/article/details/52953190" target="_blank" rel="noopener">java数据结构与算法之顺序表与链表深入分析</a></p>
+</li>
+<li><p><strong>Map</strong></p>
+<p><a href="https://juejin.im/post/5ab0568b5188255580020e56" target="_blank" rel="noopener">集合框架源码学习之HashMap(JDK1.8)</a></p>
+<p><a href="https://link.juejin.im/?target=http%3A%2F%2Fwww.cnblogs.com%2Fchengxiao%2Fp%2F6842045.html" target="_blank" rel="noopener">ConcurrentHashMap实现原理及源码分析</a></p>
+</li>
+<li><p><strong>Stack(栈)</strong></p>
+<p><a href="https://blog.csdn.net/javazejian/article/details/53362993" target="_blank" rel="noopener">java数据结构与算法之栈（Stack）设计与实现</a></p>
+</li>
+<li><p><strong>树</strong></p>
+<ul>
+<li><p><strong>1 二叉树</strong></p>
+<p> <a href="https://baike.baidu.com/item/%E4%BA%8C%E5%8F%89%E6%A0%91" target="_blank" rel="noopener">二叉树</a>（百度百科）</p>
+<p>(1)<a href="https://baike.baidu.com/item/%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91" target="_blank" rel="noopener">完全二叉树</a>——若设二叉树的高度为h，除第 h 层外，其它各层 (1～h-1) 的结点数都达到最大个数，第h层有叶子结点，并且叶子结点都是从左到右依次排布，这就是完全二叉树。</p>
+<p>(2)<a href="https://baike.baidu.com/item/%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91" target="_blank" rel="noopener">满二叉树</a>——除了叶结点外每一个结点都有左右子叶且叶子结点都处在最底层的二叉树。</p>
+<p>(3)<a href="https://baike.baidu.com/item/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/10421057" target="_blank" rel="noopener">平衡二叉树</a>——平衡二叉树又被称为AVL树（区别于AVL算法），它是一棵二叉排序树，且具有以下性质：它是一棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。 </p>
+</li>
+<li><p><strong>2 完全二叉树</strong></p>
+<p><a href="https://baike.baidu.com/item/%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91" target="_blank" rel="noopener">完全二叉树</a>（百度百科）</p>
+<p>完全二叉树：叶节点只能出现在最下层和次下层，并且最下面一层的结点都集中在该层最左边的若干位置的二叉树</p>
+</li>
+<li><p><strong>3 满二叉树</strong></p>
+<p> <a href="https://baike.baidu.com/item/%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91" target="_blank" rel="noopener">满二叉树</a>（百度百科，国内外的定义不同）</p>
+<p> 国内教程定义：一个二叉树，如果每一个层的结点数都达到最大值，则这个二叉树就是满二叉树。也就是说，如果一个二叉树的层数为K，且结点总数是(2^k) -1 ，则它就是满二叉树。</p>
+</li>
+<li><p><strong>堆</strong></p>
+<p> <a href="https://blog.csdn.net/qq_33186366/article/details/51876191" target="_blank" rel="noopener">数据结构之堆的定义</a></p>
+<p>堆是具有以下性质的完全二叉树：每个结点的值都大于或等于其左右孩子结点的值，称为大顶堆；或者每个结点的值都小于或等于其左右孩子结点的值，称为小顶堆</p>
+</li>
+<li><p><strong>4 二叉查找树（BST）</strong></p>
+<p><a href="http://www.cnblogs.com/yangecnu/p/Introduce-Binary-Search-Tree.html" target="_blank" rel="noopener">浅谈算法和数据结构: 七 二叉查找树</a></p>
+<p> 二叉查找树的特点：</p>
+<ol>
+<li>若任意节点的左子树不空，则左子树上所有结点的     值均小于它的根结点的值；</li>
+<li>若任意节点的右子树不空，则右子树上所有结点的值均大于它的根结点的值；</li>
+<li>任意节点的左、右子树也分别为二叉查找树。</li>
+<li>没有键值相等的节点（no duplicate nodes）。</li>
+</ol>
+</li>
+<li><p><strong>5 平衡二叉树（Self-balancing binary search tree）</strong></p>
+<p><a href="https://baike.baidu.com/item/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91" target="_blank" rel="noopener"> 平衡二叉树</a>（百度百科，平衡二叉树的常用实现方法有红黑树、AVL、替罪羊树、Treap、伸展树等）</p>
+</li>
+<li><p><strong>6 红黑树</strong></p>
+<p>红黑树特点:</p>
+<ol>
+<li>每个节点不是红色就是黑色的；</li>
+<li>根节点总是黑色的；</li>
+<li>所有的叶节点都是是黑色的（红黑树的叶子节点都是空节点（NIL或者NULL））；</li>
+<li>如果节点是红色的，则它的子节点必须是黑色的（反之不一定）；</li>
+<li><p>从根节点到叶节点或空子节点的每条路径，必须包含相同数目的黑色节点（即相同的黑色高度）</p>
+<p><a href="https://juejin.im/post/5a27c6946fb9a04509096248#comment" target="_blank" rel="noopener">漫画：什么是红黑树？</a>（也介绍到了二叉查找树）</p>
+<p><a href="http://dandanlove.com/2018/03/18/red-black-tree/" target="_blank" rel="noopener">寻找红黑树的操作手册</a>（文章排版以及思路真的不错）</p>
+<p><a href="https://zhuanlan.zhihu.com/p/24367771" target="_blank" rel="noopener">红黑树深入剖析及Java实现</a>（美团点评技术团队）    </p>
+</li>
+</ol>
+</li>
+<li><p><strong>7 B-，B+，B*树</strong></p>
+<p> <a href="https://yq.aliyun.com/articles/38345" target="_blank" rel="noopener">二叉树学习笔记之B树、B+树、B*树 </a></p>
+<p> <a href="https://blog.csdn.net/aqzwss/article/details/53074186" target="_blank" rel="noopener">《B-树，B+树，B*树详解》</a></p>
+<p> <a href="https://blog.csdn.net/bigtree_3721/article/details/73632405" target="_blank" rel="noopener">《B-树，B+树与B*树的优缺点比较》</a></p>
+<p>B-树（或B树）是一种平衡的多路查找(又称排序)树，在文件系统中有所应用。主要用作文件的索引。其中的B就表示平衡(Balance) </p>
+<ol>
+<li>B+ 树的叶子节点链表结构相比于 B- 树便于扫库，和范围检索。</li>
+<li>B+树支持range-query(区间查询)非常方便，而B树不支持。这是数据库选用B+树的最主要原因。</li>
+<li>B<em>树 是B+树的变体，B</em>树分配新结点的概率比B+树要低，空间使用率更高；</li>
+</ol>
+</li>
+<li><p><strong>8 LSM 树</strong></p>
+<p><a href="https://blog.csdn.net/dbanote/article/details/8897599" target="_blank" rel="noopener">[HBase] LSM树 VS B+树</a></p>
+<p>B+树最大的性能问题是会产生大量的随机IO</p>
+<p>为了克服B+树的弱点，HBase引入了LSM树的概念，即Log-Structured Merge-Trees。</p>
+<p><a href="http://www.cnblogs.com/yanghuahui/p/3483754.html" target="_blank" rel="noopener">LSM树由来、设计思想以及应用到HBase的索引</a></p>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+        <script>
+    window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "",
+            "bdMini": "2",
+            "bdPic": "",
+            "bdStyle": "0",
+            "bdSize": "16"
+        },
+        "share": {},
+        "image": {
+            "viewList": ["qzone", "tsina", "tqq", "renren", "weixin"],
+            "viewText": "分享到",
+            "viewSize": "16"
+        },
+        "selectShare": {
+            "bdContainerClass": null,
+            "bdSelectMiniList": ["qzone", "tsina", "tqq", "renren", "weixin"]
+        }
+    };
+    /*with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];*/
+with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = '/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+<div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina"></a>
+    <a href="#" class="bds_tqq" data-cmd="tqq"></a>
+    <a href="#" class="bds_renren" data-cmd="renren"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin"></a>
+</div>
+
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="http://yoursite.com/2018/07/30/数据结构与算法/数据结构/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li></ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-light/">hexo, light</a><span class="tag-list-count">1</span></li></ul>
+</div>
+
+
+  <div class="widget tag">
+<h3 class="title">友情链接</h3>
+<ul class="entry">
+<li><a href="https://www.baidu.com/" title="百度搜索" target="_blank">百度搜索</a></li>
+<li><a href="https://www.github.com/" title="github官网" target="_blank">github官网</a></li>
+</ul>
+</div>
+
+
+  <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="https://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=1&ptype=1&speed=0&skin=5&isTitle=1&noborder=1&isWeibo=1&isFans=0&uid=5684095680&verifier=b4735243&dpc=1"></iframe>
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2018 happy1st
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="https://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+<!--page counter part-->
+<script>
+function addCount (Counter) {
+        url=$('.article-date').attr('href').trim();
+        title = $('.article-title').text().trim();
+        var query=new AV.Query(Counter);
+        //use url as unique idnetfication
+        query.equalTo("url",url);
+        query.find({
+            success: function(results){
+                if(results.length>0)
+                {
+                    var counter=results[0];
+                    counter.fetchWhenSave(true); //get recent result
+                    counter.increment("time");
+                    counter.save();
+                }
+                else
+                {
+                    var newcounter=new Counter();
+                    newcounter.set("title",title);
+                    newcounter.set("url",url);
+                    newcounter.set("time",1);
+                    newcounter.save(null,{
+                        success: function(newcounter){
+                        //alert('New object created');
+                        },
+                        error: function(newcounter,error){
+                        alert('Failed to create');
+                        }
+                        });
+                }
+            },
+            error: function(error){
+                //find null is not a error
+                alert('Error:'+error.code+" "+error.message);
+            }
+        });
+}
+$(function(){
+        var Counter=AV.Object.extend("Counter");
+        //only increse visit counting when intering a page
+        if ($('.article-title').length == 1)
+           addCount(Counter);
+        var query=new AV.Query(Counter);
+        query.descending("time");
+        // the sum of popular posts
+        query.limit(10); 
+        query.find({
+            success: function(results){
+                    for(var i=0;i<results.length;i++)    
+                    {
+                        var counter=results[i];
+                        title=counter.get("title");
+                        url=counter.get("url");
+                        time=counter.get("time");
+                        // add to the popularlist widget
+                        showcontent=title+" ("+time+")";
+                        //notice the "" in href
+                        $('.popularlist').append('<li><a href="'+url+'">'+showcontent+'</a></li>');
+                    }
+                },
+            error: function(error){
+                alert("Error:"+error.code+" "+error.message);
+            }
+            }
+        )
+        });
+</script>
+</body>
+</html>
+

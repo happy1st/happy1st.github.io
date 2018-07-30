@@ -1,0 +1,365 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>you left，I right</title>
+  <meta name="author" content="happy1st">
+  
+  <meta name="description" content="记录后青春">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="you left，I right"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="/atom.xml" title="you left，I right" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+  <script src="https://cdn1.lncld.net/static/js/3.6.1/av-min.js"></script>
+  <script>
+	var APP_ID = 'rhvUkXBxc7IAl5eYvkEV4kCy-gzGzoHsz';
+	var APP_KEY = 'M26DgAo4H6hhYGjL4ILzR9ap';
+
+	AV.init({
+  		appId: APP_ID,
+  		appKey: APP_KEY
+	});
+</script>
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">you left，I right</a></h1>
+  <h2><a href="/"></a></h2>
+  <div><a href="/">Heroes come and go , but legends are forever !</a></div>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-07-30T03:02:35.814Z"><a href="/2018/07/30/数据存储/Redis/">2018-07-30</a></time>
+      
+      
+  
+    <h1 class="title"></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Redis 是一个使用 C 语言写成的，开源的 key-value 数据库。。和Memcached类似，它支持存储的value类型相对更多，包括string(字符串)、list(链表)、set(集合)、zset(sorted set –有序集合)和hash（哈希类型）。这些数据类型都支持push/pop、add/remove及取交集并集和差集及更丰富的操作，而且这些操作都是原子性的。在此基础上，redis支持各种不同方式的排序。与memcached一样，为了保证效率，数据都是缓存在内存中。区别的是redis会周期性的把更新的数据写入磁盘或者把修改操作写入追加的记录文件，并且在此基础上实现了master-slave(主从)同步。目前，Vmware在资助着redis项目的开发和维护。</p>
+<blockquote>
+<h3 id="书籍推荐"><a href="#书籍推荐" class="headerlink" title="书籍推荐"></a>书籍推荐</h3></blockquote>
+<p><strong>《Redis实战》</strong></p>
+<p><strong>《Redis设计与实现》</strong></p>
+<blockquote>
+<h3 id="教程推荐"><a href="#教程推荐" class="headerlink" title="教程推荐"></a>教程推荐</h3></blockquote>
+<p><strong>redis官方中文版教程</strong>：<a href="http://www.redis.net.cn/tutorial/3501.html" target="_blank" rel="noopener">http://www.redis.net.cn/tutorial/3501.html</a></p>
+<p><strong>Redis 教程（菜鸟教程）</strong>：<a href="http://www.runoob.com/redis/redis-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/redis/redis-tutorial.html</a></p>
+<blockquote>
+<h3 id="常见问题总结"><a href="#常见问题总结" class="headerlink" title="常见问题总结"></a>常见问题总结</h3></blockquote>
+<p><strong>学完Redis之后要问自己下面几个问题：</strong></p>
+<ul>
+<li>Redis的两种持久化操作以及如何保障数据安全（快照和AOF），</li>
+<li>如何防止数据出错（Redis事务），</li>
+<li>如何使用流水线来提升性能，</li>
+<li>Redis主从复制，</li>
+<li>Redis集群的搭建</li>
+<li>Redis的几种淘汰策略</li>
+</ul>
+<p><strong>《一文轻松搞懂redis集群原理及搭建与使用》：</strong><br><a href="https://juejin.im/post/5ad54d76f265da23970759d3" target="_blank" rel="noopener">https://juejin.im/post/5ad54d76f265da23970759d3</a></p>
+<p>昨天写了一篇自己搭建redis集群并在自己项目中使用的文章，今天早上看别人写的面经发现redis在面试中还是比较常问的（笔主主Java方向）。所以查阅官方文档以及他人造好的轮子，总结了一些redis面试和学习中你必须掌握的问题。事无巨细，不可能囊括到所有内容，尽量把比较常见的写出来。欢迎关注我的微信公众号：“<strong>Java面试通关手册</strong>”，也可以加我微信：“<strong>bwcx9393</strong>”与我学习交流。</p>
+<h2 id="Redis常见问题总结与好文Mark"><a href="#Redis常见问题总结与好文Mark" class="headerlink" title="Redis常见问题总结与好文Mark"></a>Redis常见问题总结与好文Mark</h2><h3 id="什么是Redis？"><a href="#什么是Redis？" class="headerlink" title="什么是Redis？"></a>什么是Redis？</h3><blockquote>
+<p>Redis 是一个使用 C 语言写成的，开源的 key-value 数据库。。和Memcached类似，它支持存储的value类型相对更多，包括string(字符串)、list(链表)、set(集合)、zset(sorted set –有序集合)和hash（哈希类型）。这些数据类型都支持push/pop、add/remove及取交集并集和差集及更丰富的操作，而且这些操作都是原子性的。在此基础上，redis支持各种不同方式的排序。与memcached一样，为了保证效率，数据都是缓存在内存中。区别的是redis会周期性的把更新的数据写入磁盘或者把修改操作写入追加的记录文件，并且在此基础上实现了master-slave(主从)同步。目前，Vmware在资助着redis项目的开发和维护。</p>
+</blockquote>
+<h3 id="Redis与Memcached的区别与比较"><a href="#Redis与Memcached的区别与比较" class="headerlink" title="Redis与Memcached的区别与比较"></a>Redis与Memcached的区别与比较</h3><p>1 、Redis不仅仅支持简单的k/v类型的数据，同时还提供list，set，zset，hash等数据结构的存储。memcache支持简单的数据类型，String。</p>
+<p>2 、Redis支持数据的备份，即master-slave模式的数据备份。</p>
+<p>3 、Redis支持数据的持久化，可以将内存中的数据保持在磁盘中，重启的时候可以再次加载进行使用,而Memecache把数据全部存在内存之中</p>
+<p>4、 redis的速度比memcached快很多</p>
+<p>5、Memcached是多线程，非阻塞IO复用的网络模型；Redis使用单线程的IO复用模型。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/4/18/162d7773080d4570?w=621&amp;h=378&amp;f=jpeg&amp;s=45278" alt="Redis与Memcached的区别与比较"></p>
+<p>如果想要更详细了解的话，可以查看慕课网上的这篇手记（非常推荐） <strong>：《脚踏两只船的困惑 - Memcached与Redis》</strong>：<a href="https://www.imooc.com/article/23549" target="_blank" rel="noopener">https://www.imooc.com/article/23549</a></p>
+<h3 id="Redis与Memcached的选择"><a href="#Redis与Memcached的选择" class="headerlink" title="Redis与Memcached的选择"></a>Redis与Memcached的选择</h3><p><strong>终极策略：</strong> 使用Redis的String类型做的事，都可以用Memcached替换，以此换取更好的性能提升； 除此以外，优先考虑Redis；</p>
+<h3 id="使用redis有哪些好处？"><a href="#使用redis有哪些好处？" class="headerlink" title="使用redis有哪些好处？"></a>使用redis有哪些好处？</h3><p>(1) <strong>速度快</strong>，因为数据存在内存中，类似于HashMap，HashMap的优势就是查找和操作的时间复杂度都是O(1) </p>
+<p>(2)<strong>支持丰富数据类型</strong>，支持string，list，set，sorted set，hash </p>
+<p>(3) <strong>支持事务</strong> ：redis对事务是部分支持的，如果是在入队时报错，那么都不会执行；在非入队时报错，那么成功的就会成功执行。详细了解请参考：《Redis事务介绍（四）》：<a href="https://blog.csdn.net/cuipeng0916/article/details/53698774" target="_blank" rel="noopener">https://blog.csdn.net/cuipeng0916/article/details/53698774</a></p>
+<p>redis监控：锁的介绍</p>
+<p>(4) <strong>丰富的特性</strong>：可用于缓存，消息，按key设置过期时间，过期后将会自动删除</p>
+<h3 id="Redis常见数据结构使用场景"><a href="#Redis常见数据结构使用场景" class="headerlink" title="Redis常见数据结构使用场景"></a>Redis常见数据结构使用场景</h3><h4 id="1-String"><a href="#1-String" class="headerlink" title="1. String"></a>1. String</h4><blockquote>
+<p><strong>常用命令:</strong>  set,get,decr,incr,mget 等。</p>
+</blockquote>
+<p>String数据结构是简单的key-value类型，value其实不仅可以是String，也可以是数字。<br>常规key-value缓存应用；<br>常规计数：微博数，粉丝数等。</p>
+<h4 id="2-Hash"><a href="#2-Hash" class="headerlink" title="2.Hash"></a>2.Hash</h4><blockquote>
+<p><strong>常用命令：</strong> hget,hset,hgetall 等。</p>
+</blockquote>
+<p>Hash是一个string类型的field和value的映射表，hash特别适合用于存储对象。 比如我们可以Hash数据结构来存储用户信息，商品信息等等。</p>
+<p><strong>举个例子：</strong> 最近做的一个电商网站项目的首页就使用了redis的hash数据结构进行缓存，因为一个网站的首页访问量是最大的，所以通常网站的首页可以通过redis缓存来提高性能和并发量。我用<strong>jedis客户端</strong>来连接和操作我搭建的redis集群或者单机redis，利用jedis可以很容易的对redis进行相关操作，总的来说从搭一个简单的集群到实现redis作为缓存的整个步骤不难。感兴趣的可以看我昨天写的这篇文章：</p>
+<p><strong>《一文轻松搞懂redis集群原理及搭建与使用》：</strong> <a href="https://juejin.im/post/5ad54d76f265da23970759d3" target="_blank" rel="noopener">https://juejin.im/post/5ad54d76f265da23970759d3</a></p>
+<h4 id="3-List"><a href="#3-List" class="headerlink" title="3.List"></a>3.List</h4><blockquote>
+<p><strong>常用命令:</strong> lpush,rpush,lpop,rpop,lrange等</p>
+</blockquote>
+<p>list就是链表，Redis list的应用场景非常多，也是Redis最重要的数据结构之一，比如微博的关注列表，粉丝列表，最新消息排行等功能都可以用Redis的list结构来实现。</p>
+<p>Redis list的实现为一个双向链表，即可以支持反向查找和遍历，更方便操作，不过带来了部分额外的内存开销。</p>
+<h4 id="4-Set"><a href="#4-Set" class="headerlink" title="4.Set"></a>4.Set</h4><blockquote>
+<p><strong>常用命令：</strong><br>sadd,spop,smembers,sunion 等</p>
+</blockquote>
+<p>set对外提供的功能与list类似是一个列表的功能，特殊之处在于set是可以自动排重的。<br>当你需要存储一个列表数据，又不希望出现重复数据时，set是一个很好的选择，并且set提供了判断某个成员是否在一个set集合内的重要接口，这个也是list所不能提供的。</p>
+<p>在微博应用中，可以将一个用户所有的关注人存在一个集合中，将其所有粉丝存在一个集合。Redis可以非常方便的实现如共同关注、共同喜好、二度好友等功能。</p>
+<h4 id="5-Sorted-Set"><a href="#5-Sorted-Set" class="headerlink" title="5.Sorted Set"></a>5.Sorted Set</h4><blockquote>
+<p><strong>常用命令：</strong> zadd,zrange,zrem,zcard等</p>
+</blockquote>
+<p>和set相比，sorted set增加了一个权重参数score，使得集合中的元素能够按score进行有序排列。</p>
+<p><strong>举例：</strong> 在直播系统中，实时排行信息包含直播间在线用户列表，各种礼物排行榜，弹幕消息（可以理解为按消息维度的消息排行榜）等信息，适合使用Redis中的SortedSet结构进行存储。</p>
+<h3 id="MySQL里有2000w数据，Redis中只存20w的数据，如何保证Redis中的数据都是热点数据（redis有哪些数据淘汰策略？？？）"><a href="#MySQL里有2000w数据，Redis中只存20w的数据，如何保证Redis中的数据都是热点数据（redis有哪些数据淘汰策略？？？）" class="headerlink" title="MySQL里有2000w数据，Redis中只存20w的数据，如何保证Redis中的数据都是热点数据（redis有哪些数据淘汰策略？？？）"></a>MySQL里有2000w数据，Redis中只存20w的数据，如何保证Redis中的数据都是热点数据（redis有哪些数据淘汰策略？？？）</h3><p>　　　相关知识：redis 内存数据集大小上升到一定大小的时候，就会施行数据淘汰策略（回收策略）。redis 提供 6种数据淘汰策略：</p>
+<ol>
+<li><strong>volatile-lru</strong>：从已设置过期时间的数据集（server.db[i].expires）中挑选最近最少使用的数据淘汰</li>
+<li><strong>volatile-ttl</strong>：从已设置过期时间的数据集（server.db[i].expires）中挑选将要过期的数据淘汰</li>
+<li><strong>volatile-random</strong>：从已设置过期时间的数据集（server.db[i].expires）中任意选择数据淘汰</li>
+<li><strong>allkeys-lru</strong>：从数据集（server.db[i].dict）中挑选最近最少使用的数据淘汰</li>
+<li><strong>allkeys-random</strong>：从数据集（server.db[i].dict）中任意选择数据淘汰</li>
+<li><strong>no-enviction</strong>（驱逐）：禁止驱逐数据</li>
+</ol>
+<h3 id="Redis的并发竞争问题如何解决"><a href="#Redis的并发竞争问题如何解决" class="headerlink" title="Redis的并发竞争问题如何解决?"></a>Redis的并发竞争问题如何解决?</h3><p>Redis为单进程单线程模式，采用队列模式将并发访问变为串行访问。Redis本身没有锁的概念，Redis对于多个客户端连接并不存在竞争，但是在Jedis客户端对Redis进行并发访问时会发生连接超时、数据转换错误、阻塞、客户端关闭连接等问题，这些问题均是由于客户端连接混乱造成。对此有2种解决方法：</p>
+<p>　1.客户端角度，为保证每个客户端间正常有序与Redis进行通信，对连接进行池化，同时对客户端读写Redis操作采用内部锁synchronized。<br>　<br>  2.服务器角度，利用setnx实现锁。</p>
+<p>　注：对于第一种，需要应用程序自己处理资源的同步，可以使用的方法比较通俗，可以使用synchronized也可以使用lock；第二种需要用到Redis的setnx命令，但是需要注意一些问题。</p>
+<h3 id="Redis回收进程如何工作的-Redis回收使用的是什么算法"><a href="#Redis回收进程如何工作的-Redis回收使用的是什么算法" class="headerlink" title="Redis回收进程如何工作的? Redis回收使用的是什么算法?"></a>Redis回收进程如何工作的? Redis回收使用的是什么算法?</h3><p><strong>Redis内存回收:LRU算法（写的很不错，推荐）</strong>：<a href="https://www.cnblogs.com/WJ5888/p/4371647.html" target="_blank" rel="noopener">https://www.cnblogs.com/WJ5888/p/4371647.html</a></p>
+<h3 id="Redis-大量数据插入"><a href="#Redis-大量数据插入" class="headerlink" title="Redis 大量数据插入"></a>Redis 大量数据插入</h3><p>官方文档给的解释：<a href="http://www.redis.cn/topics/mass-insert.html" target="_blank" rel="noopener">http://www.redis.cn/topics/mass-insert.html</a></p>
+<h3 id="Redis-分区的优势、不足以及分区类型"><a href="#Redis-分区的优势、不足以及分区类型" class="headerlink" title="Redis 分区的优势、不足以及分区类型"></a>Redis 分区的优势、不足以及分区类型</h3><p>官方文档提供的讲解：<a href="http://www.redis.net.cn/tutorial/3524.html" target="_blank" rel="noopener">http://www.redis.net.cn/tutorial/3524.html</a></p>
+<h3 id="Redis持久化数据和缓存怎么做扩容？"><a href="#Redis持久化数据和缓存怎么做扩容？" class="headerlink" title="Redis持久化数据和缓存怎么做扩容？"></a>Redis持久化数据和缓存怎么做扩容？</h3><p><strong>《redis的持久化和缓存机制》</strong> ：<a href="https://blog.csdn.net/tr1912/article/details/70197085?foxhandler=RssReadRenderProcessHandler" target="_blank" rel="noopener">https://blog.csdn.net/tr1912/article/details/70197085?foxhandler=RssReadRenderProcessHandler</a></p>
+<p>扩容的话可以通过redis集群实现，之前做项目的时候用过自己搭的redis集群<br>然后写了一篇关于redis集群的文章：<strong>《一文轻松搞懂redis集群原理及搭建与使用》</strong>：<a href="https://juejin.im/post/5ad54d76f265da23970759d3" target="_blank" rel="noopener">https://juejin.im/post/5ad54d76f265da23970759d3</a></p>
+<h3 id="Redis常见性能问题和解决方案"><a href="#Redis常见性能问题和解决方案" class="headerlink" title="Redis常见性能问题和解决方案:"></a>Redis常见性能问题和解决方案:</h3><ol>
+<li>Master最好不要做任何持久化工作，如RDB内存快照和AOF日志文件 </li>
+<li>如果数据比较重要，某个Slave开启AOF备份数据，策略设置为每秒同步一次 </li>
+<li>为了主从复制的速度和连接的稳定性，Master和Slave最好在同一个局域网内 </li>
+<li>尽量避免在压力很大的主库上增加从库</li>
+</ol>
+<h3 id="Redis与消息队列"><a href="#Redis与消息队列" class="headerlink" title="Redis与消息队列"></a>Redis与消息队列</h3><blockquote>
+<p>作者：翁伟<br>链接：<a href="https://www.zhihu.com/question/20795043/answer/345073457" target="_blank" rel="noopener">https://www.zhihu.com/question/20795043/answer/345073457</a></p>
+</blockquote>
+<p>不要使用redis去做消息队列，这不是redis的设计目标。但实在太多人使用redis去做去消息队列，redis的作者看不下去，另外基于redis的核心代码，另外实现了一个消息队列disque： antirez/disque:<a href="https://github.com/antirez/disque" target="_blank" rel="noopener">https://github.com/antirez/disque</a>部署、协议等方面都跟redis非常类似，并且支持集群，延迟消息等等。</p>
+<p>我在做网站过程接触比较多的还是使用redis做缓存，比如秒杀系统，首页缓存等等。</p>
+<h2 id="好文Mark"><a href="#好文Mark" class="headerlink" title="好文Mark"></a>好文Mark</h2><p><strong>非常非常推荐下面几篇文章。。。</strong></p>
+<p><strong>《Redis深入之道：原理解析、场景使用以及视频解读》</strong>：<a href="https://zhuanlan.zhihu.com/p/28073983" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/28073983</a>:<br>主要介绍了：Redis集群开源的方案、Redis协议简介及持久化Aof文件解析、Redis短连接性能优化等等内容，文章干货太大，容量很大，建议时间充裕可以看看。另外文章里面还提供了视频讲解，可以说是非常非常用心了。</p>
+<p><strong>《阿里云Redis混合存储典型场景：如何轻松搭建视频直播间系统》：</strong><a href="https://yq.aliyun.com/articles/582487?utm_content=m_46529" target="_blank" rel="noopener">https://yq.aliyun.com/articles/582487?utm_content=m_46529</a>:<br>主要介绍视频直播间系统，以及如何使用阿里云Redis混合存储实例方便快捷的构建大数据量，低延迟的视频直播间服务。还介绍到了我们之前提高过的redis的数据结构的使用场景</p>
+<p><strong>《美团在Redis上踩过的一些坑-5.redis cluster遇到的一些问》</strong>：<a href="http://carlosfu.iteye.com/blog/2254573" target="_blank" rel="noopener">http://carlosfu.iteye.com/blog/2254573</a>：主要介绍了redis集群的两个常见问题，然后分享了 一些关于redis集群不错的文章。</p>
+<p><strong>参考：</strong></p>
+<p><a href="https://www.cnblogs.com/Survivalist/p/8119891.html" target="_blank" rel="noopener">https://www.cnblogs.com/Survivalist/p/8119891.html</a></p>
+<p><a href="http://www.redis.net.cn/tutorial/3524.html" target="_blank" rel="noopener">http://www.redis.net.cn/tutorial/3524.html</a></p>
+<p><a href="https://redis.io/" target="_blank" rel="noopener">https://redis.io/</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+        <script>
+    window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "",
+            "bdMini": "2",
+            "bdPic": "",
+            "bdStyle": "0",
+            "bdSize": "16"
+        },
+        "share": {},
+        "image": {
+            "viewList": ["qzone", "tsina", "tqq", "renren", "weixin"],
+            "viewText": "分享到",
+            "viewSize": "16"
+        },
+        "selectShare": {
+            "bdContainerClass": null,
+            "bdSelectMiniList": ["qzone", "tsina", "tqq", "renren", "weixin"]
+        }
+    };
+    /*with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];*/
+with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = '/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+<div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina"></a>
+    <a href="#" class="bds_tqq" data-cmd="tqq"></a>
+    <a href="#" class="bds_renren" data-cmd="renren"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin"></a>
+</div>
+
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="http://yoursite.com/2018/07/30/数据存储/Redis/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li></ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-light/">hexo, light</a><span class="tag-list-count">1</span></li></ul>
+</div>
+
+
+  <div class="widget tag">
+<h3 class="title">友情链接</h3>
+<ul class="entry">
+<li><a href="https://www.baidu.com/" title="百度搜索" target="_blank">百度搜索</a></li>
+<li><a href="https://www.github.com/" title="github官网" target="_blank">github官网</a></li>
+</ul>
+</div>
+
+
+  <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="https://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=1&ptype=1&speed=0&skin=5&isTitle=1&noborder=1&isWeibo=1&isFans=0&uid=5684095680&verifier=b4735243&dpc=1"></iframe>
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2018 happy1st
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="https://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+<!--page counter part-->
+<script>
+function addCount (Counter) {
+        url=$('.article-date').attr('href').trim();
+        title = $('.article-title').text().trim();
+        var query=new AV.Query(Counter);
+        //use url as unique idnetfication
+        query.equalTo("url",url);
+        query.find({
+            success: function(results){
+                if(results.length>0)
+                {
+                    var counter=results[0];
+                    counter.fetchWhenSave(true); //get recent result
+                    counter.increment("time");
+                    counter.save();
+                }
+                else
+                {
+                    var newcounter=new Counter();
+                    newcounter.set("title",title);
+                    newcounter.set("url",url);
+                    newcounter.set("time",1);
+                    newcounter.save(null,{
+                        success: function(newcounter){
+                        //alert('New object created');
+                        },
+                        error: function(newcounter,error){
+                        alert('Failed to create');
+                        }
+                        });
+                }
+            },
+            error: function(error){
+                //find null is not a error
+                alert('Error:'+error.code+" "+error.message);
+            }
+        });
+}
+$(function(){
+        var Counter=AV.Object.extend("Counter");
+        //only increse visit counting when intering a page
+        if ($('.article-title').length == 1)
+           addCount(Counter);
+        var query=new AV.Query(Counter);
+        query.descending("time");
+        // the sum of popular posts
+        query.limit(10); 
+        query.find({
+            success: function(results){
+                    for(var i=0;i<results.length;i++)    
+                    {
+                        var counter=results[i];
+                        title=counter.get("title");
+                        url=counter.get("url");
+                        time=counter.get("time");
+                        // add to the popularlist widget
+                        showcontent=title+" ("+time+")";
+                        //notice the "" in href
+                        $('.popularlist').append('<li><a href="'+url+'">'+showcontent+'</a></li>');
+                    }
+                },
+            error: function(error){
+                alert("Error:"+error.code+" "+error.message);
+            }
+            }
+        )
+        });
+</script>
+</body>
+</html>
+

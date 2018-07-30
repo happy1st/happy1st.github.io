@@ -1,0 +1,1224 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>第 3 页 | you left，I right</title>
+  <meta name="author" content="happy1st">
+  
+  <meta name="description" content="记录后青春">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="you left，I right"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="/atom.xml" title="you left，I right" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+  <script src="https://cdn1.lncld.net/static/js/3.6.1/av-min.js"></script>
+  <script>
+	var APP_ID = 'rhvUkXBxc7IAl5eYvkEV4kCy-gzGzoHsz';
+	var APP_KEY = 'M26DgAo4H6hhYGjL4ILzR9ap';
+
+	AV.init({
+  		appId: APP_ID,
+  		appKey: APP_KEY
+	});
+</script>
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">you left，I right</a></h1>
+  <h2><a href="/"></a></h2>
+  <div><a href="/">Heroes come and go , but legends are forever !</a></div>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-07-30T03:02:35.736Z"><a href="/2018/07/30/Java相关/Java基础知识面试题总结/超详细的Java面试题总结（二）之Java基础知识篇/">2018-07-30</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2018/07/30/Java相关/Java基础知识面试题总结/超详细的Java面试题总结（二）之Java基础知识篇/"></a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="多线程和Java虚拟机"><a href="#多线程和Java虚拟机" class="headerlink" title="多线程和Java虚拟机"></a>多线程和Java虚拟机</h1><h2 id="创建线程有几种不同的方式？你喜欢哪一种？为什么？"><a href="#创建线程有几种不同的方式？你喜欢哪一种？为什么？" class="headerlink" title="创建线程有几种不同的方式？你喜欢哪一种？为什么？"></a><font face="楷体">创建线程有几种不同的方式？你喜欢哪一种？为什么？</font></h2><ol>
+<li>继承Thread类</li>
+<li>实现Runnable接口</li>
+<li>应用程序可以使用Executor框架来创建线程池</li>
+<li>实现Callable接口。</li>
+</ol>
+<p>我更喜欢实现Runnable接口这种方法，当然这也是现在大多程序员会选用的方法。因为一个类只能继承一个父类而可以实现多个接口。同时，线程池也是非常高效的，很容易实现和使用。</p>
+<h2 id="简述线程，程序、进程的基本概念。以及他们之间关系是什么？（参考书籍：《Java程序设计基础》第五版）"><a href="#简述线程，程序、进程的基本概念。以及他们之间关系是什么？（参考书籍：《Java程序设计基础》第五版）" class="headerlink" title="简述线程，程序、进程的基本概念。以及他们之间关系是什么？（参考书籍：《Java程序设计基础》第五版）"></a><font face="楷体">简述线程，程序、进程的基本概念。以及他们之间关系是什么？（参考书籍：《Java程序设计基础》第五版）</font></h2><p><strong>线程</strong>与进程相似，但线程是一个比进程更小的执行单位。一个进程在其执行的过程中可以产生多个线程。与进程不同的是同类的多个线程共享同一块内存空间和一组系统资源，所以系统在产生一个线程，或是在各个线程之间作切换工作时，负担要比进程小得多，也正因为如此，线程也被称为轻量级进程。  </p>
+<p><strong>程序</strong>是含有指令和数据的文件，被存储在磁盘或其他的数据存储设备中，也就是说程序是静态的代码。</p>
+<p><strong>进程</strong>是程序的一次执行过程，是系统运行程序的基本单位，因此进程是动态的。系统运行一个程序即是一个进程从创建，运行到消亡的过程。简单来说，一个进程就是一个执行中的程序，它在计算机中一个指令接着一个指令地执行着，同时，每个进程还占有某些系统资源如CPU时间，内存空间，文件，文件，输入输出设备的使用权等等。换句话说，当程序在执行时，将会被操作系统载入内存中。<br>线程是进程划分成的更小的运行单位。线程和进程最大的不同在于基本上各进程是独立的，而各线程则不一定，因为同一进程中的线程极有可能会相互影响。从另一角度来说，进程属于操作系统的范畴，主要是同一段时间内，可以同时执行一个以上的程序，而线程则是在同一程序内几乎同时执行一个以上的程序段。</p>
+<h2 id="什么是多线程？为什么程序的多线程功能是必要的？"><a href="#什么是多线程？为什么程序的多线程功能是必要的？" class="headerlink" title="什么是多线程？为什么程序的多线程功能是必要的？"></a><font face="楷体">什么是多线程？为什么程序的多线程功能是必要的？</font></h2><p> 多线程就是几乎同时执行多个线程（一个处理器在某一个时间点上永远都只能是一个线程！即使这个处理器是多核的，除非有多个处理器才能实现多个线程同时运行。）。几乎同时是因为实际上多线程程序中的多个线程实际上是一个线程执行一会然后其他的线程再执行，并不是很多书籍所谓的同时执行。这样可以带来以下的好处：</p>
+<ol>
+<li>使用线程可以把占据长时间的程序中的任务放到后台去处理</li>
+<li>用户界面可以更加吸引人，这样比如用户点击了一个按钮去触发某些事件的处理，可以弹出一个进度条来显示处理的进度</li>
+<li>程序的运行速度可能加快</li>
+<li>在一些等待的任务实现上如用户输入、文件读写和网络收发数据等，线程就比较有用了。在这种情况下可以释放一些珍贵的资源如内存占用等等。<br>还有其他很多使用多线程的好处，这里就不一一说明了。</li>
+</ol>
+<h2 id="多线程与多任务的差异是什么？（参考书籍：《Java程序设计基础》第五版）"><a href="#多线程与多任务的差异是什么？（参考书籍：《Java程序设计基础》第五版）" class="headerlink" title="多线程与多任务的差异是什么？（参考书籍：《Java程序设计基础》第五版）"></a><font face="楷体">多线程与多任务的差异是什么？（参考书籍：《Java程序设计基础》第五版）</font></h2><p>多任务与多线程是两个不同的概念，<br>多任务是针对操作系统而言的，表示操作系统可以同时运行多个应用程序。<br>而多线程是针对一个进程而言的，表示在一个进程内部可以几乎同时执行多个线程</p>
+<h2 id="线程有哪些基本状态？这些状态是如何定义的"><a href="#线程有哪些基本状态？这些状态是如何定义的" class="headerlink" title="线程有哪些基本状态？这些状态是如何定义的?"></a><font face="楷体">线程有哪些基本状态？这些状态是如何定义的?</font></h2><ol>
+<li><strong>新建(new)</strong>：新创建了一个线程对象。</li>
+<li><strong>可运行(runnable)</strong>：线程对象创建后，其他线程(比如main线程）调用了该对象的start()方法。该状态的线程位于可运行线程池中，等待被线程调度选中，获 取cpu的使用权。</li>
+<li><strong>运行(running)</strong>：可运行状态(runnable)的线程获得了cpu时间片（timeslice），执行程序代码。</li>
+<li><strong>阻塞(block)</strong>：阻塞状态是指线程因为某种原因放弃了cpu使用权，也即让出了cpu timeslice，暂时停止运行。直到线程进入可运行(runnable)状态，才有 机会再次获得cpu timeslice转到运行(running)状态。阻塞的情况分三种：<br>(一). 等待阻塞：运行(running)的线程执行o.wait()方法，JVM会把该线程放 入等待队列(waitting queue)中。<br>(二). 同步阻塞：运行(running)的线程在获取对象的同步锁时，若该同步锁 被别的线程占用，则JVM会把该线程放入锁池(lock pool)中。<br>(三). 其他阻塞: 运行(running)的线程执行Thread.sleep(long ms)或t.join()方法，或者发出了I/O请求时，JVM会把该线程置为阻塞状态。当sleep()状态超时join()等待线程终止或者超时、或者I/O处理完毕时，线程重新转入可运行(runnable)状态。</li>
+<li><strong>死亡(dead)</strong>：线程run()、main()方法执行结束，或者因异常退出了run()方法，则该线程结束生命周期。死亡的线程不可再次复生。<br><img src="https://user-gold-cdn.xitu.io/2017/12/15/16059cc91ee8efb3?w=876&amp;h=492&amp;f=png&amp;s=-1" alt="线程的基本状态"><br>备注：<br>可以用早起坐地铁来比喻这个过程：<br>还没起床：sleeping<br>起床收拾好了，随时可以坐地铁出发：Runnable<br>等地铁来：Waiting<br>地铁来了，但要排队上地铁：I/O阻塞<br>上了地铁，发现暂时没座位：synchronized阻塞<br>地铁上找到座位：Running<br>到达目的地：Dead</li>
+</ol>
+<h2 id="什么是线程的同步？程序中为什么要实现线程的同步？是如何实现同步的？"><a href="#什么是线程的同步？程序中为什么要实现线程的同步？是如何实现同步的？" class="headerlink" title="什么是线程的同步？程序中为什么要实现线程的同步？是如何实现同步的？"></a><font face="楷体">什么是线程的同步？程序中为什么要实现线程的同步？是如何实现同步的？</font></h2><p>当一个线程对共享的数据进行操作时，应使之成为一个”原子操作“，即在没有完成相关操作之前，不允许其他线程打断它，否则，就会破坏数据的完整性，必然会得到错误的处理结果，这就是线程的同步。<br>在多线程应用中，考虑不同线程之间的数据同步和防止死锁。当两个或多个线程之间同时等待对方释放资源的时候就会形成线程之间的死锁。为了防止死锁的发生，需要通过同步来实现线程安全。</p>
+<h2 id="在监视器-Monitor-内部，是如何做线程同步的？程序应该做哪种级别的同步？"><a href="#在监视器-Monitor-内部，是如何做线程同步的？程序应该做哪种级别的同步？" class="headerlink" title="在监视器(Monitor)内部，是如何做线程同步的？程序应该做哪种级别的同步？"></a><font face="楷体">在监视器(Monitor)内部，是如何做线程同步的？程序应该做哪种级别的同步？</font></h2><p>在 java 虚拟机中, 每个对象( Object 和 class )通过某种逻辑关联监视器,每个监视器和一个对象引用相关联, 为了实现监视器的互斥功能, 每个对象都关联着一把锁.<br>一旦方法或者代码块被 <strong>synchronized</strong> 修饰, 那么这个部分就放入了监视器的监视区域, <strong>确保一次只能有一个线程执行该部分的代码</strong>, 线程在获取锁之前不允许执行该部分的代码<br>另外 java 还提供了显式监视器( Lock )和隐式监视器( synchronized )两种锁方案</p>
+<h2 id="什么是死锁-deadlock-？"><a href="#什么是死锁-deadlock-？" class="headerlink" title="什么是死锁(deadlock)？"></a><font face="楷体">什么是死锁(deadlock)？</font></h2><p><a href="https://baike.so.com/doc/6950313-7172714.html" target="_blank" rel="noopener">360百科</a></p>
+<p>死锁 :是指两个或两个以上的进程在执行过程中,因争夺资源而造成的一种互相等待的现象,若无外力作用,它们都将无法推进下去 。<br>产生原因：</p>
+<ul>
+<li>因为系统资源不足。 </li>
+<li>进程运行推进顺序不合适。 </li>
+<li>资源分配不当等。 </li>
+<li>占用资源的程序崩溃等。</li>
+</ul>
+<p>如果系统资源充足，进程的资源请求都能够得到满足，死锁出现的可能性就很低，否则就会因争夺有限的资源而陷入死锁。其次，进程运行推进顺序与速度不同，也可能产生死锁。</p>
+<p>下面四个条件是死锁的必要条件，只要系统发生死锁，这些条件必然成立，而只要下列条件之一不满足，就不会发生死锁。 </p>
+<ul>
+<li>互斥条件：一个资源每次只能被一个进程使用。 </li>
+<li>请求与保持条件：一个进程因请求资源而阻塞时，对已获得的资源保持不放。 </li>
+<li>不剥夺条件:进程已获得的资源，在末使用完之前，不能强行剥夺。 </li>
+<li>循环等待条件:若干进程之间形成一种头尾相接的循环等待资源关系。<br>死锁的解除与预防：</li>
+</ul>
+<p>理解了死锁的原因，尤其是产生死锁的四个必要条件，就可以最大可能地避免、预防和 解除死锁。所以，在系统设计、进程调度等方面注意如何不让这四个必要条件成立，如何确 定资源的合理分配算法，避免进程永久占据系统资源。此外，也要防止进程在处于等待状态的情况下占用资源。因此，对资源的分配要给予合理的规划。</p>
+<h2 id="如何确保N个线程可以访问N个资源同时又不导致死锁？"><a href="#如何确保N个线程可以访问N个资源同时又不导致死锁？" class="headerlink" title="如何确保N个线程可以访问N个资源同时又不导致死锁？"></a><font face="楷体">如何确保N个线程可以访问N个资源同时又不导致死锁？</font></h2><p>上面一题我们知道了发生死锁的四个必要条件。我们只要使其中一个不成立就行了。一种非常简单的避免死锁的方式就是：指定获取锁的顺序，并强制线程按照指定的顺序获取锁。因此，如果所有的线程都是以同样的顺序加锁和释放锁，就不会出现死锁了。这也就是破坏了第四个条件循环等待条件。</p>
+<h2 id="Java中垃圾回收有什么目的？什么时候进行垃圾回收？"><a href="#Java中垃圾回收有什么目的？什么时候进行垃圾回收？" class="headerlink" title="Java中垃圾回收有什么目的？什么时候进行垃圾回收？"></a><font face="楷体">Java中垃圾回收有什么目的？什么时候进行垃圾回收？</font></h2><p>垃圾回收是在内存中存在没有引用的对象或超过作用域的对象时进行。</p>
+<p>垃圾回收的目的是识别并且丢弃应用不再使用的对象来释放和重用资源。</p>
+<h2 id="finalize-方法什么时候被调用？析构函数-finalization-的目的是什么？"><a href="#finalize-方法什么时候被调用？析构函数-finalization-的目的是什么？" class="headerlink" title="finalize()方法什么时候被调用？析构函数(finalization)的目的是什么？"></a><font face="楷体">finalize()方法什么时候被调用？析构函数(finalization)的目的是什么？</font></h2><p>1）垃圾回收器（garbage colector）决定回收某对象时，就会运行该对象的finalize()方法；<br>finalize是Object类的一个方法，该方法在Object类中的声明protected void finalize() throws Throwable { }<br>在垃圾回收器执行时会调用被回收对象的finalize()方法，可以覆盖此方法来实现对其资源的回收。注意：一旦垃圾回收器准备释放对象占用的内存，将首先调用该对象的finalize()方法，并且下一次垃圾回收动作发生时，才真正回收对象占用的内存空间</p>
+<p>2）GC本来就是内存回收了，应用还需要在finalization做什么呢？ 答案是大部分时候，什么都不用做(也就是不需要重载)。只有在某些很特殊的情况下，比如你调用了一些native的方法(一般是C写的)，可以要在finaliztion里去调用C的释放函数。</p>
+<h2 id="如果对象的引用被置为null，垃圾收集器是否会立即释放对象占用的内存？"><a href="#如果对象的引用被置为null，垃圾收集器是否会立即释放对象占用的内存？" class="headerlink" title="如果对象的引用被置为null，垃圾收集器是否会立即释放对象占用的内存？"></a><font face="楷体">如果对象的引用被置为null，垃圾收集器是否会立即释放对象占用的内存？</font></h2><p>不会，在下一个垃圾回收周期中，这个对象将是可被回收的。</p>
+<h2 id="Java中堆和栈的区别"><a href="#Java中堆和栈的区别" class="headerlink" title="Java中堆和栈的区别"></a><font face="楷体">Java中堆和栈的区别</font></h2><p><a href="http://www.cnblogs.com/perfy/p/3820594.html" target="_blank" rel="noopener">Java中堆和栈的区别</a></p>
+<p><strong>堆内存</strong>用来存放由new创建的对象和数组。 在堆中分配的内存，由Java虚拟机的自动垃圾回收器来管理。<br><strong>栈</strong>中一般存放的是局部变量（方法中的变量或某代码段里（比如for循环））</p>
+<h2 id="Java堆的结构是什么样子的？什么是堆中的永久代-Perm-Gen-space"><a href="#Java堆的结构是什么样子的？什么是堆中的永久代-Perm-Gen-space" class="headerlink" title="Java堆的结构是什么样子的？什么是堆中的永久代(Perm Gen space)?"></a><font face="楷体">Java堆的结构是什么样子的？什么是堆中的永久代(Perm Gen space)?</font></h2><p><a href="https://www.nowcoder.com/ta/review-java/review?page=39" target="_blank" rel="noopener">Java堆的结构是什么样子的？什么是堆中的永久代</a></p>
+<h1 id="Java集合框架"><a href="#Java集合框架" class="headerlink" title="Java集合框架"></a>Java集合框架</h1><font face="楷体">List，Set,Map三者的区别及总结</font>
+
+<font face="楷体">ArrayList 与 Vector 区别（为什么要用Arraylist取代Vector呢？）</font>
+
+<font face="楷体">List，Set,Map三者的区别及总结</font>
+
+<font face="楷体">HashMap 和 Hashtable 的区别</font>
+
+<font face="楷体">HashSet 和 HashMap 区别</font>
+
+<font face="楷体">HashMap 和 ConcurrentHashMap 的区别</font>
+
+<font face="楷体">HashSet如何检查重复</font>
+
+<font face="楷体">comparable 和 comparator的区别？</font>
+
+<font face="楷体">如何对Object的list排序？</font>
+
+<font face="楷体">如何实现数组与List的相互转换？</font>
+
+<font face="楷体">如何求ArrayList集合的交集 并集 差集 去重复并集?</font>
+
+<font face="楷体">HashMap 的工作原理及代码实现</font>
+
+<font face="楷体">ConcurrentHashMap 的工作原理及代码实现</font>
+
+<font face="楷体">集合框架底层数据结构总结</font>
+
+<font face="楷体">集合的选用</font>
+
+
+
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-07-30T03:02:35.733Z"><a href="/2018/07/30/Java相关/Java基础知识面试题总结/超详细的Java面试题总结（三）之Java集合篇常见问题/">2018-07-30</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2018/07/30/Java相关/Java基础知识面试题总结/超详细的Java面试题总结（三）之Java集合篇常见问题/"></a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="List，Set-Map三者的区别及总结"><a href="#List，Set-Map三者的区别及总结" class="headerlink" title="List，Set,Map三者的区别及总结"></a><font face="楷体">List，Set,Map三者的区别及总结</font></h2><ul>
+<li><p><strong>List：对付顺序的好帮手</strong></p>
+<p>List接口存储一组不唯一（可以有多个元素引用相同的对象），有序的对象</p>
+</li>
+<li><p><strong>Set:注重独一无二的性质</strong></p>
+<p>不允许重复的集合。不会有多个元素引用相同的对象。</p>
+</li>
+<li><p><strong>Map:用Key来搜索的专家</strong></p>
+<p>使用键值对存储。Map会维护与Key有关联的值。两个Key可以引用相同的对象，但Key不能重复，典型的Key是String类型，但也可以是任何对象。</p>
+</li>
+</ul>
+<h2 id="Arraylist-与-LinkedList-区别"><a href="#Arraylist-与-LinkedList-区别" class="headerlink" title="Arraylist 与 LinkedList 区别"></a><font face="楷体">Arraylist 与 LinkedList 区别</font></h2><p>Arraylist底层使用的是数组（存读数据效率高，插入删除特定位置效率低），LinkedList底层使用的是双向循环链表数据结构（插入，删除效率特别高）。学过数据结构这门课后我们就知道采用链表存储，插入，删除元素时间复杂度不受元素位置的影响，都是近似O（1）而数组为近似O（n），因此当数据特别多，而且经常需要插入删除元素时建议选用LinkedList.一般程序只用Arraylist就够用了，因为一般数据量都不会蛮大，Arraylist是使用最多的集合类。</p>
+<h2 id="ArrayList-与-Vector-区别（为什么要用Arraylist取代Vector呢？）"><a href="#ArrayList-与-Vector-区别（为什么要用Arraylist取代Vector呢？）" class="headerlink" title="ArrayList 与 Vector 区别（为什么要用Arraylist取代Vector呢？）"></a><font face="楷体">ArrayList 与 Vector 区别（为什么要用Arraylist取代Vector呢？）</font></h2><p>Vector类的所有方法都是同步的。可以由两个线程安全地访问一个Vector对象、但是一个线程访问Vector<br>，代码要在同步操作上耗费大量的时间。Arraylist不是同步的，所以在不需要同步时建议使用Arraylist。</p>
+<h2 id="HashMap-和-Hashtable-的区别"><a href="#HashMap-和-Hashtable-的区别" class="headerlink" title="HashMap 和 Hashtable 的区别"></a><font face="楷体">HashMap 和 Hashtable 的区别</font></h2><ol>
+<li><p>HashMap是非线程安全的，HashTable是线程安全的；HashTable内部的方法基本都经过synchronized修饰。</p>
+</li>
+<li><p>因为线程安全的问题，HashMap要比HashTable效率高一点，HashTable基本被淘汰。</p>
+</li>
+<li>HashMap允许有null值的存在，而在HashTable中put进的键值只要有一个null，直接抛出NullPointerException。</li>
+</ol>
+<p>Hashtable和HashMap有几个主要的不同：线程安全以及速度。仅在你需要完全的线程安全的时候使用Hashtable，而如果你使用Java5或以上的话，请使用ConcurrentHashMap吧</p>
+<h2 id="HashSet-和-HashMap-区别"><a href="#HashSet-和-HashMap-区别" class="headerlink" title="HashSet 和 HashMap 区别"></a><font face="楷体">HashSet 和 HashMap 区别</font></h2><p><img src="https://user-gold-cdn.xitu.io/2018/3/2/161e717d734f3b23?w=896&amp;h=363&amp;f=jpeg&amp;s=205536" alt="HashSet 和 HashMap 区别"></p>
+<h2 id="HashMap-和-ConcurrentHashMap-的区别"><a href="#HashMap-和-ConcurrentHashMap-的区别" class="headerlink" title="HashMap 和 ConcurrentHashMap 的区别"></a><font face="楷体">HashMap 和 ConcurrentHashMap 的区别</font></h2><p><a href="https://blog.csdn.net/xuefeng0707/article/details/40834595" target="_blank" rel="noopener">HashMap与ConcurrentHashMap的区别</a></p>
+<ol>
+<li>ConcurrentHashMap对整个桶数组进行了分割分段(Segment)，然后在每一个分段上都用lock锁进行保护，相对于HashTable的synchronized锁的粒度更精细了一些，并发性能更好，而HashMap没有锁机制，不是线程安全的。（JDK1.8之后ConcurrentHashMap启用了一种全新的方式实现,利用CAS算法。）</li>
+<li>HashMap的键值对允许有null，但是ConCurrentHashMap都不允许。</li>
+</ol>
+<h2 id="HashSet如何检查重复"><a href="#HashSet如何检查重复" class="headerlink" title="HashSet如何检查重复"></a><font face="楷体">HashSet如何检查重复</font></h2><p>当你把对象加入HashSet时，HashSet会先计算对象的hashcode值来判断对象加入的位置，同时也会与其他加入的对象的hashcode值作比较，如果没有相符的hashcode，HashSet会假设对象没有重复出现。但是如果发现有相同hashcode值的对象，这时会调用equals（）方法来检查hashcode相等的对象是否真的相同。如果两者相同，HashSet就不会让加入操作成功。（摘自我的Java启蒙书《Head fist java》第二版）</p>
+<p><strong>hashCode（）与equals（）的相关规定：</strong></p>
+<ol>
+<li>如果两个对象相等，则hashcode一定也是相同的</li>
+<li>两个对象相等,对两个equals方法返回true</li>
+<li>两个对象有相同的hashcode值，它们也不一定是相等的</li>
+<li>综上，equals方法被覆盖过，则hashCode方法也必须被覆盖</li>
+<li>hashCode()的默认行为是对堆上的对象产生独特值。如果没有重写hashCode()，则该class的两个对象无论如何都不会相等（即使这两个对象指向相同的数据）。</li>
+</ol>
+<p><strong>==与equals的区别</strong></p>
+<ol>
+<li>==是判断两个变量或实例是不是指向同一个内存空间    equals是判断两个变量或实例所指向的内存空间的值是不是相同</li>
+<li>==是指对内存地址进行比较    equals()是对字符串的内容进行比较3.==指引用是否相同    equals()指的是值是否相同</li>
+</ol>
+<h2 id="comparable-和-comparator的区别？"><a href="#comparable-和-comparator的区别？" class="headerlink" title="comparable 和 comparator的区别？"></a><font face="楷体">comparable 和 comparator的区别？</font></h2><ul>
+<li>comparable接口实际上是出自java.lang包 它有一个 compareTo(Object obj)方法用来排序</li>
+<li>comparator接口实际上是出自 java.util 包它有一个compare(Object obj1, Object obj2)方法用来排序</li>
+</ul>
+<p>一般我们需要对一个集合使用自定义排序时，我们就要重写compareTo方法或compare方法，当我们需要对某一个集合实现两种排序方式，比如一个song对象中的歌名和歌手名分别采用一种排序方法的话，我们可以重写compareTo方法和使用自制的Comparator方法或者以两个Comparator来实现歌名排序和歌星名排序，第二种代表我们只能使用两个参数版的Collections.sort().</p>
+<h3 id="Comparator定制排序"><a href="#Comparator定制排序" class="headerlink" title="Comparator定制排序"></a><font face="楷体">Comparator定制排序<font face="楷体"></font></font></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="keyword">import</span> java.util.Comparator;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * TODO Collections类方法测试之排序</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> 寇爽</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2017年11月20日</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.8</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CollectionsSort</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		ArrayList&lt;Integer&gt; arrayList = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">		arrayList.add(-<span class="number">1</span>);</span><br><span class="line">		arrayList.add(<span class="number">3</span>);</span><br><span class="line">		arrayList.add(<span class="number">3</span>);</span><br><span class="line">		arrayList.add(-<span class="number">5</span>);</span><br><span class="line">		arrayList.add(<span class="number">7</span>);</span><br><span class="line">		arrayList.add(<span class="number">4</span>);</span><br><span class="line">		arrayList.add(-<span class="number">9</span>);</span><br><span class="line">		arrayList.add(-<span class="number">7</span>);</span><br><span class="line">		System.out.println(<span class="string">"原始数组:"</span>);</span><br><span class="line">		System.out.println(arrayList);</span><br><span class="line">		<span class="comment">// void reverse(List list)：反转</span></span><br><span class="line">		Collections.reverse(arrayList);</span><br><span class="line">		System.out.println(<span class="string">"Collections.reverse(arrayList):"</span>);</span><br><span class="line">		System.out.println(arrayList);</span><br><span class="line"><span class="comment">/*		</span></span><br><span class="line"><span class="comment">		 * void rotate(List list, int distance),旋转。</span></span><br><span class="line"><span class="comment">		 * 当distance为正数时，将list后distance个元素整体移到前面。当distance为负数时，将</span></span><br><span class="line"><span class="comment">		 * list的前distance个元素整体移到后面。</span></span><br><span class="line"><span class="comment">		 </span></span><br><span class="line"><span class="comment">		Collections.rotate(arrayList, 4);</span></span><br><span class="line"><span class="comment">		System.out.println("Collections.rotate(arrayList, 4):");</span></span><br><span class="line"><span class="comment">		System.out.println(arrayList);*/</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">// void sort(List list),按自然排序的升序排序</span></span><br><span class="line">		Collections.sort(arrayList);</span><br><span class="line">		System.out.println(<span class="string">"Collections.sort(arrayList):"</span>);</span><br><span class="line">		System.out.println(arrayList);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// void shuffle(List list),随机排序</span></span><br><span class="line">		Collections.shuffle(arrayList);</span><br><span class="line">		System.out.println(<span class="string">"Collections.shuffle(arrayList):"</span>);</span><br><span class="line">		System.out.println(arrayList);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 定制排序的用法</span></span><br><span class="line">		Collections.sort(arrayList, <span class="keyword">new</span> Comparator&lt;Integer&gt;() &#123;</span><br><span class="line"></span><br><span class="line">			<span class="meta">@Override</span></span><br><span class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Integer o1, Integer o2)</span> </span>&#123;</span><br><span class="line">				<span class="keyword">return</span> o2.compareTo(o1);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line">		System.out.println(<span class="string">"定制排序后："</span>);</span><br><span class="line">		System.out.println(arrayList);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="重写compareTo方法实现按年龄来排序"><a href="#重写compareTo方法实现按年龄来排序" class="headerlink" title="重写compareTo方法实现按年龄来排序"></a><font face="楷体">重写compareTo方法实现按年龄来排序</font></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Set;</span><br><span class="line"><span class="keyword">import</span> java.util.TreeMap;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeMap2</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		TreeMap&lt;Person, String&gt; pdata = <span class="keyword">new</span> TreeMap&lt;Person, String&gt;();</span><br><span class="line">		pdata.put(<span class="keyword">new</span> Person(<span class="string">"张三"</span>, <span class="number">30</span>), <span class="string">"zhangsan"</span>);</span><br><span class="line">		pdata.put(<span class="keyword">new</span> Person(<span class="string">"李四"</span>, <span class="number">20</span>), <span class="string">"lisi"</span>);</span><br><span class="line">		pdata.put(<span class="keyword">new</span> Person(<span class="string">"王五"</span>, <span class="number">10</span>), <span class="string">"wangwu"</span>);</span><br><span class="line">		pdata.put(<span class="keyword">new</span> Person(<span class="string">"小红"</span>, <span class="number">5</span>), <span class="string">"xiaohong"</span>);</span><br><span class="line">		<span class="comment">// 得到key的值的同时得到key所对应的值</span></span><br><span class="line">		Set&lt;Person&gt; keys = pdata.keySet();</span><br><span class="line">		<span class="keyword">for</span> (Person key : keys) &#123;</span><br><span class="line">			System.out.println(key.getAge() + <span class="string">"-"</span> + key.getName());</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// person对象没有实现Comparable接口，所以必须实现，这样才不会出错，才可以使treemap中的数据按顺序排列</span></span><br><span class="line"><span class="comment">// 前面一个例子的String类已经默认实现了Comparable接口，详细可以查看String类的API文档，另外其他</span></span><br><span class="line"><span class="comment">// 像Integer类等都已经实现了Comparable接口，所以不需要另外实现了</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> <span class="keyword">implements</span> <span class="title">Comparable</span>&lt;<span class="title">Person</span>&gt; </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> String name;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">super</span>();</span><br><span class="line">		<span class="keyword">this</span>.name = name;</span><br><span class="line">		<span class="keyword">this</span>.age = age;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> name;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.name = name;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> age;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.age = age;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * TODO重写compareTo方法实现按年龄来排序</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Person o)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		<span class="keyword">if</span> (<span class="keyword">this</span>.age &gt; o.getAge()) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">this</span>.age &lt; o.getAge()) &#123;</span><br><span class="line">			<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> age;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="如何对Object的list排序？"><a href="#如何对Object的list排序？" class="headerlink" title="如何对Object的list排序？"></a><font face="楷体">如何对Object的list排序？</font></h2><ul>
+<li>对objects数组进行排序，我们可以用Arrays.sort()方法</li>
+<li>对objects的集合进行排序，需要使用Collections.sort()方法</li>
+</ul>
+<h2 id="如何实现数组与List的相互转换？"><a href="#如何实现数组与List的相互转换？" class="headerlink" title="如何实现数组与List的相互转换？"></a><font face="楷体">如何实现数组与List的相互转换？</font></h2><p>List转数组：toArray(arraylist.size()方法；数组转List:Arrays的asList(a)方法<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; arrayList = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">		arrayList.add(<span class="string">"s"</span>);</span><br><span class="line">		arrayList.add(<span class="string">"e"</span>);</span><br><span class="line">		arrayList.add(<span class="string">"n"</span>);</span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * ArrayList转数组</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">int</span> size=arrayList.size();</span><br><span class="line">		String[] a = arrayList.toArray(<span class="keyword">new</span> String[size]);</span><br><span class="line">		<span class="comment">//输出第二个元素</span></span><br><span class="line">		System.out.println(a[<span class="number">1</span>]);<span class="comment">//结果：e</span></span><br><span class="line">		<span class="comment">//输出整个数组</span></span><br><span class="line">		System.out.println(Arrays.toString(a));<span class="comment">//结果：[s, e, n]</span></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 数组转list</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		List&lt;String&gt; list=Arrays.asList(a);</span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * list转Arraylist</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		List&lt;String&gt; arrayList2 = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">		arrayList2.addAll(list);</span><br><span class="line">		System.out.println(list);</span><br></pre></td></tr></table></figure></p>
+<h2 id="如何求ArrayList集合的交集-并集-差集-去重复并集"><a href="#如何求ArrayList集合的交集-并集-差集-去重复并集" class="headerlink" title="如何求ArrayList集合的交集 并集 差集 去重复并集"></a><font face="楷体">如何求ArrayList集合的交集 并集 差集 去重复并集</font></h2><p>需要用到List接口中定义的几个方法：</p>
+<ul>
+<li>addAll(Collection&lt;? extends E&gt; c) :按指定集合的Iterator返回的顺序将指定集合中的所有元素追加到此列表的末尾<br>实例代码：</li>
+<li>retainAll(Collection&lt;?&gt; c): 仅保留此列表中包含在指定集合中的元素。 </li>
+<li>removeAll(Collection&lt;?&gt; c) :从此列表中删除指定集合中包含的所有元素。 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> list;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *TODO 两个集合之间求交集 并集 差集 去重复并集</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> 寇爽</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2017年11月21日</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.8</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MethodDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		List&lt;Integer&gt; list1 = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">		list1.add(<span class="number">1</span>);</span><br><span class="line">		list1.add(<span class="number">2</span>);</span><br><span class="line">		list1.add(<span class="number">3</span>);</span><br><span class="line">		list1.add(<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line">		List&lt;Integer&gt; list2 = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">		list2.add(<span class="number">2</span>);</span><br><span class="line">		list2.add(<span class="number">3</span>);</span><br><span class="line">		list2.add(<span class="number">4</span>);</span><br><span class="line">		list2.add(<span class="number">5</span>);</span><br><span class="line">		<span class="comment">// 并集</span></span><br><span class="line">		<span class="comment">// list1.addAll(list2);</span></span><br><span class="line">		<span class="comment">// 交集</span></span><br><span class="line">		<span class="comment">//list1.retainAll(list2);</span></span><br><span class="line">		<span class="comment">// 差集</span></span><br><span class="line">		<span class="comment">// list1.removeAll(list2);</span></span><br><span class="line">		<span class="comment">// 无重复并集</span></span><br><span class="line">		list2.removeAll(list1);</span><br><span class="line">		list1.addAll(list2);</span><br><span class="line">		<span class="keyword">for</span> (Integer i : list1) &#123;</span><br><span class="line">			System.out.println(i);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="HashMap-的工作原理及代码实现"><a href="#HashMap-的工作原理及代码实现" class="headerlink" title="HashMap 的工作原理及代码实现"></a><font face="楷体">HashMap 的工作原理及代码实现</font></h2><p><a href="https://juejin.im/post/5ab0568b5188255580020e56" target="_blank" rel="noopener">集合框架源码学习之HashMap(JDK1.8)</a></p>
+<h2 id="ConcurrentHashMap-的工作原理及代码实现"><a href="#ConcurrentHashMap-的工作原理及代码实现" class="headerlink" title="ConcurrentHashMap 的工作原理及代码实现"></a><font face="楷体">ConcurrentHashMap 的工作原理及代码实现</font></h2><p><a href="http://www.cnblogs.com/chengxiao/p/6842045.html" target="_blank" rel="noopener">ConcurrentHashMap实现原理及源码分析</a></p>
+<h2 id="集合框架底层数据结构总结"><a href="#集合框架底层数据结构总结" class="headerlink" title="集合框架底层数据结构总结"></a><font face="楷体">集合框架底层数据结构总结</font></h2><h3 id="Collection"><a href="#Collection" class="headerlink" title="- Collection"></a>- Collection</h3><h4 id="1-List"><a href="#1-List" class="headerlink" title="1. List"></a>1. List</h4><ul>
+<li>Arraylist：数组（查询快,增删慢   线程不安全,效率高  ）</li>
+<li>Vector：数组（查询快,增删慢 线程安全,效率低  ）</li>
+<li>LinkedList：链表（查询慢,增删快  线程不安全,效率高  ）</li>
+</ul>
+<h4 id="2-Set"><a href="#2-Set" class="headerlink" title="2. Set"></a>2. Set</h4><ul>
+<li>HashSet（无序，唯一）:哈希表或者叫散列集(hash table)</li>
+<li>LinkedHashSet：链表和哈希表组成 。 由链表保证元素的排序 ， 由哈希表证元素的唯一性  </li>
+<li>TreeSet（有序，唯一）：红黑树(自平衡的排序二叉树。)</li>
+</ul>
+<h3 id="Map"><a href="#Map" class="headerlink" title="- Map"></a>- Map</h3><ul>
+<li>HashMap：基于哈希表的Map接口实现（哈希表对键进行散列，Map结构即映射表存放键值对）</li>
+<li>LinkedHashMap:HashMap  的基础上加上了链表数据结构</li>
+<li>HashTable:哈希表</li>
+<li>TreeMap:红黑树（自平衡的排序二叉树）</li>
+</ul>
+<h2 id="集合的选用"><a href="#集合的选用" class="headerlink" title="集合的选用"></a><font face="楷体">集合的选用</font></h2><p>主要根据集合的特点来选用，比如我们需要根据键值获取到元素值时就选用Map接口下的集合，需要排序时选择TreeMap,不需要排序时就选择HashMap,需要保证线程安全就选用ConcurrentHashMap.当我们只需要存放元素值时，就选择实现Collection接口的集合，需要保证元素唯一时选择实现Set接口的集合比如TreeSet或HashSet，不需要就选择实现List接口的比如ArrayList或LinkedList，然后再根据实现这些接口的集合的特点来选用。</p>
+<p>2018/3/11更新</p>
+<h2 id="集合的常用方法"><a href="#集合的常用方法" class="headerlink" title="集合的常用方法"></a><font face="楷体">集合的常用方法</font></h2><p>今天下午无意看见一道某大厂的面试题，面试题的内容就是问你某一个集合常见的方法有哪些。虽然平时也经常见到这些集合，但是猛一下让我想某一个集合的常用的方法难免会有遗漏或者与其他集合搞混，所以建议大家还是照着API文档把常见的那几个集合的常用方法看一看。</p>
+<p>会持续更新。。。</p>
+<p><strong>参考书籍：</strong></p>
+<p>《Head first java 》第二版 推荐阅读真心不错 （适合基础较差的）</p>
+<p> 《Java核心技术卷1》推荐阅读真心不错 （适合基础较好的）</p>
+<p> 《算法》第四版 （适合想对数据结构的Java实现感兴趣的）</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-07-30T03:02:35.730Z"><a href="/2018/07/30/Java相关/Java基础知识面试题总结/超详细的Java面试题总结（一）之Java基础知识篇/">2018-07-30</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2018/07/30/Java相关/Java基础知识面试题总结/超详细的Java面试题总结（一）之Java基础知识篇/"></a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>　　最近在备战面试的过程中，整理一下面试题。大多数题目都是自己手敲的，网上也有很多这样的总结。自己感觉总是很乱，所以花了很久把自己觉得重要的东西总结了一下。</p>
+<h2 id="面向对象和面向过程的区别"><a href="#面向对象和面向过程的区别" class="headerlink" title="面向对象和面向过程的区别"></a><font face="楷体">面向对象和面向过程的区别</font></h2><p><strong>面向过程：</strong><br>　　优点：性能比面向对象高，因为类调用时需要实例化，开销比较大，比较消耗资源;比如单片机、嵌入式开发、Linux/Unix等一般采用面向过程开发，性能是最重要的因素。<br>缺点：没有面向对象易维护、易复用、易扩展<br><strong>面向对象：</strong><br>　　优点：易维护、易复用、易扩展，由于面向对象有封装、继承、多态性的特性，可以设计出低耦合的系统，使系统更加灵活、更加易于维护<br>缺点：性能比面向过程低</p>
+<h2 id="Java语言有哪些特点？"><a href="#Java语言有哪些特点？" class="headerlink" title="Java语言有哪些特点？"></a><font face="楷体">Java语言有哪些特点？</font></h2><p>　　1，简单易学；2，面向对象（封装，继承，多态）；3，平台无关性（Java虚拟机实现平台无关性）；4，可靠性；5，安全性；6，支持多线程（C++语言没有内置的多线程机制，因此必须调用操作系统的多线程功能来进行多线程程序设计，而Java语言却提供了多线程支持）；7，支持网络编程并且很方便（Java语言诞生本身就是为简化网络编程设计的，因此Java语言不仅支持网络编程而且很方便）；8，编译与解释并存；</p>
+<h2 id="什么是字节码？采用字节码的最大好处是什么？什么Java是虚拟机？"><a href="#什么是字节码？采用字节码的最大好处是什么？什么Java是虚拟机？" class="headerlink" title="什么是字节码？采用字节码的最大好处是什么？什么Java是虚拟机？"></a><font face="楷体">什么是字节码？采用字节码的最大好处是什么？什么Java是虚拟机？</font></h2><p><strong>先看下java中的编译器和解释器：</strong><br> 　　Java中引入了虚拟机的概念，即在机器和编译程序之间加入了一层抽象的虚拟的机器。这台虚拟的机器在任何平台上都提供给编译程序一个的共同的接口。编译程序只需要面向虚拟机，生成虚拟机能够理解的代码，然后由解释器来将虚拟机代码转换为特定系统的机器码执行。在Java中，这种供虚拟机理解的代码叫做字节码（即扩展名为.class的文件），它不面向任何特定的处理器，只面向虚拟机。每一种平台的解释器是不同的，但是实现的虚拟机是相同的。Java源程序经过编译器编译后变成字节码，字节码由虚拟机解释执行，虚拟机将每一条要执行的字节码送给解释器，解释器将其翻译成特定机器上的机器码，然后在特定的机器上运行，这就是上面提到的Java的特点的编译与解释并存的解释。<br>    Java源代码—-&gt;编译器—-&gt;jvm可执行的Java字节码(即虚拟指令)—-&gt;jvm—-&gt;jvm中解释器—–&gt;机器可执行的二进制机器码—-&gt;程序运行。<br><strong>采用字节码的好处：</strong><br>　　Java语言通过字节码的方式，在一定程度上解决了传统解释型语言执行效率低的问题，同时又保留了解释型语言可移植的特点。所以Java程序运行时比较高效，而且，由于字节码并不专对一种特定的机器，因此，Java程序无须重新编译便可在多种不同的计算机上运行。</p>
+<h2 id="什么是Java虚拟机"><a href="#什么是Java虚拟机" class="headerlink" title="什么是Java虚拟机"></a><font face="楷体">什么是Java虚拟机</font></h2><p>　　任何一种可以运行Java字节码的软件均可看成是Java的虚拟机（JVM）</p>
+<h2 id="什么是Java程序的主类？应用程序和小程序的主类有何不同？"><a href="#什么是Java程序的主类？应用程序和小程序的主类有何不同？" class="headerlink" title="什么是Java程序的主类？应用程序和小程序的主类有何不同？"></a><font face="楷体">什么是Java程序的主类？应用程序和小程序的主类有何不同？</font></h2><p>　　一个程序中可以有多个类，但只能有一个类是主类。在Java应用程序中，这个主类是指包含main（）方法的类。而在Java小程序中，这个主类是一个继承自系统类JApplet或Applet的子类。应用程序的主类不一定要求是public类，但小程序的主类要求必须是public类。主类是Java程序执行的入口点。</p>
+<h2 id="什么是JDK-什么是JRE？"><a href="#什么是JDK-什么是JRE？" class="headerlink" title="什么是JDK?什么是JRE？"></a><font face="楷体">什么是JDK?什么是JRE？</font></h2><p>　　JDK: 顾名思义它是给开发者提供的开发工具箱,是给程序开发者用的。它除了包括完整的JRE（Java Runtime Environment），Java运行环境，还包含了其他供开发者使用的工具包。<br><img src="https://user-gold-cdn.xitu.io/2017/11/8/9cf7f48fdbe608ae70080aa6c5a2f910?w=680&amp;h=278&amp;f=png&amp;s=-1" alt="JDK"><br>　　JRE:普通用户而只需要安装JRE（Java Runtime Environment）来 来运行Java程序。而程序开发者必须安装JDK来编译、调试程序。</p>
+<h2 id="环境变量Path和ClassPath的作用是什么？如何设置这两个环境变量？"><a href="#环境变量Path和ClassPath的作用是什么？如何设置这两个环境变量？" class="headerlink" title="环境变量Path和ClassPath的作用是什么？如何设置这两个环境变量？"></a><font face="楷体">环境变量Path和ClassPath的作用是什么？如何设置这两个环境变量？</font></h2><p>Java环境变量PATH和CLASSPATH - 简书  <a href="http://www.jianshu.com/p/d63b099cf283" target="_blank" rel="noopener">http://www.jianshu.com/p/d63b099cf283</a></p>
+<h2 id="Java应用程序与小程序之间有那些差别？"><a href="#Java应用程序与小程序之间有那些差别？" class="headerlink" title="Java应用程序与小程序之间有那些差别？"></a><font face="楷体">Java应用程序与小程序之间有那些差别？</font></h2><p>简单说应用程序是从主线程启动(也就是main()方法)。applet小程序没有main方法，主要是嵌在浏览器页面上运行(调用init()线程或者run()来启动)，嵌入浏览器这点跟flash的小游戏类似。</p>
+<h2 id="字符型常量和字符串常量的区别"><a href="#字符型常量和字符串常量的区别" class="headerlink" title="字符型常量和字符串常量的区别"></a><font face="楷体">字符型常量和字符串常量的区别</font></h2><p>1) 形式上:<br>字符常量是单引号引起的一个字符<br>字符串常量是双引号引起的若干个字符<br>2) 含义上:<br>字符常量相当于一个整形值(ASCII值),可以参加表达式运算<br>字符串常量代表一个地址值(该字符串在内存中存放位置)<br>3) 占内存大小<br>字符常量只占一个字节<br>字符串常量占若干个字节(至少一个字符结束标志)</p>
+<h2 id="Java语言采用何种编码方案？有何特点？"><a href="#Java语言采用何种编码方案？有何特点？" class="headerlink" title="Java语言采用何种编码方案？有何特点？"></a><font face="楷体">Java语言采用何种编码方案？有何特点？</font></h2><p>　　Java语言采用Unicode编码标准，Unicode（标准码），它为每个字符制订了一个唯一的数值，因此在任何的语言，平台，程序都可以放心的使用。</p>
+<h2 id="构造器Constructor是否可被override"><a href="#构造器Constructor是否可被override" class="headerlink" title="构造器Constructor是否可被override"></a><font face="楷体">构造器Constructor是否可被override</font></h2><p>　　在讲继承的时候我们就知道父类的私有属性和构造方法并不能被继承，所以Constructor也就不能被override,但是可以overload,所以你可以看到一个类中有多个构造函数的情况。 </p>
+<h2 id="重载和重写的区别"><a href="#重载和重写的区别" class="headerlink" title="重载和重写的区别"></a><font face="楷体">重载和重写的区别</font></h2><p>　　重载：发生在同一个类中，方法名必须相同，参数类型不同、个数不同、顺序不同，方法返回值和访问修饰符可以不同，发生在编译时。<br>　　重写：发生在父子类中，方法名、参数列表必须相同，返回值小于等于父类，抛出的异常小于等于父类，访问修饰符大于等于父类；如果父类方法访问修饰符为private则子类中就不是重写。</p>
+<h2 id="java-面向对象编程三大特性——封装、继承、多态"><a href="#java-面向对象编程三大特性——封装、继承、多态" class="headerlink" title="java 面向对象编程三大特性——封装、继承、多态"></a><font face="楷体">java 面向对象编程三大特性——封装、继承、多态</font></h2><p><a href="https://blog.csdn.net/jianyuerensheng/article/details/51602015" target="_blank" rel="noopener">https://blog.csdn.net/jianyuerensheng/article/details/51602015</a></p>
+<h2 id="java中equals方法的用法以及-的用法"><a href="#java中equals方法的用法以及-的用法" class="headerlink" title="java中equals方法的用法以及==的用法"></a><font face="楷体">java中equals方法的用法以及==的用法</font></h2><p><a href="http://www.cnblogs.com/bluestorm/archive/2012/03/02/2377615.html" target="_blank" rel="noopener">http://www.cnblogs.com/bluestorm/archive/2012/03/02/2377615.html</a></p>
+<h2 id="String和StringBuffer、StringBuilder的区别是什么？String为什么是不可变的？"><a href="#String和StringBuffer、StringBuilder的区别是什么？String为什么是不可变的？" class="headerlink" title="String和StringBuffer、StringBuilder的区别是什么？String为什么是不可变的？"></a><font face="楷体">String和StringBuffer、StringBuilder的区别是什么？String为什么是不可变的？</font></h2><p><strong>可变性</strong>
+　</p>
+<p>String类中使用字符数组保存字符串，private　final　char　value[]，所以string对象是不可变的。StringBuilder与StringBuffer都继承自AbstractStringBuilder类，在AbstractStringBuilder中也是使用字符数组保存字符串，char[]value，这两种对象都是可变的。
+　　</p>
+<p><strong>线程安全性</strong></p>
+<p>String中的对象是不可变的，也就可以理解为常量，线程安全。AbstractStringBuilder是StringBuilder与StringBuffer的公共父类，定义了一些字符串的基本操作，如expandCapacity、append、insert、indexOf等公共方法。StringBuffer对方法加了同步锁或者对调用的方法加了同步锁，所以是线程安全的。StringBuilder并没有对方法进行加同步锁，所以是非线程安全的。
+　　</p>
+<p><strong>性能</strong></p>
+<p>每次对String 类型进行改变的时候，都会生成一个新的String对象，然后将指针指向新的String 对象。StringBuffer每次都会对StringBuffer对象本身进行操作，而不是生成新的对象并改变对象引用。相同情况下使用StirngBuilder 相比使用StringBuffer 仅能获得10%~15% 左右的性能提升，但却要冒多线程不安全的风险。<br><strong>对于三者使用的总结：</strong><br>如果要操作少量的数据用 = String<br>单线程操作字符串缓冲区 下操作大量数据 = StringBuilder<br>多线程操作字符串缓冲区 下操作大量数据 = StringBuffer</p>
+<h2 id="自动装箱与拆箱"><a href="#自动装箱与拆箱" class="headerlink" title="自动装箱与拆箱"></a><font face="楷体">自动装箱与拆箱</font></h2><p><strong>装箱</strong>：将基本类型用它们对应的引用类型包装起来；</p>
+<p><strong>拆箱</strong>：将包装类型转换为基本数据类型；
+　　</p>
+<p>Java使用自动装箱和拆箱机制，节省了常用数值的内存开销和创建对象的开销，提高了效率，由编译器来完成，编译器会在编译期根据语法决定是否进行装箱和拆箱动作。</p>
+<h2 id="类、方法、成员变量和局部变量的可用修饰符"><a href="#类、方法、成员变量和局部变量的可用修饰符" class="headerlink" title="类、方法、成员变量和局部变量的可用修饰符 - "></a><font face="楷体">类、方法、成员变量和局部变量的可用修饰符 - </font></h2><p> <a href="http://blog.csdn.net/yttcjj/article/details/6939239" target="_blank" rel="noopener">http://blog.csdn.net/yttcjj/article/details/6939239</a></p>
+<h2 id="在一个静态方法内调用一个非静态成员为什么是非法的？"><a href="#在一个静态方法内调用一个非静态成员为什么是非法的？" class="headerlink" title="在一个静态方法内调用一个非静态成员为什么是非法的？"></a><font face="楷体">在一个静态方法内调用一个非静态成员为什么是非法的？</font></h2><p>　　由于静态方法可以不通过对象进行调用，因此在静态方法里，不能调用其他非静态变量，也不可以访问非静态变量成员。</p>
+<h2 id="在Java中定义一个不做事且没有参数的构造方法的作用"><a href="#在Java中定义一个不做事且没有参数的构造方法的作用" class="headerlink" title="在Java中定义一个不做事且没有参数的构造方法的作用"></a><font face="楷体">在Java中定义一个不做事且没有参数的构造方法的作用</font></h2><p>　　Java程序在执行子类的构造方法之前，如果没有用super()来调用父类特定的构造方法，则会调用父类中“没有参数的构造方法”。因此，如果父类中只定义了有参数的构造方法，而在子类的构造方法中又没有用super()来调用父类中特定的构造方法，则编译时将发生错误，因为Java程序在父类中找不到没有参数的构造方法可供执行。解决办法是在父类里加上一个不做事且没有参数的构造方法。</p>
+<h2 id="import-java和javax有什么区别"><a href="#import-java和javax有什么区别" class="headerlink" title="import java和javax有什么区别"></a><font face="楷体">import java和javax有什么区别</font></h2><p><a href="http://www.cnblogs.com/EasonJim/p/6993139.html" target="_blank" rel="noopener">http://www.cnblogs.com/EasonJim/p/6993139.html</a></p>
+<h2 id="接口和抽象类的区别是什么？"><a href="#接口和抽象类的区别是什么？" class="headerlink" title="接口和抽象类的区别是什么？"></a><font face="楷体">接口和抽象类的区别是什么？</font></h2><p>1.接口的方法默认是public，所有方法在接口中不能有实现，抽象类可以有非抽象的方法<br>2.接口中的实例变量默认是final类型的，而抽象类中则不一定<br>3.一个类可以实现多个接口，但最多只能实现一个抽象类<br>4.一个类实现接口的话要实现接口的所有方法，而抽象类不一定<br>5.接口不能用new实例化，但可以声明，但是必须引用一个实现该接口的对象<br>从设计层面来说，抽象是对类的抽象，是一种模板设计，接口是行为的抽象，是一种行为的规范。</p>
+<h2 id="成员变量与局部变量的区别有那些？"><a href="#成员变量与局部变量的区别有那些？" class="headerlink" title="成员变量与局部变量的区别有那些？"></a><font face="楷体">成员变量与局部变量的区别有那些？</font></h2><ol>
+<li>从语法形式上，看成员变量是属于类的，而局部变量是在方法中定义的变量或是方法的参数；成员变量可以被public,private,static等修饰符所修饰，而局部变量不能被访问控制修饰符及static所修饰；成员变量和局部变量都能被final所修饰；</li>
+<li>从变量在内存中的存储方式来看，成员变量是对象的一部分，而对象存在于堆内存，局部变量存在于栈内存</li>
+<li>从变量在内存中的生存时间上看，成员变量是对象的一部分，它随着对象的创建而存在，而局部变量随着方法的调用而自动消失。</li>
+<li>成员变量如果没有被赋初值，则会自动以类型的默认值而赋值（一种情况例外被final修饰但没有被static修饰的成员变量必须显示地赋值）；而局部变量则不会自动赋值。</li>
+</ol>
+<h2 id="创建一个对象用什么运算符？对象实体与对象引用有何不同？"><a href="#创建一个对象用什么运算符？对象实体与对象引用有何不同？" class="headerlink" title="创建一个对象用什么运算符？对象实体与对象引用有何不同？"></a><font face="楷体">创建一个对象用什么运算符？对象实体与对象引用有何不同？</font></h2><p>　　new运算符，new创建对象实例（对象实例在堆内存中），对象引用指向对象实例（对象引用存放在栈内存中）。一个对象引用可以指向0个或1个对象（一根绳子可以不系气球，也可以系一个气球）;一个对象可以有n个引用指向它（可以用n条绳子系住一个气球）</p>
+<h2 id="什么是方法的返回值？返回值在类的方法里的作用是什么？"><a href="#什么是方法的返回值？返回值在类的方法里的作用是什么？" class="headerlink" title="什么是方法的返回值？返回值在类的方法里的作用是什么？"></a><font face="楷体">什么是方法的返回值？返回值在类的方法里的作用是什么？</font></h2><p>　　方法的返回值是指我们获取到的某个方法体中的代码执行后产生的结果！（前提是该方法可能产生结果）。返回值的作用:接收出结果，使得它可以用于其他的操作！</p>
+<h2 id="一个类的构造方法的作用是什么？若一个类没有声明构造方法，改程序能正确执行吗？为什么？"><a href="#一个类的构造方法的作用是什么？若一个类没有声明构造方法，改程序能正确执行吗？为什么？" class="headerlink" title="一个类的构造方法的作用是什么？若一个类没有声明构造方法，改程序能正确执行吗？为什么？"></a><font face="楷体">一个类的构造方法的作用是什么？若一个类没有声明构造方法，改程序能正确执行吗？为什么？</font></h2><p>　　主要作用是完成对类对象的初始化工作。可以执行。因为一个类即使没有声明构造方法也会有默认的不带参数的构造方法。</p>
+<h2 id="构造方法有哪些特性？"><a href="#构造方法有哪些特性？" class="headerlink" title="构造方法有哪些特性？"></a><font face="楷体">构造方法有哪些特性？</font></h2><p>　　1，名字与类名相同；2，没有返回值，但不能用void声明构造函数；3，生成类的对象时自动执行，无需调用。</p>
+<h2 id="静态方法和实例方法有何不同？"><a href="#静态方法和实例方法有何不同？" class="headerlink" title="静态方法和实例方法有何不同？"></a><font face="楷体">静态方法和实例方法有何不同？</font></h2><p>静态方法和实例方法的区别主要体现在两个方面： </p>
+<ol>
+<li><p>在外部调用静态方法时，可以使用”类名.方法名”的方式，也可以使用”对象名.方法名”的方式。而实例方法只有后面这种方式。也就是说，调用静态方法可以无需创建对象。 </p>
+</li>
+<li><p>静态方法在访问本类的成员时，只允许访问静态成员（即静态成员变量和静态方法），而不允许访问实例成员变量和实例方法；实例方法则无此限制</p>
+</li>
+</ol>
+<h2 id="对象的相等与指向他们的引用相等，两者有什么不同？"><a href="#对象的相等与指向他们的引用相等，两者有什么不同？" class="headerlink" title="对象的相等与指向他们的引用相等，两者有什么不同？"></a><font face="楷体">对象的相等与指向他们的引用相等，两者有什么不同？</font></h2><p>　　对象的相等 比的是内存中存放的内容是否相等而 引用相等 比较的是他们指向的内存地址是否相等。</p>
+<h2 id="在调用子类构造方法之前会先调用父类没有参数的构造方法，其目的是？"><a href="#在调用子类构造方法之前会先调用父类没有参数的构造方法，其目的是？" class="headerlink" title="在调用子类构造方法之前会先调用父类没有参数的构造方法，其目的是？"></a><font face="楷体">在调用子类构造方法之前会先调用父类没有参数的构造方法，其目的是？</font></h2><p>　　帮助子类做初始化工作。</p>
+<h2 id="什么是多态机制？Java语言是如何实现多态的？"><a href="#什么是多态机制？Java语言是如何实现多态的？" class="headerlink" title="什么是多态机制？Java语言是如何实现多态的？"></a><font face="楷体">什么是多态机制？Java语言是如何实现多态的？</font></h2><p><a href="http://blog.csdn.net/bornlili/article/details/55213563" target="_blank" rel="noopener">http://blog.csdn.net/bornlili/article/details/55213563</a></p>
+<h2 id="equals-和-的区别？"><a href="#equals-和-的区别？" class="headerlink" title="equals 和 == 的区别？"></a><font face="楷体">equals 和 == 的区别？</font></h2><p>通俗点讲：==是看看左右是不是一个东西。equals是看看左右是不是长得一样。如何记住嘛。如果单纯是想记住，==：等于。equals：相同。两个长得一样的人，只能说长的相同(equals)，但是不等于他们俩是一个人。你只要记住equals，==就不用记了。</p>
+<p>术语来讲的区别：1.==是判断两个变量或实例是不是指向同一个内存空间    equals是判断两个变量或实例所指向的内存空间的值是不是相同<br>2.==是指对内存地址进行比较    equals()是对字符串的内容进行比较3.==指引用是否相同    equals()指的是值是否相同</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-07-30T03:02:35.725Z"><a href="/2018/07/30/Java相关/设计模式/">2018-07-30</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2018/07/30/Java相关/设计模式/"></a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>下面是自己学习设计模式的时候做的总结，有些是自己的原创文章，有些是网上写的比较好的文章，保存下来细细消化吧！</p>
+<h2 id="创建型模式："><a href="#创建型模式：" class="headerlink" title="创建型模式："></a>创建型模式：</h2><blockquote>
+<h3 id="创建型模式概述："><a href="#创建型模式概述：" class="headerlink" title="创建型模式概述："></a>创建型模式概述：</h3></blockquote>
+<ul>
+<li>创建型模式(Creational Pattern)对类的实例化过程进行了抽象，能够将软件模块中对象的创建和对象的使用分离。为了使软件的结构更加清晰，外界对于这些对象只需要知道它们共同的接口，而不清楚其具体的实现细节，使整个系统的设计更加符合单一职责原则。</li>
+<li>创建型模式在创建什么(What)，由谁创建(Who)，何时创建(When)等方面都为软件设计者提供了尽可能大的灵活性。创建型模式隐藏了类的实例的创建细节，通过隐藏对象如何被创建和组合在一起达到使整个系统独立的目的。 </li>
+</ul>
+<p><img src="https://user-gold-cdn.xitu.io/2018/6/16/1640641afcb7559b?w=491&amp;h=241&amp;f=png&amp;s=51443" alt="创建型模式"></p>
+<blockquote>
+<h3 id="创建型模式系列文章推荐："><a href="#创建型模式系列文章推荐：" class="headerlink" title="创建型模式系列文章推荐："></a>创建型模式系列文章推荐：</h3></blockquote>
+<ul>
+<li><strong>单例模式：</strong></li>
+</ul>
+<p><a href="https://blog.csdn.net/qq_34337272/article/details/80455972" target="_blank" rel="noopener">深入理解单例模式——只有一个实例</a></p>
+<ul>
+<li><strong>工厂模式：</strong></li>
+</ul>
+<p><a href="https://blog.csdn.net/qq_34337272/article/details/80472071" target="_blank" rel="noopener">深入理解工厂模式——由对象工厂生成对象</a></p>
+<ul>
+<li><strong>建造者模式：</strong></li>
+</ul>
+<p><a href="http://blog.csdn.net/qq_34337272/article/details/80540059" target="_blank" rel="noopener">深入理解建造者模式 ——组装复杂的实例</a></p>
+<ul>
+<li><strong>原型模式：</strong></li>
+</ul>
+<p><a href="https://blog.csdn.net/qq_34337272/article/details/80706444" target="_blank" rel="noopener">深入理解原型模式 ——通过复制生成实例</a></p>
+<h2 id="结构型模式："><a href="#结构型模式：" class="headerlink" title="结构型模式："></a>结构型模式：</h2><blockquote>
+<h3 id="结构型模式概述："><a href="#结构型模式概述：" class="headerlink" title="结构型模式概述："></a>结构型模式概述：</h3></blockquote>
+<ul>
+<li><strong>结构型模式(Structural Pattern)：</strong> 描述如何将类或者对象结合在一起形成更大的结构，就像搭积木，可以通过简单积木的组合形成复杂的、功能更为强大的结构<br><img src="https://user-gold-cdn.xitu.io/2018/6/16/164064d6b3c205e3?w=719&amp;h=233&amp;f=png&amp;s=270293" alt="结构型模式(Structural Pattern)"></li>
+<li><strong>结构型模式可以分为类结构型模式和对象结构型模式：</strong>  <ul>
+<li>类结构型模式关心类的组合，由多个类可以组合成一个更大的系统，在类结构型模式中一般只存在继承关系和实现关系。</li>
+<li>对象结构型模式关心类与对象的组合，通过关联关系使得在一个类中定义另一个类的实例对象，然后通过该对象调用其方法。根据“合成复用原则”，在系统中尽量使用关联关系来替代继承关系，因此大部分结构型模式都是对象结构型模式。</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://user-gold-cdn.xitu.io/2018/6/16/1640655459d766d2?w=378&amp;h=266&amp;f=png&amp;s=59652" alt="结构型模式"></p>
+<blockquote>
+<h3 id="结构型模式系列文章推荐："><a href="#结构型模式系列文章推荐：" class="headerlink" title="结构型模式系列文章推荐："></a>结构型模式系列文章推荐：</h3></blockquote>
+<ul>
+<li><strong>适配器模式：</strong></li>
+</ul>
+<p><a href="https://segmentfault.com/a/1190000011856448" target="_blank" rel="noopener">深入理解适配器模式——加个“适配器”以便于复用</a></p>
+<p><a href="https://www.ibm.com/developerworks/cn/java/j-lo-adapter-pattern/index.html" target="_blank" rel="noopener">适配器模式原理及实例介绍-IBM</a></p>
+<ul>
+<li><strong>桥接模式：</strong></li>
+</ul>
+<p><a href="https://blog.csdn.net/yangzl2008/article/details/7670996" target="_blank" rel="noopener">设计模式笔记16：桥接模式(Bridge Pattern)</a></p>
+<ul>
+<li><strong>组合模式：</strong></li>
+</ul>
+<p><a href="https://blog.csdn.net/lmb55/article/details/51039781" target="_blank" rel="noopener">大话设计模式—组合模式</a></p>
+<ul>
+<li><strong>装饰模式：</strong></li>
+</ul>
+<p><a href="https://www.cnblogs.com/chenxing818/p/4705919.html" target="_blank" rel="noopener">java模式—装饰者模式</a></p>
+<p><a href="https://blog.csdn.net/cauchyweierstrass/article/details/48240147" target="_blank" rel="noopener">Java设计模式-装饰者模式</a></p>
+<ul>
+<li><strong>外观模式：</strong></li>
+</ul>
+<p><a href="https://www.cnblogs.com/lthIU/p/5860607.html" target="_blank" rel="noopener">java设计模式之外观模式（门面模式）</a></p>
+<ul>
+<li><strong>享元模式：</strong></li>
+</ul>
+<p><a href="http://www.jasongj.com/design_pattern/flyweight/" target="_blank" rel="noopener">享元模式</a></p>
+<ul>
+<li><strong>代理模式：</strong></li>
+</ul>
+<p><a href="https://www.ibm.com/developerworks/cn/java/j-lo-proxy-pattern/index.html" target="_blank" rel="noopener">代理模式原理及实例讲解 （IBM出品，很不错）</a></p>
+<p><a href="https://blog.csdn.net/briblue/article/details/73928350" target="_blank" rel="noopener">轻松学，Java 中的代理模式及动态代理</a></p>
+<p><a href="https://blog.csdn.net/justloveyou_/article/details/74203025" target="_blank" rel="noopener">Java代理模式及其应用</a></p>
+<h2 id="行为型模式"><a href="#行为型模式" class="headerlink" title="行为型模式"></a>行为型模式</h2><blockquote>
+<h3 id="行为型模式概述："><a href="#行为型模式概述：" class="headerlink" title="行为型模式概述："></a>行为型模式概述：</h3></blockquote>
+<ul>
+<li>行为型模式(Behavioral Pattern)是对在不同的对象之间划分责任和算法的抽象化。</li>
+<li>行为型模式不仅仅关注类和对象的结构，而且重点关注它们之间的相互作用。</li>
+<li>通过行为型模式，可以更加清晰地划分类与对象的职责，并研究系统在运行时实例对象之间的交互。在系统运行时，对象并不是孤立的，它们可以通过相互通信与协作完成某些复杂功能，一个对象在运行时也将影响到其他对象的运行。 </li>
+</ul>
+<p><strong>行为型模式分为类行为型模式和对象行为型模式两种：</strong></p>
+<ul>
+<li><strong>类行为型模式：</strong> 类的行为型模式使用继承关系在几个类之间分配行为，类行为型模式主要通过多态等方式来分配父类与子类的职责。</li>
+<li><strong>对象行为型模式：</strong> 对象的行为型模式则使用对象的聚合关联关系来分配行为，对象行为型模式主要是通过对象关联等方式来分配两个或多个类的职责。根据“合成复用原则”，系统中要尽量使用关联关系来取代继承关系，因此大部分行为型设计模式都属于对象行为型设计模式。</li>
+</ul>
+<p><img src="https://user-gold-cdn.xitu.io/2018/6/28/164467dd92c6172c?w=453&amp;h=269&amp;f=png&amp;s=63270" alt="行为型模式"></p>
+<ul>
+<li><strong>职责链模式：</strong></li>
+</ul>
+<p><a href="https://blog.csdn.net/jason0539/article/details/45091639" target="_blank" rel="noopener">Java设计模式之责任链模式、职责链模式</a></p>
+<p><a href="https://www.cnblogs.com/lizo/p/7503862.html" target="_blank" rel="noopener">责任链模式实现的三种方式</a></p>
+<ul>
+<li><strong>命令模式：</strong></li>
+</ul>
+<ul>
+<li><strong>解释器模式：</strong></li>
+<li><strong>迭代器模式：</strong></li>
+<li><strong>中介者模式：</strong></li>
+<li><strong>备忘录模式：</strong></li>
+<li><strong>观察者模式：</strong></li>
+<li><strong>状态模式：</strong></li>
+<li><strong>策略模式：</strong></li>
+<li><strong>模板方法模式：</strong></li>
+<li><strong>访问者模式：</strong></li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-07-30T03:02:35.722Z"><a href="/2018/07/30/Java相关/多线程系列/">2018-07-30</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2018/07/30/Java相关/多线程系列/"></a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="多线程系列"><a href="#多线程系列" class="headerlink" title="多线程系列"></a>多线程系列</h2><ol>
+<li><p><a href="http://blog.csdn.net/qq_34337272/article/details/79640870" target="_blank" rel="noopener">Java多线程学习（一）Java多线程入门</a></p>
+</li>
+<li><p><a href="http://blog.csdn.net/qq_34337272/article/details/79655194" target="_blank" rel="noopener">Java多线程学习（二）synchronized关键字（1）</a></p>
+<p> 注意：<strong>可重入锁的概念</strong>。</p>
+<p>另外要注意：<strong>synchronized取得的锁都是对象锁，而不是把一段代码或方法当做锁。</strong> 如果多个线程访问的是同一个对象，哪个线程先执行带synchronized关键字的方法，则哪个线程就持有该方法，那么其他线程只能呈等待状态。如果多个线程访问的是多个对象则不一定，因为多个对象会产生多个锁。</p>
+</li>
+<li><p><a href="http://blog.csdn.net/qq_34337272/article/details/79670775" target="_blank" rel="noopener">Java多线程学习（二）synchronized关键字（2）</a></p>
+<p><strong>注意：</strong></p>
+<ul>
+<li>其他线程执行对象中<strong>synchronized同步方法</strong>（上一节我们介绍过，需要回顾的可以看上一节的文章）和<strong>synchronized(this)代码块</strong>时呈现同步效果;</li>
+<li><strong>如果两个线程使用了同一个“对象监视器”（synchronized(object)）,运行结果同步，否则不同步</strong>.</li>
+</ul>
+<p><strong>synchronized关键字加到static静态方法</strong>和<strong>synchronized(class)代码块</strong>上都是是给<strong>Class类</strong>上锁，而<strong>synchronized关键字加到非static静态方法</strong>上是给<strong>对象</strong>上锁。</p>
+<p>数据类型String的常量池属性:<strong>在Jvm中具有String常量池缓存的功能</strong></p>
+</li>
+<li><p><a href="http://blog.csdn.net/qq_34337272/article/details/79680771" target="_blank" rel="noopener">Java多线程学习（三）volatile关键字</a></p>
+<p><strong>注意：</strong></p>
+<p><strong>synchronized关键字</strong>和<strong>volatile关键字</strong>比较</p>
+</li>
+<li><p><a href="http://blog.csdn.net/qq_34337272/article/details/79690279" target="_blank" rel="noopener">Java多线程学习（四）等待/通知（wait/notify）机制</a></p>
+</li>
+<li><p><a href="http://blog.csdn.net/qq_34337272/article/details/79694226" target="_blank" rel="noopener">Java多线程学习（五）线程间通信知识点补充</a></p>
+<p><strong>注意：</strong> ThreadLocal类主要解决的就是让每个线程绑定自己的值，可以将ThreadLocal类形象的比喻成存放数据的盒子，盒子中可以存储每个线程的私有数据。</p>
+</li>
+<li><p><a href="http://blog.csdn.net/qq_34337272/article/details/79714196" target="_blank" rel="noopener">Java多线程学习（六）Lock锁的使用</a><br><img src="https://user-gold-cdn.xitu.io/2018/3/27/1626755a8e9a8774?w=1197&amp;h=571&amp;f=jpeg&amp;s=258439" alt="本节思维导图"></p>
+</li>
+<li><p><a href="https://blog.csdn.net/qq_34337272/article/details/79844051" target="_blank" rel="noopener">Java多线程学习（七）并发编程中一些问题</a><br><img src="https://user-gold-cdn.xitu.io/2018/4/7/162a01b71ebc4842?w=1067&amp;h=517&amp;f=png&amp;s=36857" alt="思维导图"></p>
+</li>
+<li><p><a href="https://blog.csdn.net/qq_34337272" target="_blank" rel="noopener">Java多线程学习（八）线程池与Executor 框架</a><br><img src="https://user-gold-cdn.xitu.io/2018/5/31/163b4379a605fa18?w=1560&amp;h=752&amp;f=png&amp;s=56361" alt="本节思维导图"></p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-07-30T03:02:35.718Z"><a href="/2018/07/30/Java相关/Java虚拟机（jvm）/">2018-07-30</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2018/07/30/Java相关/Java虚拟机（jvm）/"></a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Java面试通关手册（Java学习指南）github地址（欢迎star和pull）：<a href="https://github.com/Snailclimb/Java_Guide" target="_blank" rel="noopener">https://github.com/Snailclimb/Java_Guide</a></p>
+<p>下面是按jvm虚拟机知识点分章节总结的一些jvm学习与面试相关的一些东西。一般作为Java程序员在面试的时候一般会问的大多就是<strong>Java内存区域、虚拟机垃圾算法、虚拟垃圾收集器、JVM内存管理</strong>这些问题了。这些内容参考周的《深入理解Java虚拟机》中第二章和第三章就足够了对应下面的<a href="https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s%3F__biz%3DMzU4NDQ4MzU5OA%3D%3D%26mid%3D2247483910%26idx%3D1%26sn%3D246f39051a85fc312577499691fba89f%26chksm%3Dfd985467caefdd71f9a7c275952be34484b14f9e092723c19bd4ef557c324169ed084f868bdb%23rd" target="_blank" rel="noopener">深入理解虚拟机之Java内存区域：</a>和<a href="https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s%3F__biz%3DMzU4NDQ4MzU5OA%3D%3D%26mid%3D2247483914%26idx%3D1%26sn%3D9aa157d4a1570962c39783cdeec7e539%26chksm%3Dfd98546bcaefdd7d9f61cd356e5584e56b64e234c3a403ed93cb6d4dde07a505e3000fd0c427%23rd" target="_blank" rel="noopener">深入理解虚拟机之垃圾回收</a>这两篇文章。</p>
+<blockquote>
+<h3 id="常见面试题"><a href="#常见面试题" class="headerlink" title="常见面试题"></a>常见面试题</h3></blockquote>
+<p><a href="https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s%3F__biz%3DMzU4NDQ4MzU5OA%3D%3D%26mid%3D2247483910%26idx%3D1%26sn%3D246f39051a85fc312577499691fba89f%26chksm%3Dfd985467caefdd71f9a7c275952be34484b14f9e092723c19bd4ef557c324169ed084f868bdb%23rd" target="_blank" rel="noopener">深入理解虚拟机之Java内存区域：</a></p>
+<ol>
+<li><p>介绍下Java内存区域（运行时数据区）。</p>
+</li>
+<li><p>对象的访问定位的两种方式。</p>
+</li>
+</ol>
+<p><a href="https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s%3F__biz%3DMzU4NDQ4MzU5OA%3D%3D%26mid%3D2247483914%26idx%3D1%26sn%3D9aa157d4a1570962c39783cdeec7e539%26chksm%3Dfd98546bcaefdd7d9f61cd356e5584e56b64e234c3a403ed93cb6d4dde07a505e3000fd0c427%23rd" target="_blank" rel="noopener">深入理解虚拟机之垃圾回收</a></p>
+<ol>
+<li><p>如何判断对象是否死亡（两种方法）。</p>
+</li>
+<li><p>简单的介绍一下强引用、软引用、弱引用、虚引用（虚引用与软引用和弱引用的区别、使用软引用能带来的好处）。</p>
+</li>
+<li><p>垃圾收集有哪些算法，各自的特点？</p>
+</li>
+<li><p>HotSpot为什么要分为新生代和老年代？</p>
+</li>
+<li><p>常见的垃圾回收器有那些？</p>
+</li>
+<li><p>介绍一下CMS,G1收集器。</p>
+</li>
+<li><p>Minor Gc和Full GC 有什么不同呢？</p>
+</li>
+</ol>
+<p><a href="https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s%3F__biz%3DMzU4NDQ4MzU5OA%3D%3D%26mid%3D2247483922%26idx%3D1%26sn%3D0695ff4c2700ccebb8fbc39011866bd8%26chksm%3Dfd985473caefdd6583eb42dbbc7f01918dc6827c808292bb74a5b6333e3d526c097c9351e694%23rd" target="_blank" rel="noopener">虚拟机性能监控和故障处理工具</a></p>
+<ol>
+<li>JVM调优的常见命令行工具有哪些？</li>
+</ol>
+<p><a href="https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s%3F__biz%3DMzU4NDQ4MzU5OA%3D%3D%26mid%3D2247483926%26idx%3D1%26sn%3D224413da998f7e024f7b8d87397934d9%26chksm%3Dfd985477caefdd61a2fe1a3f0be29e057082252e579332f5b6d9072a150b838cefe2c47b6e5a%23rd" target="_blank" rel="noopener">深入理解虚拟机之类文件结构</a></p>
+<ol>
+<li>简单介绍一下Class类文件结构（常量池主要存放的是那两大常量？Class文件的继承关系是如何确定的？字段表、方法表、属性表主要包含那些信息？）</li>
+</ol>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU4NDQ4MzU5OA==&amp;mid=2247483934&amp;idx=1&amp;sn=f247f9bee4e240f5e7fac25659da3bff&amp;chksm=fd98547fcaefdd6996e1a7046e03f29df9308bdf82ceeffd111112766ffd3187892700f64b40#rd" target="_blank" rel="noopener">深入理解虚拟机之虚拟机类加载机制</a></p>
+<ol>
+<li><p>简单说说类加载过程，里面执行了哪些操作？</p>
+</li>
+<li><p>对类加载器有了解吗？</p>
+</li>
+<li><p>什么是双亲委派模型？</p>
+</li>
+<li><p>双亲委派模型的工作过程以及使用它的好处。</p>
+</li>
+</ol>
+<blockquote>
+<h3 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h3></blockquote>
+<p><a href="https://juejin.im/post/5aebcb076fb9a07a9a10b5f3" target="_blank" rel="noopener">深入理解虚拟机之虚拟机字节码执行引擎</a></p>
+<p><a href="http://www.54tianzhisheng.cn/2018/02/28/Java-Memory-Model/" target="_blank" rel="noopener">《深入理解 Java 内存模型》读书笔记</a> （非常不错的文章）</p>
+<p><a href="https://blog.csdn.net/javazejian/article/details/72772461" target="_blank" rel="noopener">全面理解Java内存模型(JMM)及volatile关键字 </a></p>
+<p><strong>欢迎关注我的微信公众号:”Java面试通关手册”（一个有温度的微信公众号，期待与你共同进步~~~坚持原创，分享美文，分享各种Java学习资源）：</strong></p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/3/19/1623c870135a3609?w=215&amp;h=215&amp;f=jpeg&amp;s=29172" alt="微信公众号"></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-07-30T03:02:35.713Z"><a href="/2018/07/30/Java相关/Java基础知识/">2018-07-30</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2018/07/30/Java相关/Java基础知识/"></a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p><strong>我自己总结的Java学习的系统知识点以及面试问题，目前已经开源，会一直完善下去，欢迎建议和指导欢迎Star：</strong> <a href="https://github.com/Snailclimb/Java-Guide" target="_blank" rel="noopener">https://github.com/Snailclimb/Java-Guide</a></p>
+<blockquote>
+<h3 id="学习书籍推荐"><a href="#学习书籍推荐" class="headerlink" title="学习书籍推荐"></a>学习书籍推荐</h3></blockquote>
+<p><strong>《Head First Java.第二版》：</strong><br>可以说是我的Java启蒙书籍了，特别适合新手读当然也适合我们用来温故Java知识点。</p>
+<p><strong>《Java核心技术卷1+卷2》：</strong><br>很棒的两本书，建议有点Java基础之后再读，介绍的还是比较深入的，非常推荐。</p>
+<p><strong>《Java编程思想(第4版)》：</strong><br>这本书要常读，初学者可以快速概览，中等程序员可以深入看看java，老鸟还可以用之回顾java的体系。这本书之所以厉害，因为它在无形中整合了设计模式，这本书之所以难读，也恰恰在于他对设计模式的整合是无形的。</p>
+<blockquote>
+<h3 id="学习视频推荐"><a href="#学习视频推荐" class="headerlink" title="学习视频推荐"></a>学习视频推荐</h3></blockquote>
+<p><a href="https://www.imooc.com/course/programdetail/pid/31" target="_blank" rel="noopener">Java工程师学习路径完整版</a> （慕课网Java工程师路径）另外大家也可以关注微信公众号：<strong>“Java面试通关手册”</strong> 后台回复关键字 <strong>“资源分享第一波”</strong> 即可领取黑马内部Javaweb工程师以及大数据工程师相关视频以及配套资料。</p>
+<p>以下视频整理自慕课网Java工程师路径相关免费课程。</p>
+<ul>
+<li><strong>语法基础：</strong> <a href="https://www.imooc.com/learn/85" target="_blank" rel="noopener">《Java入门第一季》</a></li>
+<li><strong>面向对象：</strong> <a href="https://www.imooc.com/learn/124" target="_blank" rel="noopener">《Java入门第一季》</a></li>
+<li><strong>常用工具类：</strong> <a href="https://www.imooc.com/learn/124" target="_blank" rel="noopener">《Java入门第三季》</a></li>
+<li><strong>文件操作：</strong> <a href="https://www.imooc.com/learn/195" target="_blank" rel="noopener">《二进制基础》</a> -&gt; <a href="https://www.imooc.com/learn/123" target="_blank" rel="noopener">《文件传输基础——Java IO流》</a> -&gt; <a href="https://www.imooc.com/learn/171" target="_blank" rel="noopener">《Java眼中的XML—文件读取》</a> -&gt;<a href="https://www.imooc.com/learn/251" target="_blank" rel="noopener">《Java眼中的XML 文件写入》</a></li>
+<li><strong>网路Socket编程：</strong> <a href="https://www.imooc.com/learn/161" target="_blank" rel="noopener">《Java Socket应用—通信是这样练成的》</a></li>
+<li><strong>Java进阶之反射与注解：</strong> <a href="https://www.imooc.com/learn/199" target="_blank" rel="noopener">《反射——Java高级开发必须懂的》</a> -&gt; <a href="https://www.imooc.com/learn/456" target="_blank" rel="noopener">《全面解析Java注解》</a></li>
+</ul>
+<blockquote>
+<h3 id="面试常见问题汇总"><a href="#面试常见问题汇总" class="headerlink" title="面试常见问题汇总"></a>面试常见问题汇总</h3></blockquote>
+<p><a href="https://github.com/Snailclimb/Java-Guide/blob/master/Java相关/Java基础知识面试题总结/超详细的Java面试题总结（一）之Java基础知识篇.md" target="_blank" rel="noopener">超详细的Java面试题总结（一）之Java基础知识篇</a></p>
+<ol>
+<li>重载和重写的区别</li>
+<li>自动装箱与拆箱</li>
+<li>成员变量与局部变量的区别有那些？</li>
+<li>静态方法和实例方法有何不同？</li>
+<li>equals 和 == 的区别？</li>
+</ol>
+<p><a href="https://github.com/Snailclimb/Java-Guide/blob/master/Java相关/Java基础知识面试题总结/超详细的Java面试题总结（二）之Java基础知识篇.md" target="_blank" rel="noopener">超详细的Java面试题总结（二）之Java基础知识篇</a></p>
+<ol>
+<li>创建线程有几种不同的方式？你喜欢哪一种？为什么？</li>
+<li>线程有哪些基本状态？这些状态是如何定义的?</li>
+<li>finalize()方法什么时候被调用？析构函数(finalization)的目的是什么？</li>
+</ol>
+<p><a href="https://github.com/Snailclimb/Java-Guide/blob/master/Java相关/Java基础知识面试题总结/超详细的Java面试题总结（三）之Java集合篇常见问题.md" target="_blank" rel="noopener">超详细的Java面试题总结（三）之Java集合篇常见问题</a></p>
+<ol>
+<li>List，Set,Map三者的区别及总结</li>
+<li>Arraylist 与 LinkedList 区别</li>
+<li>ArrayList 与 Vector 区别（为什么要用Arraylist取代Vector呢？）</li>
+<li>HashMap 和 Hashtable 的区别</li>
+<li>HashSet 和 HashMap 区别</li>
+<li>HashMap 和 ConcurrentHashMap 的区别</li>
+<li>HashSet如何检查重复</li>
+<li>comparable 和 comparator的区别？</li>
+<li>如何对Object的list排序？</li>
+<li>如何实现数组与List的相互转换？</li>
+<li>如何求ArrayList集合的交集 并集 差集 去重复并集</li>
+<li>HashMap 的工作原理及代码实现</li>
+<li>ConcurrentHashMap 的工作原理及代码实现</li>
+<li>集合框架底层数据结构总结</li>
+<li>集合的选用</li>
+<li>集合的常用方法</li>
+<li>集合的选用</li>
+</ol>
+<p><a href="https://github.com/Snailclimb/Java-Guide/blob/master/Java相关/Java基础知识面试题总结/超详细的Java面试题总结（四%20）之JavaWeb基础知识总结.md" target="_blank" rel="noopener">超详细的Java面试题总结（四 ）之JavaWeb基础知识总结</a></p>
+<ol>
+<li>简述Servlet</li>
+<li>阐述Servlet和CGI的区别?</li>
+<li>Servlet接口中有哪些方法及Servlet生命周期探秘</li>
+<li>get和post请求的区别？</li>
+<li>转发（Forward）和重定向（Redirect）的区别？</li>
+<li>Servlet与线程安全</li>
+<li>JSP和Servlet是什么关系？</li>
+<li>JSP工作原理：</li>
+<li>JSP有哪些内置对象？作用分别是什么？</li>
+<li>Request对象的主要方法有哪些？</li>
+<li>request.getAttribute()和 request.getParameter()有何区别?</li>
+<li>JSP九大内置对象，七大动作，三大指令-</li>
+<li>实现会话跟踪的技术有哪些？</li>
+<li>Cookie和Session的的区别？</li>
+</ol>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-07-30T03:02:35.707Z"><a href="/2018/07/30/Java相关/Java IO与NIO/">2018-07-30</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2018/07/30/Java相关/Java IO与NIO/"></a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Java面试通关手册（Java学习指南） Github地址：<a href="https://github.com/Snailclimb/Java_Guide" target="_blank" rel="noopener">https://github.com/Snailclimb/Java_Guide</a></p>
+<blockquote>
+<h1 id="IO流学习总结"><a href="#IO流学习总结" class="headerlink" title="IO流学习总结"></a>IO流学习总结</h1></blockquote>
+<h3 id="一-Java-IO，硬骨头也能变软"><a href="#一-Java-IO，硬骨头也能变软" class="headerlink" title="一　Java IO，硬骨头也能变软"></a><a href="https://mp.weixin.qq.com/s?__biz=MzU4NDQ4MzU5OA==&amp;mid=2247483981&amp;idx=1&amp;sn=6e5c682d76972c8d2cf271a85dcf09e2&amp;chksm=fd98542ccaefdd3a70428e9549bc33e8165836855edaa748928d16c1ebde9648579d3acaac10#rd" target="_blank" rel="noopener">一　Java IO，硬骨头也能变软</a></h3><h3 id="主要内容："><a href="#主要内容：" class="headerlink" title="主要内容："></a>主要内容：</h3><p><strong>（1） 按操作方式分类结构图：</strong></p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/5/16/16367d4fd1ce1b46?w=720&amp;h=1080&amp;f=jpeg&amp;s=69522" alt="按操作方式分类结构图："></p>
+<p><strong>（2）按操作对象分类结构图</strong></p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/5/16/16367d673b0e268d?w=720&amp;h=535&amp;f=jpeg&amp;s=46081" alt="按操作对象分类结构图"></p>
+<h3 id="二-java-IO体系的学习总结"><a href="#二-java-IO体系的学习总结" class="headerlink" title="二　java IO体系的学习总结"></a><a href="https://blog.csdn.net/nightcurtis/article/details/51324105" target="_blank" rel="noopener">二　java IO体系的学习总结</a></h3><ol>
+<li><strong>IO流的分类：</strong><ul>
+<li>按照流的流向分，可以分为输入流和输出流；</li>
+<li>按照操作单元划分，可以划分为字节流和字符流；</li>
+<li>按照流的角色划分为节点流和处理流。</li>
+</ul>
+</li>
+<li><p><strong>流的原理浅析:</strong></p>
+<p>java Io流共涉及40多个类，这些类看上去很杂乱，但实际上很有规则，而且彼此之间存在非常紧密的联系， Java Io流的40多个类都是从如下4个抽象类基类中派生出来的。</p>
+<ul>
+<li><strong>InputStream/Reader</strong>: 所有的输入流的基类，前者是字节输入流，后者是字符输入流。</li>
+<li><strong>OutputStream/Writer</strong>: 所有输出流的基类，前者是字节输出流，后者是字符输出流。</li>
+</ul>
+</li>
+<li><strong>常用的io流的用法</strong> </li>
+</ol>
+<h3 id="三-Java-IO面试题"><a href="#三-Java-IO面试题" class="headerlink" title="三　Java IO面试题"></a><a href="https://mp.weixin.qq.com/s?__biz=MzU4NDQ4MzU5OA==&amp;mid=2247483985&amp;idx=1&amp;sn=38531c2cee7b87f125df7aef41637014&amp;chksm=fd985430caefdd26b0506aa84fc26251877eccba24fac73169a4d6bd1eb5e3fbdf3c3b940261#rd" target="_blank" rel="noopener">三　Java IO面试题</a></h3><blockquote>
+<h1 id="NIO学习总结"><a href="#NIO学习总结" class="headerlink" title="NIO学习总结"></a>NIO学习总结</h1></blockquote>
+<h3 id="一-Java-NIO-概览"><a href="#一-Java-NIO-概览" class="headerlink" title="一　Java NIO 概览"></a><a href="https://mp.weixin.qq.com/s?__biz=MzU4NDQ4MzU5OA==&amp;mid=2247483956&amp;idx=1&amp;sn=57692bc5b7c2c6dfb812489baadc29c9&amp;chksm=fd985455caefdd4331d828d8e89b22f19b304aa87d6da73c5d8c66fcef16e4c0b448b1a6f791#rd" target="_blank" rel="noopener">一　Java NIO 概览</a></h3><h3 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容:"></a>主要内容:</h3><ol>
+<li><p><strong>NIO简介</strong>:</p>
+<p>Java NIO 是 java 1.4, 之后新出的一套IO接口NIO中的N可以理解为Non-blocking，不单纯是New。</p>
+</li>
+<li><p><strong>NIO的特性/NIO与IO区别:</strong></p>
+<ul>
+<li>1)IO是面向流的，NIO是面向缓冲区的；</li>
+<li>2)IO流是阻塞的，NIO流是不阻塞的;</li>
+<li>3)NIO有选择器，而IO没有。</li>
+</ul>
+</li>
+<li><p><strong>读数据和写数据方式:</strong></p>
+<ul>
+<li><p>从通道进行数据读取 ：创建一个缓冲区，然后请求通道读取数据。</p>
+</li>
+<li><p>从通道进行数据写入 ：创建一个缓冲区，填充数据，并要求通道写入数据。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>NIO核心组件简单介绍</strong></p>
+<ul>
+<li><strong>Channels</strong></li>
+<li><strong>Buffers</strong></li>
+<li><strong>Selectors</strong></li>
+</ul>
+</li>
+</ol>
+<h3 id="二-Java-NIO-之-Buffer-缓冲区"><a href="#二-Java-NIO-之-Buffer-缓冲区" class="headerlink" title="二　Java NIO 之 Buffer(缓冲区)"></a><a href="https://mp.weixin.qq.com/s?__biz=MzU4NDQ4MzU5OA==&amp;mid=2247483961&amp;idx=1&amp;sn=f67bef4c279e78043ff649b6b03fdcbc&amp;chksm=fd985458caefdd4e3317ccbdb2d0a5a70a5024d3255eebf38183919ed9c25ade536017c0a6ba#rd" target="_blank" rel="noopener">二　Java NIO 之 Buffer(缓冲区)</a></h3><h3 id="主要内容-1"><a href="#主要内容-1" class="headerlink" title="主要内容:"></a>主要内容:</h3><ol>
+<li><strong>Buffer(缓冲区)介绍:</strong><ul>
+<li>Java NIO Buffers用于和NIO Channel交互。 我们从Channel中读取数据到buffers里，从Buffer把数据写入到Channels；</li>
+<li>Buffer本质上就是一块内存区；</li>
+<li>一个Buffer有三个属性是必须掌握的，分别是：capacity容量、position位置、limit限制。</li>
+</ul>
+</li>
+<li><strong>Buffer的常见方法</strong><ul>
+<li>Buffer clear()</li>
+<li>Buffer flip()</li>
+<li>Buffer rewind()</li>
+<li>Buffer position(int newPosition)</li>
+</ul>
+</li>
+<li><p><strong>Buffer的使用方式/方法介绍:</strong></p>
+<ul>
+<li><p>分配缓冲区（Allocating a Buffer）:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ByteBuffer buf = ByteBuffer.allocate(<span class="number">28</span>);<span class="comment">//以ByteBuffer为例子</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>写入数据到缓冲区（Writing Data to a Buffer）</p>
+<p><strong>写数据到Buffer有两种方法：</strong></p>
+<p>1.从Channel中写数据到Buffer</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> bytesRead = inChannel.read(buf); <span class="comment">//read into buffer.</span></span><br></pre></td></tr></table></figure>
+<p>2.通过put写数据：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">buf.put(<span class="number">127</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><strong>Buffer常用方法测试</strong></p>
+<p> 说实话，NIO编程真的难，通过后面这个测试例子，你可能才能勉强理解前面说的Buffer方法的作用。</p>
+</li>
+</ol>
+<h3 id="三-Java-NIO-之-Channel（通道）"><a href="#三-Java-NIO-之-Channel（通道）" class="headerlink" title="三　Java NIO 之 Channel（通道）"></a><a href="https://mp.weixin.qq.com/s?__biz=MzU4NDQ4MzU5OA==&amp;mid=2247483966&amp;idx=1&amp;sn=d5cf18c69f5f9ec2aff149270422731f&amp;chksm=fd98545fcaefdd49296e2c78000ce5da277435b90ba3c03b92b7cf54c6ccc71d61d13efbce63#rd" target="_blank" rel="noopener">三　Java NIO 之 Channel（通道）</a></h3><h3 id="主要内容-2"><a href="#主要内容-2" class="headerlink" title="主要内容:"></a>主要内容:</h3><ol>
+<li><strong>Channel（通道）介绍</strong><ul>
+<li>通常来说NIO中的所有IO都是从 Channel（通道） 开始的。 </li>
+<li>NIO Channel通道和流的区别：</li>
+</ul>
+</li>
+<li><strong>FileChannel的使用</strong></li>
+<li><strong>SocketChannel和ServerSocketChannel的使用</strong></li>
+<li><strong>️DatagramChannel的使用</strong></li>
+<li><strong>Scatter / Gather</strong><ul>
+<li>Scatter: 从一个Channel读取的信息分散到N个缓冲区中(Buufer).</li>
+<li>Gather: 将N个Buffer里面内容按照顺序发送到一个Channel.</li>
+</ul>
+</li>
+<li><strong>通道之间的数据传输</strong><ul>
+<li>在Java NIO中如果一个channel是FileChannel类型的，那么他可以直接把数据传输到另一个channel。</li>
+<li>transferFrom() :transferFrom方法把数据从通道源传输到FileChannel</li>
+<li>transferTo() :transferTo方法把FileChannel数据传输到另一个channel</li>
+</ul>
+</li>
+</ol>
+<h3 id="四-Java-NIO之Selector（选择器）"><a href="#四-Java-NIO之Selector（选择器）" class="headerlink" title="四　Java NIO之Selector（选择器）"></a><a href="https://mp.weixin.qq.com/s?__biz=MzU4NDQ4MzU5OA==&amp;mid=2247483970&amp;idx=1&amp;sn=d5e2b133313b1d0f32872d54fbdf0aa7&amp;chksm=fd985423caefdd354b587e57ce6cf5f5a7bec48b9ab7554f39a8d13af47660cae793956e0f46#rd" target="_blank" rel="noopener">四　Java NIO之Selector（选择器）</a></h3><h3 id="主要内容-3"><a href="#主要内容-3" class="headerlink" title="主要内容:"></a>主要内容:</h3><ol>
+<li><strong>Selector（选择器）介绍</strong><ul>
+<li>Selector 一般称 为选择器 ，当然你也可以翻译为 多路复用器 。它是Java NIO核心组件中的一个，用于检查一个或多个NIO Channel（通道）的状态是否处于可读、可写。如此可以实现单线程管理多个channels,也就是可以管理多个网络链接。</li>
+<li>使用Selector的好处在于： 使用更少的线程来就可以来处理通道了， 相比使用多个线程，避免了线程上下文切换带来的开销。</li>
+</ul>
+</li>
+<li><p><strong>Selector（选择器）的使用方法介绍</strong></p>
+<ul>
+<li><p>Selector的创建</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Selector selector = Selector.open();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注册Channel到Selector(Channel必须是非阻塞的)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">channel.configureBlocking(<span class="keyword">false</span>);</span><br><span class="line">SelectionKey key = channel.register(selector, Selectionkey.OP_READ);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>SelectionKey介绍</p>
+<p>一个SelectionKey键表示了一个特定的通道对象和一个特定的选择器对象之间的注册关系。</p>
+</li>
+<li><p>从Selector中选择channel(Selecting Channels via a Selector)</p>
+<p>选择器维护注册过的通道的集合，并且这种注册关系都被封装在SelectionKey当中.</p>
+</li>
+<li><p>停止选择的方法</p>
+<p>wakeup()方法 和close()方法。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>模板代码</strong></p>
+<p>有了模板代码我们在编写程序时，大多数时间都是在模板代码中添加相应的业务代码。</p>
+</li>
+<li><strong>客户端与服务端简单交互实例</strong></li>
+</ol>
+<h3 id="五-Java-NIO之拥抱Path和Files"><a href="#五-Java-NIO之拥抱Path和Files" class="headerlink" title="五 　Java NIO之拥抱Path和Files"></a><a href="https://mp.weixin.qq.com/s?__biz=MzU4NDQ4MzU5OA==&amp;tempkey=OTU3X2k5RHFXbjA4MHhzcC9DN0F6TU1OdlgzVno5ZkhYV29GSEZURmktTWJRUkFib2FKNnRwZGE2RHdPTDJMUXl5cVVwMVJWUUVodU4zWlg4YUw1ZURPVXRXakJLcXhDN0VaenkyYjdJdm9uRVJrcWROcGh3d2c2NWNsQjFNWld5N2lNNmxVUWJ1enlad1dUNVoyNFBPaEJyU05KMmpaZEJCLVFSUWllbGd%2Bfg%3D%3D&amp;chksm=7d9854254aefdd33a40a4bad918bdc54cc64450bc3d4597ee53151fdedcdbd2ce722fc8aca4d#rd" target="_blank" rel="noopener">五 　Java NIO之拥抱Path和Files</a></h3><h3 id="主要内容-4"><a href="#主要内容-4" class="headerlink" title="主要内容"></a>主要内容</h3><p><strong>一 文件I/O基石：Path：</strong></p>
+<ul>
+<li>创建一个Path</li>
+<li>File和Path之间的转换，File和URI之间的转换</li>
+<li>获取Path的相关信息</li>
+<li>移除Path中的冗余项</li>
+</ul>
+<p><strong>二 拥抱Files类：</strong></p>
+<ul>
+<li>Files.exists() 检测文件路径是否存在</li>
+<li>Files.createFile() 创建文件</li>
+<li>Files.createDirectories()和Files.createDirectory()创建文件夹</li>
+<li>Files.delete()方法 可以删除一个文件或目录</li>
+<li>Files.copy()方法可以吧一个文件从一个地址复制到另一个位置</li>
+<li>获取文件属性</li>
+<li>遍历一个文件夹</li>
+<li>Files.walkFileTree()遍历整个目录</li>
+</ul>
+<h3 id="六-NIO学习总结以及NIO新特性介绍"><a href="#六-NIO学习总结以及NIO新特性介绍" class="headerlink" title="六 　NIO学习总结以及NIO新特性介绍"></a><a href="https://blog.csdn.net/a953713428/article/details/64907250" target="_blank" rel="noopener">六 　NIO学习总结以及NIO新特性介绍</a></h3><ul>
+<li><strong>内存映射：</strong></li>
+</ul>
+<p>这个功能主要是为了提高大文件的读写速度而设计的。内存映射文件(memory-mappedfile)能让你创建和修改那些大到无法读入内存的文件。有了内存映射文件，你就可以认为文件已经全部读进了内存，然后把它当成一个非常大的数组来访问了。将文件的一段区域映射到内存中，比传统的文件处理速度要快很多。内存映射文件它虽然最终也是要从磁盘读取数据，但是它并不需要将数据读取到OS内核缓冲区，而是直接将进程的用户私有地址空间中的一部分区域与文件对象建立起映射关系，就好像直接从内存中读、写文件一样，速度当然快了。</p>
+<h3 id="七-Java-NIO-AsynchronousFileChannel异步文件通"><a href="#七-Java-NIO-AsynchronousFileChannel异步文件通" class="headerlink" title="七　Java NIO AsynchronousFileChannel异步文件通"></a><a href="http://wiki.jikexueyuan.com/project/java-nio-zh/java-nio-asynchronousfilechannel.html" target="_blank" rel="noopener">七　Java NIO AsynchronousFileChannel异步文件通</a></h3><p>Java7中新增了AsynchronousFileChannel作为nio的一部分。AsynchronousFileChannel使得数据可以进行异步读写。</p>
+<h3 id="八-高并发Java（8）：NIO和AIO"><a href="#八-高并发Java（8）：NIO和AIO" class="headerlink" title="八　高并发Java（8）：NIO和AIO"></a><a href="http://www.importnew.com/21341.html" target="_blank" rel="noopener">八　高并发Java（8）：NIO和AIO</a></h3><blockquote>
+<h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2></blockquote>
+<h3 id="在-Java-7-中体会-NIO-2-异步执行的快乐"><a href="#在-Java-7-中体会-NIO-2-异步执行的快乐" class="headerlink" title="在 Java 7 中体会 NIO.2 异步执行的快乐"></a><a href="https://www.ibm.com/developerworks/cn/java/j-lo-nio2/index.html" target="_blank" rel="noopener">在 Java 7 中体会 NIO.2 异步执行的快乐</a></h3><h3 id="Java-AIO总结与示例"><a href="#Java-AIO总结与示例" class="headerlink" title="Java AIO总结与示例"></a><a href="https://blog.csdn.net/x_i_y_u_e/article/details/52223406" target="_blank" rel="noopener">Java AIO总结与示例</a></h3><p>AIO是异步IO的缩写，虽然NIO在网络操作中，提供了非阻塞的方法，但是NIO的IO行为还是同步的。对于NIO来说，我们的业务线程是在IO操作准备好时，得到通知，接着就由这个线程自行进行IO操作，IO操作本身是同步的。</p>
+<p><strong>欢迎关注我的微信公众号:”Java面试通关手册”（一个有温度的微信公众号，期待与你共同进步~~~坚持原创，分享美文，分享各种Java学习资源）：</strong></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-07-30T03:02:35.640Z"><a href="/2018/07/30/个人阅读书籍清单/">2018-07-30</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2018/07/30/个人阅读书籍清单/"></a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>下面是个人阅读书籍的部分清单，我比较建议阅读的书籍前都加上了:thumbsup: 表情。</p>
+<blockquote>
+<h3 id="核心基础知识"><a href="#核心基础知识" class="headerlink" title="核心基础知识"></a>核心基础知识</h3></blockquote>
+<ul>
+<li><p>:thumbsup: <a href="https://book.douban.com/subject/25863515/" target="_blank" rel="noopener">《图解HTTP》</a></p>
+<p>讲漫画一样的讲HTTP，很有意思，不会觉得枯燥，大概也涵盖也HTTP常见的知识点。因为篇幅问题，内容可能不太全面。不过，如果不是专门做网络方向研究的小伙伴想研究HTTP相关知识的话，读这本书的话应该来说就差不多了。</p>
+</li>
+</ul>
+<blockquote>
+<h3 id="Java相关"><a href="#Java相关" class="headerlink" title="Java相关"></a>Java相关</h3></blockquote>
+<ul>
+<li><p>:thumbsup: <a href="https://book.douban.com/subject/2000732/" target="_blank" rel="noopener">《Head First Java.第二版》</a></p>
+<p>可以说是我的Java启蒙书籍了，特别适合新手读当然也适合我们用来温故Java知识点。</p>
+</li>
+<li><p><a href="https://book.douban.com/subject/26555197/" target="_blank" rel="noopener">《Java多线程编程核心技术》</a></p>
+<p>Java多线程入门级书籍还不错，但是说实话，质量不是很高，很快就可以阅读完。</p>
+</li>
+<li><p><a href="https://book.douban.com/subject/26259017/" target="_blank" rel="noopener">《JAVA网络编程 第4版》</a></p>
+<p>可以系统的学习一下网络的一些概念以及网络编程在Java中的使用。</p>
+</li>
+<li><p>:thumbsup: <a href="https://book.douban.com/subject/25762168/" target="_blank" rel="noopener">《Java核心技术卷1+卷2》</a></p>
+<p>很棒的两本书，建议有点Java基础之后再读，介绍的还是比较深入的，非常推荐。这两本书我一般也会用来巩固知识点，是两本适合放在自己身边的好书。</p>
+</li>
+<li><p>:thumbsup: <a href="https://book.douban.com/subject/2130190/" target="_blank" rel="noopener">《Java编程思想(第4版)》</a></p>
+<p>这本书要常读，初学者可以快速概览，中等程序员可以深入看看java，老鸟还可以用之回顾java的体系。这本书之所以厉害，因为它在无形中整合了设计模式，这本书之所以难读，也恰恰在于他对设计模式的整合是无形的。</p>
+</li>
+<li><p>:thumbsup: <a href="https://book.douban.com/subject/26591326/" target="_blank" rel="noopener">《Java并发编程的艺术》</a></p>
+<p>这本书不是很适合作为Java并发入门书籍，需要具备一定的JVM基础。我感觉有些东西讲的还是挺深入的，推荐阅读。</p>
+</li>
+<li><p><a href="https://book.douban.com/subject/24841235/" target="_blank" rel="noopener">《Java程序员修炼之道》</a></p>
+<p>很杂，我只看了前面几章，不太推荐阅读。</p>
+</li>
+<li><p>:thumbsup: <a href="https://book.douban.com/subject/24722612/" target="_blank" rel="noopener">《深入理解Java虚拟机（第2版）周志明》</a></p>
+<p>神书！神书！神书！建议多刷几遍，书中的所有知识点可以通过JAVA运行时区域和JAVA的内存模型与线程两个大模块罗列完全。 </p>
+</li>
+</ul>
+<blockquote>
+<h3 id="JavaWeb相关"><a href="#JavaWeb相关" class="headerlink" title="JavaWeb相关"></a>JavaWeb相关</h3></blockquote>
+<ul>
+<li><p>:thumbsup: <a href="https://book.douban.com/subject/25953851/" target="_blank" rel="noopener">《深入分析Java Web技术内幕》</a></p>
+<p>感觉还行，涉及的东西也蛮多，推荐阅读。</p>
+</li>
+<li><p>:thumbsup: <a href="https://book.douban.com/subject/26767354/" target="_blank" rel="noopener">《Spring实战（第4版）》</a></p>
+<p>不建议当做入门书籍读，入门的话可以找点国人的书或者视频看。这本定位就相当于是关于Spring的新华字典，只有一些基本概念的介绍和示例，涵盖了Spring的各个方面，但都不够深入。就像作者在最后一页写的那样：“学习Spring，这才刚刚开始”。</p>
+</li>
+<li><p><a href="https://book.douban.com/subject/4189495/" target="_blank" rel="noopener">《Java Web整合开发王者归来》</a></p>
+<p>当时刚开始学的时候就是开的这本书，基本上是完完整整的看完了。不过，我不是很推荐大家看。这本书比较老了，里面很多东西都已经算是过时了。不过，这本书的一个很大优点是：基础知识点概括全面。</p>
+</li>
+<li><p>:thumbsup: <a href="https://book.douban.com/subject/26612779/" target="_blank" rel="noopener">《Redis实战》</a></p>
+<p> 如果你想了解Redis的一些概念性知识的话，这本书真的非常不错。</p>
+</li>
+</ul>
+<blockquote>
+<h3 id="架构相关"><a href="#架构相关" class="headerlink" title="架构相关"></a>架构相关</h3></blockquote>
+<ul>
+<li><p>:thumbsup: <a href="https://book.douban.com/subject/25723064/" target="_blank" rel="noopener">《大型网站技术架构：核心原理与案例分析+李智慧》</a></p>
+<p>这本书我读过，基本不需要你有什么基础啊~读起来特别轻松，但是却可以学到很多东西，非常推荐了。另外我写过这本书的思维导图，关注我的微信公众号：“Java面试通关手册”回复“大型网站技术架构”即可领取思维导图。</p>
+</li>
+<li><p><a href="https://book.douban.com/subject/27081188/" target="_blank" rel="noopener">《架构解密从分布式到微服务（Leaderus著）》</a></p>
+<p>很一般的书籍，我就是当做课后图书来阅读的。</p>
+</li>
+</ul>
+<blockquote>
+<h3 id="课外书籍"><a href="#课外书籍" class="headerlink" title="课外书籍"></a>课外书籍</h3></blockquote>
+<p>《技术奇点》 :thumbsup:《追风筝的人》 :thumbsup:《穆斯林的葬礼》  :thumbsup:《三体》 《人工智能——李开复》<br>:thumbsup:《活着——余华》  </p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-05-08T11:37:11.000Z"><a href="/2018/05/08/2018-05-08/">2018-05-08</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2018/05/08/2018-05-08/">2018-05-08</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>我现在越来越佩服自己，真的。面对别人的嘲讽，内心可以无比的平静，就跟说的不是我一样。可能我现在心态太好了，好到我自己都不敢相信，记得小时候我被亲戚弄生气，果断跑回家了，山高路远的我还是不停的跑，然后被我爸妈追到，一顿大骂。<br>但是啊，那股气还在，憋在心里难受。什么时候可以忍着，心里没有气憋着就好了，这样就不用那么不舒服了。<br>现在的我啊，能让我生气的有两种人，一种是那种特别特别特别牛逼的人，牛逼到我可以生气的那种，另一种就是自己特别在乎的人。<br>牛逼的人我就不说了，各种牛逼，牛逼到你怀疑人生。<br>接着就说说在乎的人吧，为什么在乎的人很容易呢，因为太在乎啊，不在乎的人才不爱搭理呢，没必要把他们的话放在心里，在乎的人就不一样了，她说的每一句话都会很在意，虽然我比较健忘，但是有些话还是那么的触碰到自己的心的。<br>在乎的人说了温暖的话，会很开心，说了很刺耳的话，就真的心痛了，心痛到沉默，半天都不想讲话。<br>面对在乎的人，我会尽量去改变，即使心情不好，也会很去迁就她吧，毕竟她才是你喜欢的人，不是别人。可能只有喜欢的人才有那么大能力去改变那么倔强的我吧。<br>今天突然有种感慨，感觉生活就像一块磨刀石，曾经的人是一把锋利的刀，有的人被生活磨炼之后就变钝了，失去了原有的锋芒，有的人却越来越锋利。感觉自己是前者，现在很是怀念曾经的锋芒，或者我的锋芒还在，只是被一层厚厚的灰掩盖的。<br>现在想的就是要把自己的锋芒展露出来了，以前老是觉得自己很优秀，但其实不然，现在呢要去做一个优秀的人，往那条路上走，即使很远很漫长，即使自己的速度很慢，即使是爬着去的，也要去坚持。<br>每个人心中都有那么一个人，需要我们为之奋斗，虽然我曾说我什么都不信，我就信我自己，但是我其实真的有一个信仰，就是不能苦了跟我的人。虽然不能荣华富贵，但是不能过的很苦，我还是很相信自己的，虽然有时候会怀疑自己。<br>好吧今天就暂时写到这里。希望未来都是那么的美好。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+<nav id="pagination">
+  
+    <a href="/page/2/" class="alignleft prev">上一页</a>
+  
+  
+    <a href="/page/4/" class="alignright next">下一页</a>
+  
+  <div class="clearfix"></div>
+</nav></div></div>
+    <aside id="sidebar" class="alignright">
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li></ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-light/">hexo, light</a><span class="tag-list-count">1</span></li></ul>
+</div>
+
+
+  <div class="widget tag">
+<h3 class="title">友情链接</h3>
+<ul class="entry">
+<li><a href="https://www.baidu.com/" title="百度搜索" target="_blank">百度搜索</a></li>
+<li><a href="https://www.github.com/" title="github官网" target="_blank">github官网</a></li>
+</ul>
+</div>
+
+
+  <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="https://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=1&ptype=1&speed=0&skin=5&isTitle=1&noborder=1&isWeibo=1&isFans=0&uid=5684095680&verifier=b4735243&dpc=1"></iframe>
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2018 happy1st
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="https://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+<!--page counter part-->
+<script>
+function addCount (Counter) {
+        url=$('.article-date').attr('href').trim();
+        title = $('.article-title').text().trim();
+        var query=new AV.Query(Counter);
+        //use url as unique idnetfication
+        query.equalTo("url",url);
+        query.find({
+            success: function(results){
+                if(results.length>0)
+                {
+                    var counter=results[0];
+                    counter.fetchWhenSave(true); //get recent result
+                    counter.increment("time");
+                    counter.save();
+                }
+                else
+                {
+                    var newcounter=new Counter();
+                    newcounter.set("title",title);
+                    newcounter.set("url",url);
+                    newcounter.set("time",1);
+                    newcounter.save(null,{
+                        success: function(newcounter){
+                        //alert('New object created');
+                        },
+                        error: function(newcounter,error){
+                        alert('Failed to create');
+                        }
+                        });
+                }
+            },
+            error: function(error){
+                //find null is not a error
+                alert('Error:'+error.code+" "+error.message);
+            }
+        });
+}
+$(function(){
+        var Counter=AV.Object.extend("Counter");
+        //only increse visit counting when intering a page
+        if ($('.article-title').length == 1)
+           addCount(Counter);
+        var query=new AV.Query(Counter);
+        query.descending("time");
+        // the sum of popular posts
+        query.limit(10); 
+        query.find({
+            success: function(results){
+                    for(var i=0;i<results.length;i++)    
+                    {
+                        var counter=results[i];
+                        title=counter.get("title");
+                        url=counter.get("url");
+                        time=counter.get("time");
+                        // add to the popularlist widget
+                        showcontent=title+" ("+time+")";
+                        //notice the "" in href
+                        $('.popularlist').append('<li><a href="'+url+'">'+showcontent+'</a></li>');
+                    }
+                },
+            error: function(error){
+                alert("Error:"+error.code+" "+error.message);
+            }
+            }
+        )
+        });
+</script>
+</body>
+</html>
+

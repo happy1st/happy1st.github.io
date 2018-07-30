@@ -1,0 +1,369 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>you left，I right</title>
+  <meta name="author" content="happy1st">
+  
+  <meta name="description" content="记录后青春">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="you left，I right"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="/atom.xml" title="you left，I right" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+  <script src="https://cdn1.lncld.net/static/js/3.6.1/av-min.js"></script>
+  <script>
+	var APP_ID = 'rhvUkXBxc7IAl5eYvkEV4kCy-gzGzoHsz';
+	var APP_KEY = 'M26DgAo4H6hhYGjL4ILzR9ap';
+
+	AV.init({
+  		appId: APP_ID,
+  		appKey: APP_KEY
+	});
+</script>
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">you left，I right</a></h1>
+  <h2><a href="/"></a></h2>
+  <div><a href="/">Heroes come and go , but legends are forever !</a></div>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-07-30T03:02:35.725Z"><a href="/2018/07/30/Java相关/设计模式/">2018-07-30</a></time>
+      
+      
+  
+    <h1 class="title"></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>下面是自己学习设计模式的时候做的总结，有些是自己的原创文章，有些是网上写的比较好的文章，保存下来细细消化吧！</p>
+<h2 id="创建型模式："><a href="#创建型模式：" class="headerlink" title="创建型模式："></a>创建型模式：</h2><blockquote>
+<h3 id="创建型模式概述："><a href="#创建型模式概述：" class="headerlink" title="创建型模式概述："></a>创建型模式概述：</h3></blockquote>
+<ul>
+<li>创建型模式(Creational Pattern)对类的实例化过程进行了抽象，能够将软件模块中对象的创建和对象的使用分离。为了使软件的结构更加清晰，外界对于这些对象只需要知道它们共同的接口，而不清楚其具体的实现细节，使整个系统的设计更加符合单一职责原则。</li>
+<li>创建型模式在创建什么(What)，由谁创建(Who)，何时创建(When)等方面都为软件设计者提供了尽可能大的灵活性。创建型模式隐藏了类的实例的创建细节，通过隐藏对象如何被创建和组合在一起达到使整个系统独立的目的。 </li>
+</ul>
+<p><img src="https://user-gold-cdn.xitu.io/2018/6/16/1640641afcb7559b?w=491&amp;h=241&amp;f=png&amp;s=51443" alt="创建型模式"></p>
+<blockquote>
+<h3 id="创建型模式系列文章推荐："><a href="#创建型模式系列文章推荐：" class="headerlink" title="创建型模式系列文章推荐："></a>创建型模式系列文章推荐：</h3></blockquote>
+<ul>
+<li><strong>单例模式：</strong></li>
+</ul>
+<p><a href="https://blog.csdn.net/qq_34337272/article/details/80455972" target="_blank" rel="noopener">深入理解单例模式——只有一个实例</a></p>
+<ul>
+<li><strong>工厂模式：</strong></li>
+</ul>
+<p><a href="https://blog.csdn.net/qq_34337272/article/details/80472071" target="_blank" rel="noopener">深入理解工厂模式——由对象工厂生成对象</a></p>
+<ul>
+<li><strong>建造者模式：</strong></li>
+</ul>
+<p><a href="http://blog.csdn.net/qq_34337272/article/details/80540059" target="_blank" rel="noopener">深入理解建造者模式 ——组装复杂的实例</a></p>
+<ul>
+<li><strong>原型模式：</strong></li>
+</ul>
+<p><a href="https://blog.csdn.net/qq_34337272/article/details/80706444" target="_blank" rel="noopener">深入理解原型模式 ——通过复制生成实例</a></p>
+<h2 id="结构型模式："><a href="#结构型模式：" class="headerlink" title="结构型模式："></a>结构型模式：</h2><blockquote>
+<h3 id="结构型模式概述："><a href="#结构型模式概述：" class="headerlink" title="结构型模式概述："></a>结构型模式概述：</h3></blockquote>
+<ul>
+<li><strong>结构型模式(Structural Pattern)：</strong> 描述如何将类或者对象结合在一起形成更大的结构，就像搭积木，可以通过简单积木的组合形成复杂的、功能更为强大的结构<br><img src="https://user-gold-cdn.xitu.io/2018/6/16/164064d6b3c205e3?w=719&amp;h=233&amp;f=png&amp;s=270293" alt="结构型模式(Structural Pattern)"></li>
+<li><strong>结构型模式可以分为类结构型模式和对象结构型模式：</strong>  <ul>
+<li>类结构型模式关心类的组合，由多个类可以组合成一个更大的系统，在类结构型模式中一般只存在继承关系和实现关系。</li>
+<li>对象结构型模式关心类与对象的组合，通过关联关系使得在一个类中定义另一个类的实例对象，然后通过该对象调用其方法。根据“合成复用原则”，在系统中尽量使用关联关系来替代继承关系，因此大部分结构型模式都是对象结构型模式。</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://user-gold-cdn.xitu.io/2018/6/16/1640655459d766d2?w=378&amp;h=266&amp;f=png&amp;s=59652" alt="结构型模式"></p>
+<blockquote>
+<h3 id="结构型模式系列文章推荐："><a href="#结构型模式系列文章推荐：" class="headerlink" title="结构型模式系列文章推荐："></a>结构型模式系列文章推荐：</h3></blockquote>
+<ul>
+<li><strong>适配器模式：</strong></li>
+</ul>
+<p><a href="https://segmentfault.com/a/1190000011856448" target="_blank" rel="noopener">深入理解适配器模式——加个“适配器”以便于复用</a></p>
+<p><a href="https://www.ibm.com/developerworks/cn/java/j-lo-adapter-pattern/index.html" target="_blank" rel="noopener">适配器模式原理及实例介绍-IBM</a></p>
+<ul>
+<li><strong>桥接模式：</strong></li>
+</ul>
+<p><a href="https://blog.csdn.net/yangzl2008/article/details/7670996" target="_blank" rel="noopener">设计模式笔记16：桥接模式(Bridge Pattern)</a></p>
+<ul>
+<li><strong>组合模式：</strong></li>
+</ul>
+<p><a href="https://blog.csdn.net/lmb55/article/details/51039781" target="_blank" rel="noopener">大话设计模式—组合模式</a></p>
+<ul>
+<li><strong>装饰模式：</strong></li>
+</ul>
+<p><a href="https://www.cnblogs.com/chenxing818/p/4705919.html" target="_blank" rel="noopener">java模式—装饰者模式</a></p>
+<p><a href="https://blog.csdn.net/cauchyweierstrass/article/details/48240147" target="_blank" rel="noopener">Java设计模式-装饰者模式</a></p>
+<ul>
+<li><strong>外观模式：</strong></li>
+</ul>
+<p><a href="https://www.cnblogs.com/lthIU/p/5860607.html" target="_blank" rel="noopener">java设计模式之外观模式（门面模式）</a></p>
+<ul>
+<li><strong>享元模式：</strong></li>
+</ul>
+<p><a href="http://www.jasongj.com/design_pattern/flyweight/" target="_blank" rel="noopener">享元模式</a></p>
+<ul>
+<li><strong>代理模式：</strong></li>
+</ul>
+<p><a href="https://www.ibm.com/developerworks/cn/java/j-lo-proxy-pattern/index.html" target="_blank" rel="noopener">代理模式原理及实例讲解 （IBM出品，很不错）</a></p>
+<p><a href="https://blog.csdn.net/briblue/article/details/73928350" target="_blank" rel="noopener">轻松学，Java 中的代理模式及动态代理</a></p>
+<p><a href="https://blog.csdn.net/justloveyou_/article/details/74203025" target="_blank" rel="noopener">Java代理模式及其应用</a></p>
+<h2 id="行为型模式"><a href="#行为型模式" class="headerlink" title="行为型模式"></a>行为型模式</h2><blockquote>
+<h3 id="行为型模式概述："><a href="#行为型模式概述：" class="headerlink" title="行为型模式概述："></a>行为型模式概述：</h3></blockquote>
+<ul>
+<li>行为型模式(Behavioral Pattern)是对在不同的对象之间划分责任和算法的抽象化。</li>
+<li>行为型模式不仅仅关注类和对象的结构，而且重点关注它们之间的相互作用。</li>
+<li>通过行为型模式，可以更加清晰地划分类与对象的职责，并研究系统在运行时实例对象之间的交互。在系统运行时，对象并不是孤立的，它们可以通过相互通信与协作完成某些复杂功能，一个对象在运行时也将影响到其他对象的运行。 </li>
+</ul>
+<p><strong>行为型模式分为类行为型模式和对象行为型模式两种：</strong></p>
+<ul>
+<li><strong>类行为型模式：</strong> 类的行为型模式使用继承关系在几个类之间分配行为，类行为型模式主要通过多态等方式来分配父类与子类的职责。</li>
+<li><strong>对象行为型模式：</strong> 对象的行为型模式则使用对象的聚合关联关系来分配行为，对象行为型模式主要是通过对象关联等方式来分配两个或多个类的职责。根据“合成复用原则”，系统中要尽量使用关联关系来取代继承关系，因此大部分行为型设计模式都属于对象行为型设计模式。</li>
+</ul>
+<p><img src="https://user-gold-cdn.xitu.io/2018/6/28/164467dd92c6172c?w=453&amp;h=269&amp;f=png&amp;s=63270" alt="行为型模式"></p>
+<ul>
+<li><strong>职责链模式：</strong></li>
+</ul>
+<p><a href="https://blog.csdn.net/jason0539/article/details/45091639" target="_blank" rel="noopener">Java设计模式之责任链模式、职责链模式</a></p>
+<p><a href="https://www.cnblogs.com/lizo/p/7503862.html" target="_blank" rel="noopener">责任链模式实现的三种方式</a></p>
+<ul>
+<li><strong>命令模式：</strong></li>
+</ul>
+<ul>
+<li><strong>解释器模式：</strong></li>
+<li><strong>迭代器模式：</strong></li>
+<li><strong>中介者模式：</strong></li>
+<li><strong>备忘录模式：</strong></li>
+<li><strong>观察者模式：</strong></li>
+<li><strong>状态模式：</strong></li>
+<li><strong>策略模式：</strong></li>
+<li><strong>模板方法模式：</strong></li>
+<li><strong>访问者模式：</strong></li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+        <script>
+    window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "",
+            "bdMini": "2",
+            "bdPic": "",
+            "bdStyle": "0",
+            "bdSize": "16"
+        },
+        "share": {},
+        "image": {
+            "viewList": ["qzone", "tsina", "tqq", "renren", "weixin"],
+            "viewText": "分享到",
+            "viewSize": "16"
+        },
+        "selectShare": {
+            "bdContainerClass": null,
+            "bdSelectMiniList": ["qzone", "tsina", "tqq", "renren", "weixin"]
+        }
+    };
+    /*with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];*/
+with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = '/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+<div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina"></a>
+    <a href="#" class="bds_tqq" data-cmd="tqq"></a>
+    <a href="#" class="bds_renren" data-cmd="renren"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin"></a>
+</div>
+
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="http://yoursite.com/2018/07/30/Java相关/设计模式/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li></ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-light/">hexo, light</a><span class="tag-list-count">1</span></li></ul>
+</div>
+
+
+  <div class="widget tag">
+<h3 class="title">友情链接</h3>
+<ul class="entry">
+<li><a href="https://www.baidu.com/" title="百度搜索" target="_blank">百度搜索</a></li>
+<li><a href="https://www.github.com/" title="github官网" target="_blank">github官网</a></li>
+</ul>
+</div>
+
+
+  <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="https://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=1&ptype=1&speed=0&skin=5&isTitle=1&noborder=1&isWeibo=1&isFans=0&uid=5684095680&verifier=b4735243&dpc=1"></iframe>
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2018 happy1st
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="https://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+<!--page counter part-->
+<script>
+function addCount (Counter) {
+        url=$('.article-date').attr('href').trim();
+        title = $('.article-title').text().trim();
+        var query=new AV.Query(Counter);
+        //use url as unique idnetfication
+        query.equalTo("url",url);
+        query.find({
+            success: function(results){
+                if(results.length>0)
+                {
+                    var counter=results[0];
+                    counter.fetchWhenSave(true); //get recent result
+                    counter.increment("time");
+                    counter.save();
+                }
+                else
+                {
+                    var newcounter=new Counter();
+                    newcounter.set("title",title);
+                    newcounter.set("url",url);
+                    newcounter.set("time",1);
+                    newcounter.save(null,{
+                        success: function(newcounter){
+                        //alert('New object created');
+                        },
+                        error: function(newcounter,error){
+                        alert('Failed to create');
+                        }
+                        });
+                }
+            },
+            error: function(error){
+                //find null is not a error
+                alert('Error:'+error.code+" "+error.message);
+            }
+        });
+}
+$(function(){
+        var Counter=AV.Object.extend("Counter");
+        //only increse visit counting when intering a page
+        if ($('.article-title').length == 1)
+           addCount(Counter);
+        var query=new AV.Query(Counter);
+        query.descending("time");
+        // the sum of popular posts
+        query.limit(10); 
+        query.find({
+            success: function(results){
+                    for(var i=0;i<results.length;i++)    
+                    {
+                        var counter=results[i];
+                        title=counter.get("title");
+                        url=counter.get("url");
+                        time=counter.get("time");
+                        // add to the popularlist widget
+                        showcontent=title+" ("+time+")";
+                        //notice the "" in href
+                        $('.popularlist').append('<li><a href="'+url+'">'+showcontent+'</a></li>');
+                    }
+                },
+            error: function(error){
+                alert("Error:"+error.code+" "+error.message);
+            }
+            }
+        )
+        });
+</script>
+</body>
+</html>
+

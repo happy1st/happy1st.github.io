@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>you left，I right</title>
+  <meta name="author" content="happy1st">
+  
+  <meta name="description" content="记录后青春">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="you left，I right"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="/atom.xml" title="you left，I right" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+  <script src="https://cdn1.lncld.net/static/js/3.6.1/av-min.js"></script>
+  <script>
+	var APP_ID = 'rhvUkXBxc7IAl5eYvkEV4kCy-gzGzoHsz';
+	var APP_KEY = 'M26DgAo4H6hhYGjL4ILzR9ap';
+
+	AV.init({
+  		appId: APP_ID,
+  		appKey: APP_KEY
+	});
+</script>
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">you left，I right</a></h1>
+  <h2><a href="/"></a></h2>
+  <div><a href="/">Heroes come and go , but legends are forever !</a></div>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-07-30T03:02:35.798Z"><a href="/2018/07/30/架构/分布式/">2018-07-30</a></time>
+      
+      
+  
+    <h1 class="title"></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <ul>
+<li><h3 id="一-分布式系统的经典基础理论"><a href="#一-分布式系统的经典基础理论" class="headerlink" title="一　分布式系统的经典基础理论"></a>一　分布式系统的经典基础理论</h3><p><a href="https://blog.csdn.net/qq_34337272/article/details/80444032" target="_blank" rel="noopener">分布式系统的经典基础理论</a></p>
+<p> 本文主要是简单的介绍了三个常见的概念： <strong>分布式系统设计理念</strong> 、 <strong>CAP定理</strong> 、 <strong>BASE理论</strong> ，关于分布式系统的还有很多很多东西。<br><img src="https://user-gold-cdn.xitu.io/2018/5/24/1639234237ec9805?w=791&amp;h=466&amp;f=png&amp;s=55908" alt="分布式系统的经典基础理论总结"></p>
+</li>
+<li><h3 id="二-分布式事务"><a href="#二-分布式事务" class="headerlink" title="二　分布式事务"></a>二　分布式事务</h3><p>分布式事务就是指事务的参与者、支持事务的服务器、资源服务器以及事务管理器分别位于不同的分布式系统的不同节点之上。以上是百度百科的解释，简单的说，就是一次大的操作由不同的小操作组成，这些小的操作分布在不同的服务器上，且属于不同的应用，分布式事务需要保证这些小操作要么全部成功，要么全部失败。本质上来说，分布式事务就是为了保证不同数据库的数据一致性。</p>
+<ul>
+<li><a href="http://www.codeceo.com/article/distributed-transaction.html" target="_blank" rel="noopener">深入理解分布式事务</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/25933039" target="_blank" rel="noopener">分布式事务？No, 最终一致性</a></li>
+<li><a href="https://www.cnblogs.com/savorboard/p/distributed-system-transaction-consistency.html" target="_blank" rel="noopener">聊聊分布式事务，再说说解决方案</a>
+　　</li>
+</ul>
+</li>
+<li><h3 id="三-分布式系统一致性"><a href="#三-分布式系统一致性" class="headerlink" title="三　分布式系统一致性"></a>三　分布式系统一致性</h3><p><a href="https://www.jianshu.com/p/1156151e20c8" target="_blank" rel="noopener">分布式服务化系统一致性的“最佳实干”</a></p>
+<ul>
+<li><h3 id="四-一致性协议-算法"><a href="#四-一致性协议-算法" class="headerlink" title="四　一致性协议/算法"></a>四　一致性协议/算法</h3>早在1898年就诞生了著名的 <strong>Paxos经典算法</strong> （<strong>Zookeeper就采用了Paxos算法的近亲兄弟Zab算法</strong>），但由于Paxos算法非常难以理解、实现、排错。所以不断有人尝试简化这一算法，直到2013年才有了重大突破：斯坦福的Diego Ongaro、John Ousterhout以易懂性为目标设计了新的一致性算法—— <strong>Raft算法</strong> ，并发布了对应的论文《In Search of an Understandable Consensus Algorithm》，到现在有十多种语言实现的Raft算法框架，较为出名的有以Go语言实现的Etcd，它的功能类似于Zookeeper，但采用了更为主流的Rest接口。<ul>
+<li><a href="http://blog.xiaohansong.com/2016/09/30/Paxos/" target="_blank" rel="noopener">图解 Paxos 一致性协议</a></li>
+<li><a href="http://ifeve.com/raft/" target="_blank" rel="noopener">图解分布式协议-RAFT</a></li>
+<li><a href="http://blog.xiaohansong.com/2016/08/25/zab/" target="_blank" rel="noopener">Zookeeper ZAB 协议分析</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h3 id="五-分布式存储"><a href="#五-分布式存储" class="headerlink" title="五　分布式存储"></a>五　分布式存储</h3><p><strong>分布式存储系统将数据分散存储在多台独立的设备上</strong>。传统的网络存储系统采用集中的存储服务器存放所有数据，存储服务器成为系统性能的瓶颈，也是可靠性和安全性的焦点，不能满足大规模存储应用的需要。分布式网络存储系统采用可扩展的系统结构，利用多台存储服务器分担存储负荷，利用位置服务器定位存储信息，它不但提高了系统的可靠性、可用性和存取效率，还易于扩展。 </p>
+<ul>
+<li><a href="http://witchiman.top/2017/05/05/distributed-system/" target="_blank" rel="noopener">分布式存储系统概要</a></li>
+</ul>
+</li>
+<li><h3 id="六-分布式计算"><a href="#六-分布式计算" class="headerlink" title="六　分布式计算"></a>六　分布式计算</h3><p><strong>所谓分布式计算是一门计算机科学，它研究如何把一个需要非常巨大的计算能力才能解决的问题分成许多小的部分，然后把这些部分分配给许多计算机进行处理，最后把这些计算结果综合起来得到最终的结果。</strong><br>分布式网络存储技术是将数据分散的存储于多台独立的机器设备上。分布式网络存储系统采用可扩展的系统结构，利用多台存储服务器分担存储负荷，利用位置服务器定位存储信息，不但解决了传统集中式存储系统中单存储服务器的瓶颈问题，还提高了系统的可靠性、可用性和扩展性。</p>
+<ul>
+<li><a href="https://blog.csdn.net/qq_34337272/article/details/80549020" target="_blank" rel="noopener">关于分布式计算的一些概念</a></li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+        <script>
+    window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "",
+            "bdMini": "2",
+            "bdPic": "",
+            "bdStyle": "0",
+            "bdSize": "16"
+        },
+        "share": {},
+        "image": {
+            "viewList": ["qzone", "tsina", "tqq", "renren", "weixin"],
+            "viewText": "分享到",
+            "viewSize": "16"
+        },
+        "selectShare": {
+            "bdContainerClass": null,
+            "bdSelectMiniList": ["qzone", "tsina", "tqq", "renren", "weixin"]
+        }
+    };
+    /*with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];*/
+with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = '/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+<div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina"></a>
+    <a href="#" class="bds_tqq" data-cmd="tqq"></a>
+    <a href="#" class="bds_renren" data-cmd="renren"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin"></a>
+</div>
+
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="http://yoursite.com/2018/07/30/架构/分布式/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li></ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-light/">hexo, light</a><span class="tag-list-count">1</span></li></ul>
+</div>
+
+
+  <div class="widget tag">
+<h3 class="title">友情链接</h3>
+<ul class="entry">
+<li><a href="https://www.baidu.com/" title="百度搜索" target="_blank">百度搜索</a></li>
+<li><a href="https://www.github.com/" title="github官网" target="_blank">github官网</a></li>
+</ul>
+</div>
+
+
+  <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="https://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=1&ptype=1&speed=0&skin=5&isTitle=1&noborder=1&isWeibo=1&isFans=0&uid=5684095680&verifier=b4735243&dpc=1"></iframe>
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2018 happy1st
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="https://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+<!--page counter part-->
+<script>
+function addCount (Counter) {
+        url=$('.article-date').attr('href').trim();
+        title = $('.article-title').text().trim();
+        var query=new AV.Query(Counter);
+        //use url as unique idnetfication
+        query.equalTo("url",url);
+        query.find({
+            success: function(results){
+                if(results.length>0)
+                {
+                    var counter=results[0];
+                    counter.fetchWhenSave(true); //get recent result
+                    counter.increment("time");
+                    counter.save();
+                }
+                else
+                {
+                    var newcounter=new Counter();
+                    newcounter.set("title",title);
+                    newcounter.set("url",url);
+                    newcounter.set("time",1);
+                    newcounter.save(null,{
+                        success: function(newcounter){
+                        //alert('New object created');
+                        },
+                        error: function(newcounter,error){
+                        alert('Failed to create');
+                        }
+                        });
+                }
+            },
+            error: function(error){
+                //find null is not a error
+                alert('Error:'+error.code+" "+error.message);
+            }
+        });
+}
+$(function(){
+        var Counter=AV.Object.extend("Counter");
+        //only increse visit counting when intering a page
+        if ($('.article-title').length == 1)
+           addCount(Counter);
+        var query=new AV.Query(Counter);
+        query.descending("time");
+        // the sum of popular posts
+        query.limit(10); 
+        query.find({
+            success: function(results){
+                    for(var i=0;i<results.length;i++)    
+                    {
+                        var counter=results[i];
+                        title=counter.get("title");
+                        url=counter.get("url");
+                        time=counter.get("time");
+                        // add to the popularlist widget
+                        showcontent=title+" ("+time+")";
+                        //notice the "" in href
+                        $('.popularlist').append('<li><a href="'+url+'">'+showcontent+'</a></li>');
+                    }
+                },
+            error: function(error){
+                alert("Error:"+error.code+" "+error.message);
+            }
+            }
+        )
+        });
+</script>
+</body>
+</html>
+
